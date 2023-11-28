@@ -1,0 +1,14 @@
+matto:
+  name: Matto Godoy
+  picture: /images/matto.jpg
+  twitter: "@mattogodoy"
+  links:
+    - title: Mastodon
+      url: https://fosstodon.org/@mattogodoy
+      icon: fab fa-mastodon
+    - title: Twitter
+      url: https://twitter.com/mattogodoy
+      icon: fab fa-twitter-square
+    - title: GitHub
+      url: https://github.com/mattogodoy
+      icon: fab fa-github-square
