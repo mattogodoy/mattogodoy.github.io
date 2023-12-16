@@ -5,8 +5,6 @@ title: Seguidor de líneas
 date: '2015-01-28 01:31:00'
 image: 
   path: /images/arduino.jpg
-  thumbnail: /images/arduino.jpg
-  caption: ""
 tags:
 - electronica
 - robotica
@@ -55,7 +53,7 @@ Inicialmente tenía idea de hacer un robot que usara dos motores. Uno en cada ru
 
 Hice un prototipo y una rutina de pruebas:
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/bhYZy4x66rA?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></figure>
+{% include embed/youtube.html id='bhYZy4x66rA' %}
 
 Luego de algunas pruebas llegué a la conclusión de que la manera más fácil sería usar sólo un motor para la tracción, y un servo para la dirección, girando las ruedas frontales como un auto común.  
 Esto me ahorraría varios dolores de cabeza y simplificaría el diseño tanto en el hardware como en el software del robot.

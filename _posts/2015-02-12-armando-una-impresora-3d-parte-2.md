@@ -1,7 +1,10 @@
 ---
-layout: post
+author: matto
 title: Armando una Impresora 3D - Parte 2
-date: '2015-02-12 20:01:00'
+date: 2015-02-12T20:01:00+01:00
+image: 
+  path: /images/impresora2.jpg
+categories:
 tags:
 - electronica
 - impresora-3d
@@ -39,30 +42,32 @@ Si tienes la desdicha de utilizar Windows, tendrás que instalar algunos [driver
 
 El código que subiremos será muy simple. Lo único que hace es encender y apagar intermitentemente un [LED](http://es.wikipedia.org/wiki/Led) que viene integrado en el pin 13 del Arduino:
 
-    /*
-      Blink
-      Turns on an LED on for one second, then off for one second, repeatedly.
-     
-      This example code is in the public domain.
-     */
-     
-    // Pin 13 has an LED connected on most Arduino boards.
-    // give it a name:
-    int led = 13;
+```c++
+/*
+Blink
+Turns on an LED on for one second, then off for one second, repeatedly.
+
+This example code is in the public domain.
+*/
     
-    // the setup routine runs once when you press reset:
-    void setup() {                
-      // initialize the digital pin as an output.
-      pinMode(led, OUTPUT);     
-    }
-    
-    // the loop routine runs over and over again forever:
-    void loop() {
-      digitalWrite(led, HIGH); // turn the LED on (HIGH is the voltage level)
-      delay(1000); // wait for a second
-      digitalWrite(led, LOW); // turn the LED off by making the voltage LOW
-      delay(1000); // wait for a second
-    }
+// Pin 13 has an LED connected on most Arduino boards.
+// give it a name:
+int led = 13;
+
+// the setup routine runs once when you press reset:
+void setup() {                
+    // initialize the digital pin as an output.
+    pinMode(led, OUTPUT);     
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+    digitalWrite(led, HIGH); // turn the LED on (HIGH is the voltage level)
+    delay(1000); // wait for a second
+    digitalWrite(led, LOW); // turn the LED off by making the voltage LOW
+    delay(1000); // wait for a second
+}
+```
 
 Subimos este código al Arduino. Si vemos un LED parpadear, sabremos que estamos en condiciones de comunicarnos con él correctamente y podemos pasar al siguiente paso.
 
@@ -71,7 +76,7 @@ Descargamos Marlin desde su [repositorio de Github](https://github.com/MarlinFir
 
 El paso siguiente es conectar todos los controladores de motores en la RAMPS, y la RAMPS sobre el Arduino, quedando un bloque compacto que contiene toda la electrónica.
 
-<figure class="kg-image-card kg-width-wide"><img src="/content/images/2018/08/prusa3.jpg" class="kg-image"></figure>
+![](/images/prusa3.jpg)
 
 Este bloque ya se comporta como una impresora 3D, por lo que estando conectado por USB, ya podríamos utilizar algún software de impresión para enviarle órdenes y comprobar que todo funciona correctamente.
 
@@ -83,27 +88,29 @@ Un archivo GCODE es simplemente un conjunto secuencial de órdenes que la impres
 
 El siguiente es un ejemplo de archivo GCODE que dibuja un círculo desde la posición **X=-0.5, Y=0, Z=0**. Cuando termina, vuelve a la posición **X=0, Y=0, Z=0.25** (la punta del extrusor un poco levantada):
 
-    G17 G20 G90 G94 G54
-    G0 Z0.25
-    X-0.5 Y0.
-    Z0.1
-    G01 Z0. F5.
-    G02 X0. Y0.5 I0.5 J0. F2.5
-    X0.5 Y0. I0. J-0.5
-    X0. Y-0.5 I-0.5 J0.
-    X-0.5 Y0. I0. J0.5
-    G01 Z0.1 F5.
-    G00 X0. Y0. Z0.25
+```
+G17 G20 G90 G94 G54
+G0 Z0.25
+X-0.5 Y0.
+Z0.1
+G01 Z0. F5.
+G02 X0. Y0.5 I0.5 J0. F2.5
+X0.5 Y0. I0. J-0.5
+X0. Y-0.5 I-0.5 J0.
+X-0.5 Y0. I0. J0.5
+G01 Z0.1 F5.
+G00 X0. Y0. Z0.25
+```
 
 Para comprobar si el firmware funciona bien, conectamos los motores a la RAMPS (el orden y la dirección de los motores no importa en este momento).
 
 También es importante alimentar la RAMPS con la salida de 12 volts de la fuente. De lo contrario los motores no se moverán ಠ\_ಠ
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/motores.jpg" class="kg-image"></figure>
+![](/images/motores.jpg)
 
 Con los motores ya conectados, podemos probar si nuestra impresora interpreta bien las órdenes. Para ello, yo utilicé un archivo GCODE muy particular: Uno que al hacer girar los motores, lo hace en una dirección y velocidad específica generando un sonido que suena como la [Marcha Imperial](https://www.youtube.com/watch?v=n4rHGubRqpw).
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/lMhPuMIk59Q?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></figure>
+{% include embed/youtube.html id='lMhPuMIk59Q' %}
 
 El archivo está disponible para su descarga [aquí](https://github.com/Obijuan/Clone-wars/blob/master/Calibration/imperial.gcode).
 
@@ -131,17 +138,17 @@ Ahora hay que repetir este proceso 22 veces más...
 
 Lo siguiente es armar el carro del eje X, donde se une el extrusor con el hot-end.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/eje_x.jpg" class="kg-image"></figure>
+![](/images/eje_x.jpg)
 
 Para ello se utilizan 2 varillas lisas de métrica 8 sobre las que se deslizará el carro utilizando 3 rodamientos lineales que harán que la fricción sea mínima:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/linear-ball-bearing.jpg" class="kg-image"></figure>
+![](/images/linear-ball-bearing.jpg)
 
 También aquí instalaremos el primero de los motores que por medio de una correa de tipo T2.5 y un rodamiento de tipo 608 moverá el carro en ambas direcciones del eje X.
 
 Lo que queda es más o menos esto:
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/BwfnwRrXj-Q?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></figure>
+{% include embed/youtube.html id='BwfnwRrXj-Q' %}
 
 También nos adelantamos y colocamos los rodamientos lineales y las tuercas de métrica 8 que nos servirán para el desplazamiento del **eje Z**.
 
@@ -149,17 +156,17 @@ También nos adelantamos y colocamos los rodamientos lineales y las tuercas de m
 
 La estructura principal se compone de 2 triángulos formados con varillas roscadas y piezas impresas.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/estructura.jpg" class="kg-image"></figure>
+![](/images/estructura.jpg)
 
 Estos triángulos se unen por medio de otras varillas roscadas que contiene las piezas necesarias para sostener el motor, los rodamientos y las varillas lisas para carro del eje Y.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/estructura2.jpg" class="kg-image"></figure>
+![](/images/estructura2.jpg)
 
 El orden en que se colocan las piezas y las tuercas es muy importante. Darse cuenta de que te olvidaste algo una vez que está todo armado no es muy divertido.
 
 En la parte superior se colocan también los soportes para los motores del eje Z. Una vez armado, esto es lo que queda:
 
-<figure class="kg-image-card kg-width-wide"><img src="/content/images/2018/08/estructura3.jpg" class="kg-image"></figure>
+![](/images/estructura3.jpg)
 
 Ya se va pareciendo más a una impresora ¿No?
 
@@ -169,7 +176,7 @@ La base de este eje es una placa de madera a la cual se atornillan 3 rodamientos
 
 También se atornillan las piezas que presionarán la correa y la mantendrán tensada.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/estructura4.jpg" class="kg-image"></figure>
+![](/images/estructura4.jpg)
 
 Colocamos ahora la correa del eje Y y continuamos.
 
@@ -179,7 +186,7 @@ Instalamos los 2 motores en los soportes del eje Z y pasando las varillas lisas 
 
 Los motores se conectan a varillas roscadas de métrica 8 que van dentro de las tuercas del soporte del **eje X**. Gracias a esto, cuando los motores del **eje Z** giran, hacen que el carro completo del **eje X** se eleve.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/estructura5.jpg" class="kg-image"></figure>
+![](/images/estructura5.jpg)
 
 ¡Estructura lista!
 
@@ -187,7 +194,7 @@ Los motores se conectan a varillas roscadas de métrica 8 que van dentro de las 
 
 Ahora que tenemos toda la estructura armada, comprobamos que todos los motores funcionan correctamente y que todos los ejes se desplazan sin problemas en ambas direcciones. ¿Qué mejor que una marcha imperial a gran escala?
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/JHD9WMfdCuI?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></figure>
+{% include embed/youtube.html id='JHD9WMfdCuI' %}
 
 Lo bueno de este archivo GCODE es que además de tocar la marcha imperial, lo hace de tal forma que no permite que ninguno de los carros llegue a los extremos de los ejes (sobre todo ahora que todavía no hemos instalado los sensores de fin de carrera).
 
@@ -199,7 +206,7 @@ Se utilizan 3 sensores de final de carrera y van atornillados a las piezas insta
 
 La cama caliente va apoyada sobre 4 resortes que sirven para absorber cualquier golpe que reciba en caso de que el eje Z baje más de lo normal y la empuje con el hot-end.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/muelle.jpg" class="kg-image"></figure>
+![](/images/muelle.jpg)
 
 Una vez instalada conectamos los cables que van a la alimentación. Para esto mucha gente la conecta directamente a la salida que tiene la RAMPS para este fin, pero dada la cantidad de corriente que consume, el [MOSFET](http://es.wikipedia.org/wiki/MOSFET) se calienta muchísimo y corre riesgo de quemarse.
 
@@ -219,7 +226,7 @@ Para armar el cuerpo del extrusor usamos el _hobbed bolt_ como eje del engranaje
 
 Un tercer rodamiento se usa para presionar el filamento contra las ranuras del _hobbed bolt_ con la ayuda de unos resortes y unas mariposas que permiten variar la presión.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/extrusor2.jpg" class="kg-image"></figure>
+![](/images/extrusor2.jpg)
 
 Hecho esto podemos comprobar la fuerza de tracción del extrusor utilizando un poco de filamento y activando el motor con Pronterface. Te sorprendería la fuerza que puede llegar a tener.
 
@@ -229,13 +236,13 @@ El hot-end va sujetado a la base del carro del eje X. Lo atornillamos y llevamos
 
 Para este caso, no necesitaremos un relay dado que la cantidad de corriente utilizada para calentar el hot-end es mucho menor y con el MOSFET de la RAMPS nos alcanza.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/hot_end-1.jpg" class="kg-image"></figure>
+![](/images/hot_end-1.jpg)
 
 Como se ve en la foto, para probar el hot-end le asignamos una temperatura de 230º usando Pronterface y cuando esté bastante caliente (de nuevo, todavía no tenemos medidas precisas hasta que no configuremos el _firmware_) insertamos filamento por el agujero de entrada y presionamos levemente con la mano. El filamento debería salir derretido por la punta.
 
 Ahora que sabemos que funciona, atornillamos el extrusor en la parte superior del carro del eje X. Para asegurarnos primero probaremos girando el engranaje con la mano, y cuando estemos seguros de que funciona, utilizando el motor del extrusor para empujar el filamento:
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/nR9dhcskIvk?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></figure>
+{% include embed/youtube.html id='nR9dhcskIvk' %}
 
 ¡Ya casi estamos! Nos queda calibrar y configurar algunas cosas, pero lo más difícil ya está hecho.
 
@@ -249,25 +256,31 @@ Para lograr ubicar la punta del hot-end en las coordenadas exactas, el cerebro d
 
 Esta configuración se encuentra en el archivo «Configuration.h» del firmware en la línea:
 
-    float axis_steps_per_unit[] = {80, 80, 2560, 719};
+```c++
+float axis_steps_per_unit[] = {80, 80, 2560, 719};
+```
 
 Dentro del array, vemos que hay 4 valores, que representan los pasos por milímetro de los ejes X, Y, Z y el extrusor respectivamente.
 
 Para calibrar el eje X, lo que debemos hacer es medir con un [calibre](http://es.wikipedia.org/wiki/Calibre_(instrumento)) (en lo posible digital) la distancia entre el carro y uno de los soportes del eje de guía.  
 Una imagen vale más que mil palabras:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/eje_x2.jpg" class="kg-image"><figcaption><em>Imagen robada de la <a href="http://www.iearobotics.com/wiki/index.php?title=Guia_de_montaje_de_la_Prusa_2">guía de Obijuan</a></em></figcaption></figure>
+![](/images/eje_x2.jpg)
+_Imagen robada de la <a href="http://www.iearobotics.com/wiki/index.php?title=Guia_de_montaje_de_la_Prusa_2">guía de Obijuan</a>_
 
 Ahora usando Pronterface damos la orden de desplazar el eje X 100 milímetros. Volvemos a medir y verificamos cuál fue el desplazamiento real del carro.  
 Nos dará un número que probablemente esté cerca de 100mm, pero seguramente tendrá un error. Eso es lo que queremos corregir.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/eje_x3.jpg" class="kg-image"><figcaption><em>Imagen robada de la <a href="http://www.iearobotics.com/wiki/index.php?title=Guia_de_montaje_de_la_Prusa_2">guía de Obijuan</a></em></figcaption></figure>
+![](/images/eje_x3.jpg)
+_Imagen robada de la <a href="http://www.iearobotics.com/wiki/index.php?title=Guia_de_montaje_de_la_Prusa_2">guía de Obijuan</a>_
 
 En la imagen ya vemos un carro calibrado (99,97mm de los 100mm que le pedimos que se desplace es más que aceptable), pero imaginemos un escenario más real, en el que la medida nos dará, por ejemplo, **86mm**.
 
 Para corregir este error de desplazamiento (100mm - 86mm = 14mm de error) hay una fórmula muy simple:
 
-    (valor actual * distancia solicitada) / distancia recorrida = nuevo valor
+```
+(valor actual * distancia solicitada) / distancia recorrida = nuevo valor
+```
 
 En nuestro caso, los parámetros serían:
 
@@ -277,13 +290,17 @@ En nuestro caso, los parámetros serían:
 
 quedando la cuenta:
 
-    (80 * 100) / 86 = 93,02
+```
+(80 * 100) / 86 = 93,02
+```
 
 Esto significa que el nuevo valor que debemos asignar para el eje X en el archivo de configuración es de **93**. Dado que los motores paso a paso pueden hacer una cantidad discreta de pasos, no tiene sentido que agreguemos los decimales.
 
 Modificamos el archivo quedando de esta manera:
 
-    float axis_steps_per_unit[] = {93, 80, 2560, 719};
+```c++
+float axis_steps_per_unit[] = {93, 80, 2560, 719};
+```
 
 y cargamos nuevamente el firmware en el Arduino para actualizarlo con los nuevos valores.
 
@@ -309,10 +326,12 @@ Además de la cantidad de pasos por milímetro de los motores, el archivo [Confi
 
 Debemos definir qué tipo de termistor tenemos en el extrusor (_TEMP\_SENSOR\_0_) y en la cama caliente (_TEMP\_SENSOR\_BED_). Para mi caso los valores son **5** y **1** respectivamente, pero pueden variar.
 
-    #define TEMP_SENSOR_0 5
-    #define TEMP_SENSOR_1 0
-    #define TEMP_SENSOR_2 0
-    #define TEMP_SENSOR_BED 1
+```c++
+#define TEMP_SENSOR_0 5
+#define TEMP_SENSOR_1 0
+#define TEMP_SENSOR_2 0
+#define TEMP_SENSOR_BED 1
+```
 
 El valor **0** indica que los sensores están desactivados, como es el caso de _TEMP\_SENSOR\_1_ y _TEMP\_SENSOR\_2_ que pueden ser usados para un segundo extrusor u otra funcionalidad.
 
@@ -326,15 +345,19 @@ Para conseguir los parámetros debemos seguir [una serie de pasos](http://reprap
 
 Para el extrusor:
 
-    #define DEFAULT_Kp 22.2
-    #define DEFAULT_Ki 1.08
-    #define DEFAULT_Kd 114
+```c++
+#define DEFAULT_Kp 22.2
+#define DEFAULT_Ki 1.08
+#define DEFAULT_Kd 114
+```
 
 Para la cama caliente:
 
-    #define DEFAULT_bedKp 10.00
-    #define DEFAULT_bedKi .023
-    #define DEFAULT_bedKd 305.4
+```c++
+#define DEFAULT_bedKp 10.00
+#define DEFAULT_bedKi .023
+#define DEFAULT_bedKd 305.4
+```
 
 Al igual que con el calibrado de los pasos de los motores, mientras más veces repitamos este proceso, más exactos serán los valores que obtengamos.
 
@@ -346,7 +369,9 @@ Por un tema de protección, es importante que no permitamos que se de la orden d
 
 Para evitar eso, tenemos el siguiente parámetro:
 
-    #define EXTRUDE_MINTEMP 210
+```c++
+#define EXTRUDE_MINTEMP 210
+```
 
 Yo lo he puesto en **210º** dado que es la temperatura en la que el plástico ya está derretido, a pesar de que la ideal sean **230º**.
 
@@ -362,19 +387,19 @@ Con todo esto armado y configurado, ya podemos empezar a imprimir. ¡Al fin!
 
 Lo primero que imprimí fue una [ficha de casino](http://www.thingiverse.com/thing:4688). Su forma permite saber si hemos calibrado bien los pasos de los motores, y a la vez vemos si el resto de parámetros son correctos. Sobre todo, sabremos si nuestro Frankestein funciona para lo que fue concebido.
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/x77h3cfLWX8?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></figure>
+{% include embed/youtube.html id='x77h3cfLWX8' %}
 
 Por suerte todo salió como esperaba, aunque es verdad que el mantenimiento es un proceso constante durante la vida de la impresora. Es común hacer cambios frecuentemente dado que el simple hecho de cambiar de color o marca de filamento, o la época del año en que estamos (frío o calor) pueden hacer que la impresora se comporte de manera diferente y debamos ajustar algo.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/impresora.jpg" class="kg-image"></figure>
+![](/images/impresora.jpg)
 
 ¡Funciona!
 
 ## Galería
 
-Todas las fotos y videos del proceso de construcción están en un [álbum de Flickr](https://www.flickr.com/photos/96215205@N02/sets/72157634010097482/), y son éstas:
+Todas las fotos y videos del proceso de construcción están en un [álbum de Flickr](https://www.flickr.com/photos/96215205@N02/sets/72157634010097482/).
 
-[![Impresora 3D](https://farm3.staticflickr.com/2829/8988999116_188546ca65_z.jpg)](https://www.flickr.com/photos/96215205@N02/albums/72157634010097482 "Impresora 3D")<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script><figure class="kg-image-card"><img src="http://matto.io/content/images/2015/02/hr.png" class="kg-image"></figure>
+![](/images/hr.png)
 
 Nadie dijo que sería fácil, pero sin duda es divertido y se aprende mucho en el camino.
 
@@ -383,4 +408,3 @@ Si estás pensando en armar tu propia impresora 3D, te recomiendo que sigas los 
 En el próximo post veremos cómo es el proceso de impresión, empezando por la pieza modelada en 3D y terminando con una pieza ya impresa en el mundo real. Veremos también recursos de software y un repositorio de piezas en 3D para imprimir.
 
 ¡Hasta la próxima!
-

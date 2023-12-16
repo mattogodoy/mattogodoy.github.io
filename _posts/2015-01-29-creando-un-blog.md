@@ -4,8 +4,6 @@ title: Creando un blog
 date: 2015-01-29T01:56:00+01:00
 image: 
   path: /images/code.png
-  thumbnail: /images/code.png
-  caption: ""
 categories:
 tags:
 - servidores
@@ -74,4 +72,4 @@ Fue duro, pero quedó...
 
 ¡Hasta la próxima!
 
-<figure class="kg-image-card"><img src="/images/bye.gif" class="kg-image"></figure>
+![](/images/bye.gif)
