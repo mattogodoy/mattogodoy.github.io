@@ -76,7 +76,7 @@ Desde entonces nunca he dejado de disfrutar de las sensaciones y la libertad que
 
 Fue en el año 2015 cuando me compré mi primera moto con capacidades para meterme por campo. Hasta entonces había tenido exclusivamente motos de carretera, y no sabía de lo que me estaba perdiendo.
 
-Fue durante ese mismo año que me dispuse a buscar compañeros de ruta y mentores de lo que para mí era algo completamente nuevo. En esa búsqueda me encontré con el [Motoclub Trail Madrid](http://trailmadrid.es/), un foro en el que conoces gente del mundillo y donde he hecho grandes amigos con los que a día de hoy sigo compartiendo salidas.
+Fue durante ese mismo año que me dispuse a buscar compañeros de ruta y mentores de lo que para mí era algo completamente nuevo. En esa búsqueda me encontré con el [Motoclub Trail Madrid](https://trailmadrid.es/), un foro en el que conoces gente del mundillo y donde he hecho grandes amigos con los que a día de hoy sigo compartiendo salidas.
 
 Fue por culpa de (o gracias a?) estos amigos que me enganché con los rallies de [navegación con roadbook](https://www.youtube.com/watch?v=gUxTGKPrCos). Una de las primeras cosas que noté fue que el coste de los equipos necesarios para participar de este tipo de eventos era demasiado elevado, sobre todo para un piloto principiante como yo.
 

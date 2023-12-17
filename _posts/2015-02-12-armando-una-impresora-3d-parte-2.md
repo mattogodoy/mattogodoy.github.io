@@ -10,9 +10,9 @@ tags:
 - impresora-3d
 ---
 
-En la [parte 1](http://matto.io/armando-una-impresora-3d-parte-1/) de este post vimos una introducción al funcionamiento y los componentes de una impresora 3d.
+En la [parte 1](https://matto.io/armando-una-impresora-3d-parte-1/) de este post vimos una introducción al funcionamiento y los componentes de una impresora 3d.
 
-> Ya está disponible también la [parte 3](http://matto.io/armando-una-impresora-3d-parte-3/).
+> Ya está disponible también la [parte 3](https://matto.io/armando-una-impresora-3d-parte-3/).
 
 En esta segunda parte veremos los procesos de construcción y calibración de a impresora.
 
@@ -32,15 +32,15 @@ Hay dos grandes proyectos de código abierto en este momento: [Sprinter](https:/
 
 Inicialmente utilicé Sprinter, dado que es más simple y requiere menos configuración. Más adelante, cuando instalé el módulo de la pantalla LCD mencionado en el post anterior, tuve que pasarme a Marlin, dado que Sprinter no lo soporta (al menos por el momento).
 
-Este cambio fue muy positivo, dado que no sólo me da la posibilidad de utilizar la pantalla LCD, sino que tiene algunas mejoras respecto a las velocidades de movimiento de los motores, utilizando [easing](http://www.robertpenner.com/easing/easing_demo.html) para moverse, lo cual hace que la impresora haga mucho menos ruido y los movimientos sean sorprendentemente suaves, y no por ello más lentos.
+Este cambio fue muy positivo, dado que no sólo me da la posibilidad de utilizar la pantalla LCD, sino que tiene algunas mejoras respecto a las velocidades de movimiento de los motores, utilizando [easing](https://www.robertpenner.com/easing/easing_demo.html) para moverse, lo cual hace que la impresora haga mucho menos ruido y los movimientos sean sorprendentemente suaves, y no por ello más lentos.
 
 Si estás pensando en armar tu propia impresora, mi recomendación es que uses Marlin directamente. La configuración puede llevar un poco más de tiempo, pero vale la pena.
 
-Volviendo al proceso: lo primero que hay que hacer es comprobar que podemos comunicarnos con el Arduino. Para ello se conecta por USB y se intenta subir un código de ejemplo al microcontrolador utilizado el [IDE de Arduino](http://arduino.cc/en/main/software).
+Volviendo al proceso: lo primero que hay que hacer es comprobar que podemos comunicarnos con el Arduino. Para ello se conecta por USB y se intenta subir un código de ejemplo al microcontrolador utilizado el [IDE de Arduino](https://arduino.cc/en/main/software).
 
-Si tienes la desdicha de utilizar Windows, tendrás que instalar algunos [drivers adicionales](http://arduino.cc/en/Guide/Windows) antes. Y por favor, considera cambiar de sistema operativo.
+Si tienes la desdicha de utilizar Windows, tendrás que instalar algunos [drivers adicionales](https://arduino.cc/en/Guide/Windows) antes. Y por favor, considera cambiar de sistema operativo.
 
-El código que subiremos será muy simple. Lo único que hace es encender y apagar intermitentemente un [LED](http://es.wikipedia.org/wiki/Led) que viene integrado en el pin 13 del Arduino:
+El código que subiremos será muy simple. Lo único que hace es encender y apagar intermitentemente un [LED](https://es.wikipedia.org/wiki/Led) que viene integrado en el pin 13 del Arduino:
 
 ```c++
 /*
@@ -80,11 +80,11 @@ El paso siguiente es conectar todos los controladores de motores en la RAMPS, y 
 
 Este bloque ya se comporta como una impresora 3D, por lo que estando conectado por USB, ya podríamos utilizar algún software de impresión para enviarle órdenes y comprobar que todo funciona correctamente.
 
-Uno muy utilizado es [Pronterface](http://www.pronterface.com/). Éste nos permite enviar comandos simples, o modelos completos a nuestra impresora.
+Uno muy utilizado es [Pronterface](https://www.pronterface.com/). Éste nos permite enviar comandos simples, o modelos completos a nuestra impresora.
 
-Los archivos utilizados por las impresoras 3D son los mismos que para las máquinas CNC; en formato [GCODE](http://en.wikipedia.org/wiki/G-code).
+Los archivos utilizados por las impresoras 3D son los mismos que para las máquinas CNC; en formato [GCODE](https://en.wikipedia.org/wiki/G-code).
 
-Un archivo GCODE es simplemente un conjunto secuencial de órdenes que la impresora va ejecutando en orden. Para ello dispone de una [lista de posibles comandos](http://reprap.org/wiki/G-code) que se envían en cada línea.
+Un archivo GCODE es simplemente un conjunto secuencial de órdenes que la impresora va ejecutando en orden. Para ello dispone de una [lista de posibles comandos](https://reprap.org/wiki/G-code) que se envían en cada línea.
 
 El siguiente es un ejemplo de archivo GCODE que dibuja un círculo desde la posición **X=-0.5, Y=0, Z=0**. Cuando termina, vuelve a la posición **X=0, Y=0, Z=0.25** (la punta del extrusor un poco levantada):
 
@@ -208,17 +208,17 @@ La cama caliente va apoyada sobre 4 resortes que sirven para absorber cualquier 
 
 ![](/images/muelle.jpg)
 
-Una vez instalada conectamos los cables que van a la alimentación. Para esto mucha gente la conecta directamente a la salida que tiene la RAMPS para este fin, pero dada la cantidad de corriente que consume, el [MOSFET](http://es.wikipedia.org/wiki/MOSFET) se calienta muchísimo y corre riesgo de quemarse.
+Una vez instalada conectamos los cables que van a la alimentación. Para esto mucha gente la conecta directamente a la salida que tiene la RAMPS para este fin, pero dada la cantidad de corriente que consume, el [MOSFET](https://es.wikipedia.org/wiki/MOSFET) se calienta muchísimo y corre riesgo de quemarse.
 
-Lo que yo hice fue conectarla directamente a la fuente utilizando un [relay](http://es.wikipedia.org/wiki/Relé), a su vez conectado a la RAMPS. Así no corro riesgos de quemar nada.
+Lo que yo hice fue conectarla directamente a la fuente utilizando un [relay](https://es.wikipedia.org/wiki/Relé), a su vez conectado a la RAMPS. Así no corro riesgos de quemar nada.
 
-Por otra parte, para que podamos saber a qué temperatura está la base usaremos un [termistor](http://es.wikipedia.org/wiki/Termistor) que va pegado a la parte posterior de la cama caliente y encaja en un agujerito que trae para tal fin. Éste se conecta a su correspondiente entrada en la RAMPS. Es importante que el cableado desde la fuente hasta la cama caliente se haga utilizando cables preparados para una buena cantidad de corriente. De lo contrario se derretirá.
+Por otra parte, para que podamos saber a qué temperatura está la base usaremos un [termistor](https://es.wikipedia.org/wiki/Termistor) que va pegado a la parte posterior de la cama caliente y encaja en un agujerito que trae para tal fin. Éste se conecta a su correspondiente entrada en la RAMPS. Es importante que el cableado desde la fuente hasta la cama caliente se haga utilizando cables preparados para una buena cantidad de corriente. De lo contrario se derretirá.
 
-Una mejora importante es la instalación de un LED indicador para saber cuando la cama caliente está recibiendo corriente. La placa base de la cama ya trae los conectores para instalarlo. Lo único que debemos hacer es soldar una [resistencia](http://es.wikipedia.org/wiki/Resistor) de 1K y un LED en los zócalos.
+Una mejora importante es la instalación de un LED indicador para saber cuando la cama caliente está recibiendo corriente. La placa base de la cama ya trae los conectores para instalarlo. Lo único que debemos hacer es soldar una [resistencia](https://es.wikipedia.org/wiki/Resistor) de 1K y un LED en los zócalos.
 
 Una vez instalada y conectada, ya podemos probarla utilizando Pronterface. Podemos asignarle una temperatura y ver si enciende el led, y sobre todo si la base se calienta. La temperatura reportada por Pronterface puede no ser la correcta, dado que todavía no configuramos el _firmware_, pero con saber que funciona nos basta por ahora.
 
-Una buena práctica es colocar un espejo de 20cm X 20cm sobre la cama caliente. Esto nos permite despegar las piezas fácilmente una vez impresas, y además protege el [PCB](http://es.wikipedia.org/wiki/Circuito_impreso).
+Una buena práctica es colocar un espejo de 20cm X 20cm sobre la cama caliente. Esto nos permite despegar las piezas fácilmente una vez impresas, y además protege el [PCB](https://es.wikipedia.org/wiki/Circuito_impreso).
 
 ### Extrusor
 
@@ -262,17 +262,17 @@ float axis_steps_per_unit[] = {80, 80, 2560, 719};
 
 Dentro del array, vemos que hay 4 valores, que representan los pasos por milímetro de los ejes X, Y, Z y el extrusor respectivamente.
 
-Para calibrar el eje X, lo que debemos hacer es medir con un [calibre](http://es.wikipedia.org/wiki/Calibre_(instrumento)) (en lo posible digital) la distancia entre el carro y uno de los soportes del eje de guía.  
+Para calibrar el eje X, lo que debemos hacer es medir con un [calibre](https://es.wikipedia.org/wiki/Calibre_(instrumento)) (en lo posible digital) la distancia entre el carro y uno de los soportes del eje de guía.  
 Una imagen vale más que mil palabras:
 
 ![](/images/eje_x2.jpg)
-_Imagen robada de la <a href="http://www.iearobotics.com/wiki/index.php?title=Guia_de_montaje_de_la_Prusa_2">guía de Obijuan</a>_
+_Imagen robada de la <a href="https://www.iearobotics.com/wiki/index.php?title=Guia_de_montaje_de_la_Prusa_2">guía de Obijuan</a>_
 
 Ahora usando Pronterface damos la orden de desplazar el eje X 100 milímetros. Volvemos a medir y verificamos cuál fue el desplazamiento real del carro.  
 Nos dará un número que probablemente esté cerca de 100mm, pero seguramente tendrá un error. Eso es lo que queremos corregir.
 
 ![](/images/eje_x3.jpg)
-_Imagen robada de la <a href="http://www.iearobotics.com/wiki/index.php?title=Guia_de_montaje_de_la_Prusa_2">guía de Obijuan</a>_
+_Imagen robada de la <a href="https://www.iearobotics.com/wiki/index.php?title=Guia_de_montaje_de_la_Prusa_2">guía de Obijuan</a>_
 
 En la imagen ya vemos un carro calibrado (99,97mm de los 100mm que le pedimos que se desplace es más que aceptable), pero imaginemos un escenario más real, en el que la medida nos dará, por ejemplo, **86mm**.
 
@@ -314,7 +314,7 @@ Otro punto importante es calibrar la altura exacta a la que el hot-end debe dete
 
 Para ello debemos desplazar verticalmente la pieza que sostiene el sensor de fin de carrera del eje Y, para lograr que la punta del hot-end se detenga a la altura exacta al hacer un _homing_.
 
-En mi caso, agregué [una mejora](http://www.iearobotics.com/wiki/index.php?title=Evolucionando_la_Prusa_2#Regulador_de_altura_para_el_eje_z) que me permite regular la altura del eje Z usando un tornillo en vez de tener que desplazar la pieza completa.
+En mi caso, agregué [una mejora](https://www.iearobotics.com/wiki/index.php?title=Evolucionando_la_Prusa_2#Regulador_de_altura_para_el_eje_z) que me permite regular la altura del eje Z usando un tornillo en vez de tener que desplazar la pieza completa.
 
 La altura ideal es la utilizada para la primera capa. Normalmente alrededor de 0,2mm.
 
@@ -339,9 +339,9 @@ Normalmente los fabricantes brindan esta información. De todas maneras el códi
 
 **PID**
 
-Para mantener una temperatura constante tanto en el hot-end como en la cama caliente, se utiliza control del tipo _[Proporcional Integral Derivativo](http://es.wikipedia.org/wiki/Proporcional_integral_derivativo)_ (PID), por lo que debemos establecer los parámetros correctos para que el comportamiento sea el que buscamos. &nbsp;Por suerte el firmware nos da la opción de descubrirlos por su cuenta de manera empírica, ahorrándonos muchísimo trabajo.
+Para mantener una temperatura constante tanto en el hot-end como en la cama caliente, se utiliza control del tipo _[Proporcional Integral Derivativo](https://es.wikipedia.org/wiki/Proporcional_integral_derivativo)_ (PID), por lo que debemos establecer los parámetros correctos para que el comportamiento sea el que buscamos. &nbsp;Por suerte el firmware nos da la opción de descubrirlos por su cuenta de manera empírica, ahorrándonos muchísimo trabajo.
 
-Para conseguir los parámetros debemos seguir [una serie de pasos](http://reprap.org/wiki/PID_Tuning) en los que la impresora nos devolverá unos parámetros que debemos reemplazar en _Configuration.h_ con los obtenidos.
+Para conseguir los parámetros debemos seguir [una serie de pasos](https://reprap.org/wiki/PID_Tuning) en los que la impresora nos devolverá unos parámetros que debemos reemplazar en _Configuration.h_ con los obtenidos.
 
 Para el extrusor:
 
@@ -379,19 +379,19 @@ Yo lo he puesto en **210º** dado que es la temperatura en la que el plástico y
 
 Hay muchos parámetros muy útiles y muy bien documentados. [Te invito a que veas el código](https://github.com/MarlinFirmware/Marlin/blob/Development/Marlin/Configuration.h) y decidas por tu cuenta qué cambiarías y qué no.
 
-En mi caso tuve que hacer algunos cambios extra para habilitar el funcionamiento del [panel LCD](http://reprap.org/wiki/RAMPS_LCD).
+En mi caso tuve que hacer algunos cambios extra para habilitar el funcionamiento del [panel LCD](https://reprap.org/wiki/RAMPS_LCD).
 
 ## Primera impresión
 
 Con todo esto armado y configurado, ya podemos empezar a imprimir. ¡Al fin!
 
-Lo primero que imprimí fue una [ficha de casino](http://www.thingiverse.com/thing:4688). Su forma permite saber si hemos calibrado bien los pasos de los motores, y a la vez vemos si el resto de parámetros son correctos. Sobre todo, sabremos si nuestro Frankestein funciona para lo que fue concebido.
+Lo primero que imprimí fue una [ficha de casino](https://www.thingiverse.com/thing:4688). Su forma permite saber si hemos calibrado bien los pasos de los motores, y a la vez vemos si el resto de parámetros son correctos. Sobre todo, sabremos si nuestro Frankestein funciona para lo que fue concebido.
 
 {% include embed/youtube.html id='x77h3cfLWX8' %}
 
 Por suerte todo salió como esperaba, aunque es verdad que el mantenimiento es un proceso constante durante la vida de la impresora. Es común hacer cambios frecuentemente dado que el simple hecho de cambiar de color o marca de filamento, o la época del año en que estamos (frío o calor) pueden hacer que la impresora se comporte de manera diferente y debamos ajustar algo.
 
-![](/images/impresora.jpg)
+![](/images/impresora-1.jpg)
 
 ¡Funciona!
 
@@ -403,7 +403,7 @@ Todas las fotos y videos del proceso de construcción están en un [álbum de Fl
 
 Nadie dijo que sería fácil, pero sin duda es divertido y se aprende mucho en el camino.
 
-Si estás pensando en armar tu propia impresora 3D, te recomiendo que sigas los tutoriales de Obijuan mencionados en el [primer post](http://matto.io/armando-una-impresora-3d-parte-1/). Lo mío es mas un registro de mi propia experiencia que una guía y estoy seguro de que me he saltado muchos pasos importantes a lo largo de esta entrada.
+Si estás pensando en armar tu propia impresora 3D, te recomiendo que sigas los tutoriales de Obijuan mencionados en el [primer post](https://matto.io/armando-una-impresora-3d-parte-1/). Lo mío es mas un registro de mi propia experiencia que una guía y estoy seguro de que me he saltado muchos pasos importantes a lo largo de esta entrada.
 
 En el próximo post veremos cómo es el proceso de impresión, empezando por la pieza modelada en 3D y terminando con una pieza ya impresa en el mundo real. Veremos también recursos de software y un repositorio de piezas en 3D para imprimir.
 

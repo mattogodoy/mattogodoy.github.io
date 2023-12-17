@@ -28,7 +28,7 @@ Al mover la cabeza como si estuviera mirando, el personaje del juego mira en la 
 
 # Construcción
 
-Hay muchas variantes de head trackers, pero hay una que me llamó la atención por ser completamente open hardware y open software: **[EdTracker](http://www.edtracker.org.uk/)**.
+Hay muchas variantes de head trackers, pero hay una que me llamó la atención por ser completamente open hardware y open software: **[EdTracker](https://www.edtracker.org.uk/)**.
 
 ### Componentes
 
@@ -38,7 +38,7 @@ La lista de componentes es bastante simple:
 
 ![](/images/arduino2.jpg)
 
-- IMU (Unidad de Medición Inercial): Aquí tenemos dos posibilidades. Hay dos tipos de sensores que son compatibles; el **[MPU-6050](http://playground.arduino.cc/Main/MPU-6050)** que trae acelerómetro y giróscopo, o el **[MPU-9250](https://www.sparkfun.com/products/13762)** que es un poco más caro pero trae también un magnetómetro (brújula digital) que permite evitar un efecto no deseado llamado **drifting** (ya hablaré de esto más adelante). &nbsp;
+- IMU (Unidad de Medición Inercial): Aquí tenemos dos posibilidades. Hay dos tipos de sensores que son compatibles; el **[MPU-6050](https://playground.arduino.cc/Main/MPU-6050)** que trae acelerómetro y giróscopo, o el **[MPU-9250](https://www.sparkfun.com/products/13762)** que es un poco más caro pero trae también un magnetómetro (brújula digital) que permite evitar un efecto no deseado llamado **drifting** (ya hablaré de esto más adelante). &nbsp;
 
 ![](/images/accelerometer.jpg)
 
@@ -46,7 +46,7 @@ La lista de componentes es bastante simple:
 
 ![](/images/button.jpg)
 
-- Un circuito impreso sobre el que montar todos los componentes. Aquí de nuevo contamos con 2 opciones; la primera es comprar la [placa con su correspondiente circuito](http://www.edtracker.co.uk/shop/my-basket/edtracker-diy-pcb) a los chicos de EdTracker. La segunda es hacer el circuito nosotros mismos usando una [placa de prototipado](https://www.sparkfun.com/products/12702) y hacer las conexiones entre componentes. Yo opté por la segunda, porque aunque queda más desprolijo, es algo que me gusta hacer. 
+- Un circuito impreso sobre el que montar todos los componentes. Aquí de nuevo contamos con 2 opciones; la primera es comprar la [placa con su correspondiente circuito](https://www.edtracker.co.uk/shop/my-basket/edtracker-diy-pcb) a los chicos de EdTracker. La segunda es hacer el circuito nosotros mismos usando una [placa de prototipado](https://www.sparkfun.com/products/12702) y hacer las conexiones entre componentes. Yo opté por la segunda, porque aunque queda más desprolijo, es algo que me gusta hacer. 
 
 ![](/images/protoboard.jpg)
 
@@ -88,7 +88,7 @@ Tenemos 2 formas de hacerlo: Por medio del IDE de Arduino con [estas librerías]
 
 La segunda opción es la que yo recomiendo si valoras tu tiempo y tus cabales.
 
-Para ello tendremos que descargar el GUI desde la página de descargas de EdTracker: [http://www.edtracker.org.uk/index.php/downloads](http://www.edtracker.org.uk/index.php/downloads)
+Para ello tendremos que descargar el GUI desde la página de descargas de EdTracker: [https://www.edtracker.org.uk/index.php/downloads](https://www.edtracker.org.uk/index.php/downloads)
 
 Este mismo GUI es el que usaremos para la calibración más adelante, y es necesario para hacer creer a los juegos que el Arduino es un joystick y de esa manera controlar la vista del jugador.
 

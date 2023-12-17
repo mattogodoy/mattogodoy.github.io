@@ -21,7 +21,7 @@ La idea era imprimir la estructura de un brazo robótico de 3 ejes que se pueda 
 
 ## Diseño
 
-El diseño original del brazo es [éste](http://www.thingiverse.com/thing:34829/#files), pero hice algunas modificaciones con la ayuda de [Tinkercad](https://www.tinkercad.com/):
+El diseño original del brazo es [éste](https://www.thingiverse.com/thing:34829/#files), pero hice algunas modificaciones con la ayuda de [Tinkercad](https://www.tinkercad.com/):
 
 - Base del brazo simplificada
 - Tramos de los brazos más largos

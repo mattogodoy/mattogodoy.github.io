@@ -11,25 +11,25 @@ tags:
 - servidores
 ---
 
-Ya hemos hablado en [posts anteriores](http://matto.io/descarga-automagica-de-series-con-raspberry-pi/) sobre los diversos usos que podemos dar a la todopoderosa [Raspberry Pi](http://www.raspberrypi.org/).
+Ya hemos hablado en [posts anteriores](https://matto.io/descarga-automagica-de-series-con-raspberry-pi/) sobre los diversos usos que podemos dar a la todopoderosa [Raspberry Pi](https://www.raspberrypi.org/).
 
 Hoy veremos cómo transformarla en un servidor de impresión 3D gracias al excelente proyecto creado por una chica alemana llamada [Gina Häußge](https://twitter.com/foosel).
 
 # Octoprint
 
-El proyecto en cuestión se llama [Octoprint](http://octoprint.org/), y es un servidor programado en [Python](https://www.python.org/) con una interfaz web que nos permite controlar nuestra [impresora 3D](http://matto.io/armando-una-impresora-3d-parte-1/) a través de una red privada o, por qué no, desde [Internet](http://media.giphy.com/media/iYDlg0CljYqTm/giphy.gif).
+El proyecto en cuestión se llama [Octoprint](https://octoprint.org/), y es un servidor programado en [Python](https://www.python.org/) con una interfaz web que nos permite controlar nuestra [impresora 3D](https://matto.io/armando-una-impresora-3d-parte-1/) a través de una red privada o, por qué no, desde [Internet](https://media.giphy.com/media/iYDlg0CljYqTm/giphy.gif).
 
 ![](/images/octoprint.png)
 
 Esto nos da la libertad de no tener que dejar un ordenador conectado a la impresora. Podemos comenzar una impresión desde la oficina, o ver como avanza el proceso desde nuestro smartphone en tiempo real desde cualquier parte del mundo.
 
-Otra ventaja interesante es que Octoprint tiene soporte para conectar una cámara web con la cual podremos hacer un [time-lapse](http://es.wikipedia.org/wiki/Time-lapse) o transmitir un video en [tiempo real](http://en.wikipedia.org/wiki/Streaming_media) mostrando el proceso de impresión.
+Otra ventaja interesante es que Octoprint tiene soporte para conectar una cámara web con la cual podremos hacer un [time-lapse](https://es.wikipedia.org/wiki/Time-lapse) o transmitir un video en [tiempo real](https://en.wikipedia.org/wiki/Streaming_media) mostrando el proceso de impresión.
 
 # Raspberry Pi
 
 La Raspberry es perfecta para hacer este tipo de proyectos debido a su pequeño tamaño y bajo consumo eléctrico en contraste con su más que aceptable potencia.
 
-Una buena noticia es que gracias a un proyecto Open Source llamado [OctoPi](https://github.com/guysoft/OctoPi), tenemos disponible una [distro](http://es.wikipedia.org/wiki/Distribución_Linux) de Linux específica para Raspberry que viene con todo lo necesario ya pre-instalado y pre-configurado. Esto nos simplifica mucho las cosas para los pasos que siguen.
+Una buena noticia es que gracias a un proyecto Open Source llamado [OctoPi](https://github.com/guysoft/OctoPi), tenemos disponible una [distro](https://es.wikipedia.org/wiki/Distribución_Linux) de Linux específica para Raspberry que viene con todo lo necesario ya pre-instalado y pre-configurado. Esto nos simplifica mucho las cosas para los pasos que siguen.
 
 # Configuración
 
@@ -44,11 +44,11 @@ Una gran ventaja es que podemos tener varias tarjetas SD con distintos proyectos
 El proceso de instalación de la imagen en la SD dependerá del sistema operativo que estes utilizando.  
 En el sitio web de Raspberry tienen tutoriales que explican cómo hacerlo para los más habituales:
 
-- [Mac OS](http://www.raspberrypi.org/documentation/installation/installing-images/mac.md)
-- [Linux](http://www.raspberrypi.org/documentation/installation/installing-images/linux.md)
-- [Windows](http://www.raspberrypi.org/documentation/installation/installing-images/windows.md)
+- [Mac OS](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md)
+- [Linux](https://www.raspberrypi.org/documentation/installation/installing-images/linux.md)
+- [Windows](https://www.raspberrypi.org/documentation/installation/installing-images/windows.md)
 
-Una vez instalado OctoPi en la SD, debemos conectar todos los periféricos necesarios a la Raspberry usando el hub USB alimentado, tal como vimos en el post «[Descarga automágica de series con Raspberry Pi](http://matto.io/descarga-automagica-de-series-con-raspberry-pi/)». En mi caso conecté el adaptador WiFi para la conexión a Internet, una webcam para ver el proceso de impresión y obviamente la propia impresora 3D. También un teclado, un mouse y un monitor para la configuración. Estos tres últimos podemos quitarlos una vez tengamos todo funcionando.
+Una vez instalado OctoPi en la SD, debemos conectar todos los periféricos necesarios a la Raspberry usando el hub USB alimentado, tal como vimos en el post «[Descarga automágica de series con Raspberry Pi](https://matto.io/descarga-automagica-de-series-con-raspberry-pi/)». En mi caso conecté el adaptador WiFi para la conexión a Internet, una webcam para ver el proceso de impresión y obviamente la propia impresora 3D. También un teclado, un mouse y un monitor para la configuración. Estos tres últimos podemos quitarlos una vez tengamos todo funcionando.
 
 Instalamos la tarjeta SD en la Raspberry y la encendemos. Durante el primer arranque, se nos abrirá una pantalla en la que debemos configurar un par de cosas:
 
@@ -84,13 +84,13 @@ Ya podemos desconectar el monitor, el teclado y el mouse. Ya no los necesitaremo
 
 Teniendo todo configurado, ya podemos acceder a la Raspberry desde cualquier dispositivo conectado a la red.
 
-Otra de las ventajas de OctoPi es que nos crea un dominio del tipo «[.local](http://www.howtogeek.com/167190/how-and-why-to-assign-the-.local-domain-to-your-raspberry-pi/)», con lo cual podemos acceder a OctoPrint fácilmente escribiendo en el navegador:
+Otra de las ventajas de OctoPi es que nos crea un dominio del tipo «[.local](https://www.howtogeek.com/167190/how-and-why-to-assign-the-.local-domain-to-your-raspberry-pi/)», con lo cual podemos acceder a OctoPrint fácilmente escribiendo en el navegador:
 
-> [http://octopi.local](http://octopi.local)
+> [https://octopi.local](https://octopi.local)
 
 Para el caso en que hayamos conectado una webcam, podemos ver el streaming en vivo desde:
 
-> [http://octopi.local/webcam/?action=stream](http://octopi.local/webcam/?action=stream)
+> [https://octopi.local/webcam/?action=stream](https://octopi.local/webcam/?action=stream)
 
 La primera vez que accedamos a la pantalla principal de OctoPrint, nos pedirá que creemos un usario y una contraseña. Es importante destacar que este usuario no guarda ninguna relación con el que establecimos durante la configuración de la Raspberry. En este caso es un usuario que servirá únicamente para conectarnos a OctoPrint:
 
@@ -140,7 +140,7 @@ En la pestaña «Terminal» tenemos, como su nombre lo indica, una terminal para
 
 ![](/images/serial.png)
 
-También tiene la ventaja de que nos muestra el [log](http://en.wikipedia.org/wiki/Server_log) que devuelve la impresora en cada momento.
+También tiene la ventaja de que nos muestra el [log](https://en.wikipedia.org/wiki/Server_log) que devuelve la impresora en cada momento.
 
 ## Timelapse
 
@@ -160,6 +160,6 @@ Mi experiencia con OctoPrint fue más que positiva. En un momento dado tuve algu
 
 Actualmente mi Raspberry está cumpliedo otras funciones, pero no descarto volver a usarla para esto. Este es otro de los casos donde creo que merece la pena comprar una Raspberry y dedicarla únicamente a esta tarea.
 
-Estoy pensando en un proyecto en el que pueda conectar un [relay](http://es.wikipedia.org/wiki/Relé) a una de las entradas GPIO de la misma Raspberry, que me permita encender y apagar la impresora remotamente. De esta manera puedo dejarla imprimiendo mientras estoy en mi trabajo y no hace falta que quede encendida hasta que vuelva a casa a apagarla. Si lo hago, claramente haré un post al respecto.
+Estoy pensando en un proyecto en el que pueda conectar un [relay](https://es.wikipedia.org/wiki/Relé) a una de las entradas GPIO de la misma Raspberry, que me permita encender y apagar la impresora remotamente. De esta manera puedo dejarla imprimiendo mientras estoy en mi trabajo y no hace falta que quede encendida hasta que vuelva a casa a apagarla. Si lo hago, claramente haré un post al respecto.
 
 ¡Hasta la próxima!

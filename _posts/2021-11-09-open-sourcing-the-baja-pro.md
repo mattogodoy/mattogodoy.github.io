@@ -78,7 +78,7 @@ Since then, I’ve never stopped enjoying the sensations and freedom that only a
 
 It was the year 2015 when I bought my first off-road motorcycle. Until then I have only had road bikes exclusively, and I didn’t know what I was missing.
 
-It was during that same year when I started looking for companion to go on off-road adventures, something that was completely new to me. During that search, I found [Motoclub Trail Madrid](http://trailmadrid.es/), a forum where you get to know people interested in these topics. Some of them are great friends of mine up to this day.
+It was during that same year when I started looking for companion to go on off-road adventures, something that was completely new to me. During that search, I found [Motoclub Trail Madrid](https://trailmadrid.es/), a forum where you get to know people interested in these topics. Some of them are great friends of mine up to this day.
 
 It was thanks to these friends that I got hooked up to participating in roadbook navigation rallies. One of the first things that caught my attention was the price of the necessary equipment to participate in these kind of events. It was too expensive, especially for a beginner pilot like myself.
 

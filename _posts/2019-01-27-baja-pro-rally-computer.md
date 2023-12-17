@@ -207,7 +207,7 @@ Hoy finalmente he terminado con el desarrollo de una página web en la que se pu
 
 Puedes ver la nueva página en:
 
-**[https://baja.matto.io](http://baja.matto.io)**
+**[https://baja.matto.io](https://baja.matto.io)**
 
 ## Avances
 

@@ -20,7 +20,7 @@ Actualmente (y desde hace ya varios años) soy desarrollador front-end de aplica
 
 # Comienzos
 
-Hace ya algunos meses, junto a [Alberto Fernandez](https://twitter.com/AlbertoFdzM) decidimos crear un pequeño estudio independiente de desarrollo de videojuegos. Así nació [ZombieUnicorn](http://zombieunicorn.studio/)
+Hace ya algunos meses, junto a [Alberto Fernandez](https://twitter.com/AlbertoFdzM) decidimos crear un pequeño estudio independiente de desarrollo de videojuegos. Así nació [ZombieUnicorn](https://zombieunicorn.studio/)
 
 ![](/images/logo.png)
 _Logo de ZombieUnicorn_
@@ -97,12 +97,12 @@ JetFight tiene por ahora sólo un nivel. En él hay varias amenazas para los jug
 ![](/images/map.jpg)
 _Boceto de idea inicial del nivel_
 
-Hice el diseño del nivel con una herramienta gratuita llamada [Tiled](http://www.mapeditor.org/), que facilita muchísimo las cosas. Unity está en el proceso de agregar este tipo de herramientas a su interfaz, pero todavía está en desarrollo.
+Hice el diseño del nivel con una herramienta gratuita llamada [Tiled](https://www.mapeditor.org/), que facilita muchísimo las cosas. Unity está en el proceso de agregar este tipo de herramientas a su interfaz, pero todavía está en desarrollo.
 
 ![](/images/tiled.png)
 _Diseño del nivel en Tiled_
 
-Una vez terminado el diseño del nivel, se exporta a Unity usando otra gran herramienta gratuita llamada [Tiled2Unity](http://www.seanba.com/tiled2unity).
+Una vez terminado el diseño del nivel, se exporta a Unity usando otra gran herramienta gratuita llamada [Tiled2Unity](https://www.seanba.com/tiled2unity).
 
 ![](/images/tiled2.png)
 _Exportando el nivel a Unity_
@@ -123,7 +123,7 @@ Para hacer un jugador de otro color, pero con exactamente las mismas caracterís
 Investigando un poco más, me crucé con lo que en el mundo de Unity se llaman "[Shaders](https://docs.unity3d.com/Manual/ShadersOverview.html)". Son scripts &nbsp;que contienen operaciones matemáticas y algoritmos para calcular el color de cada uno de los píxeles renderizados, basándose en la iluminación que reciben y el material que tengan aplicado. Un poco técnico, pero ésa es la explicación oficial.  
 En pagano, lo que significa es que cuando aplicamos un shader a un sprite, éste modifica la forma en que se verá. Esto brinda infinitas posibilidades, pero yo sólo necesitaba dar con una solución. Mi idea era simple: reemplazar un color por otro.
 
-Buscando un poco me encontré con una web donde explican cómo hacerlo: [http://gamedevelopment.tutsplus.com/tutorials/how-to-use-a-shader-to-dynamically-swap-a-sprites-colors--cms-25129](http://gamedevelopment.tutsplus.com/tutorials/how-to-use-a-shader-to-dynamically-swap-a-sprites-colors--cms-25129)
+Buscando un poco me encontré con una web donde explican cómo hacerlo: [https://gamedevelopment.tutsplus.com/tutorials/how-to-use-a-shader-to-dynamically-swap-a-sprites-colors--cms-25129](https://gamedevelopment.tutsplus.com/tutorials/how-to-use-a-shader-to-dynamically-swap-a-sprites-colors--cms-25129)
 
 Básicamente lo que hace es, basándose en la paleta de colores RGB de un sprite, busca cualquier color que tenga el número especificado de Rojo (entre 0 y 256) y lo reemplaza por el color especificado. En mi caso es algo así:
 
@@ -237,7 +237,7 @@ El resultado final es un juego bastante entretenido y con todas las funcionalida
 ![](/images/jetfight6.jpg)
 ### Publicación y distribución
 
-Hay varias plataformas para la distribución de juegos independientes, siendo [Steam](http://store.steampowered.com/) por mucho la mas importante. La desventaja que tiene es que como desarrollador te obligan a pasar por un proceso de registro en el cual es obligatorio hacer un pago inicial de U$D 100 y ademas tener a tu nombre una empresa con la cual facturar la venta de cada una de las copias de tu juego. No sólo eso, si no que deberás pagar al estado los impuestos correspondientes por cada venta, más los gastos fijos que suponen tener una empresa, más la comisión que te cobra Steam, que al momento de escribir este artículo es de un nada despreciable 15% del valor de cada venta. Finalmente, PayPal se queda con U$D0.30 + 2.9% del valor de cada venta.  
+Hay varias plataformas para la distribución de juegos independientes, siendo [Steam](https://store.steampowered.com/) por mucho la mas importante. La desventaja que tiene es que como desarrollador te obligan a pasar por un proceso de registro en el cual es obligatorio hacer un pago inicial de U$D 100 y ademas tener a tu nombre una empresa con la cual facturar la venta de cada una de las copias de tu juego. No sólo eso, si no que deberás pagar al estado los impuestos correspondientes por cada venta, más los gastos fijos que suponen tener una empresa, más la comisión que te cobra Steam, que al momento de escribir este artículo es de un nada despreciable 15% del valor de cada venta. Finalmente, PayPal se queda con U$D0.30 + 2.9% del valor de cada venta.  
 No hace falta ser un astrofísico de la NASA para darse cuenta de que a menos que te dediques a ello y tengas un estudio serio, no conviene publicar tu juego en su plataforma bajo ningún concepto.  
 Pero no termina ahí... Para que tu juego sea publicado, tiene que pasar por un proceso de aprobación de los usuarios llamado [GreenLight](https://steamcommunity.com/greenlight/), que por medio de votaciones deciden si tu juego es apto o no...  
 Hay [muchos artículos](https://hipertextual.com/2015/08/steam-greenlight) que hablan de este doloroso proceso y de cómo afrontarlo.
@@ -257,15 +257,15 @@ _Tablero de analíticas de itch.io_
 
 Considero que una parte importante de los juegos son los sonidos que se utilizan.
 
-Inicialmente pensé en usar sonidos de 8 bits que recuerden a juegos antiguos. Para generarlos usé una herramienta online llamada [Chiptone](http://sfbgames.com/chiptone/):
+Inicialmente pensé en usar sonidos de 8 bits que recuerden a juegos antiguos. Para generarlos usé una herramienta online llamada [Chiptone](https://sfbgames.com/chiptone/):
 
 ![](/images/chiptone.png)
 
 Pero luego de hacer unas pruebas me pareció que estos sonidos no transmitían lo que yo estaba buscando para este juego en particular.
 
-Finalmente lo que hice fue buscar sonidos en [freesound.org](http://www.freesound.org/), que tienen la gran ventaja de ser gratuitos y libres de derechos, lo cual te da total libertad para usarlos en cualquier proyecto.
+Finalmente lo que hice fue buscar sonidos en [freesound.org](https://www.freesound.org/), que tienen la gran ventaja de ser gratuitos y libres de derechos, lo cual te da total libertad para usarlos en cualquier proyecto.
 
-Hice modificaciones sobre algunos sonidos usando [Audacity](http://www.audacityteam.org/) para hacer que sean más cortos, largos, que hagan fade-out o loop dependiendo del caso.
+Hice modificaciones sobre algunos sonidos usando [Audacity](https://www.audacityteam.org/) para hacer que sean más cortos, largos, que hagan fade-out o loop dependiendo del caso.
 
 ![](/images/audacity.png)
 _Edición de sonidos en Audacity_

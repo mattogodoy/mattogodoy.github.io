@@ -14,13 +14,13 @@ Por allá por Agosto de 2009 se me dio por aprender a programar microcontrolador
 
 Si hay algo más divertido que programar, es hacer que tu código haga cosas en el mundo real, y no sólo en el virtual.
 
-Como Arduino nació recién en 2005 y no se hizo conocido hasta bastante más tarde, mi interés se desvió hacia el mítico **[PIC16F84](http://www.microchip.com/wwwproducts/Devices.aspx?product=PIC16F84)**, un microcontrolador muy básico con una arquitectura de [8 bits](http://histinf.blogs.upv.es/2011/01/12/computadores-de-8-bits/) y 18 pines:
+Como Arduino nació recién en 2005 y no se hizo conocido hasta bastante más tarde, mi interés se desvió hacia el mítico **[PIC16F84](https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC16F84)**, un microcontrolador muy básico con una arquitectura de [8 bits](https://histinf.blogs.upv.es/2011/01/12/computadores-de-8-bits/) y 18 pines:
 
 ![](/images/PIC16F84.png)
 
 Se programa en lenguaje máquina (assembler), por tanto, escribir un programa por simple que sea es un suplicio (aunque también existen compiladores que interpretan **C** o **Basic** ).
 
-Para aprender me compré uno de los libros más famosos sobre el tema: «[MICROCONTROLADOR PIC16F84. Desarrollo de proyectos](http://www.pic16f84a.org/)» (muy recomendable).
+Para aprender me compré uno de los libros más famosos sobre el tema: «[MICROCONTROLADOR PIC16F84. Desarrollo de proyectos](https://www.pic16f84a.org/)» (muy recomendable).
 
 El proyecto más interesante que hice se basó en el concepto de «Persistence of vision» o persistencia de la visión: un fenómeno visual por el cual una imagen permanece en la retina humana una décima de segundo antes de desaparecer por completo.
 

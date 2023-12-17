@@ -10,12 +10,12 @@ tags:
 - robotica
 ---
 
-Desde hace ya tiempo estoy interesado en el creciente desarrollo de los «drones». Tanto, que hace poco he finalizado un [_Máster en Vehículos Aéreos No Tripulados_](http://ixtitute.com/%22).
+Desde hace ya tiempo estoy interesado en el creciente desarrollo de los «drones». Tanto, que hace poco he finalizado un [_Máster en Vehículos Aéreos No Tripulados_](https://ixtitute.com/).
 
 Lo que me motivó a hacer el máster fue un proyecto personal que veremos hoy: El armado de un drone multirotor. Aquí quiero hacer una aclaración: Un «drone» **no es lo mismo** que un juguete a radiocontrol. Un drone es un robot, al que asignamos una misión y debe cumplirla de manera **autónoma**. El tomará las medidas correctoras necesarias para mantenerse estable y en el rumbo indicado. Cumplirá con la misión por sí mismo sin ayuda de un ser humano.  
 Lo aclaro porque hoy en día la gente llama _drone_ a cualquier cosa que vuela.
 
-Para lograrlo se basa en una unidad central de procesamiento llamada **autopiloto** , que valiéndose de varios sensores como [giróscopos](http://es.wikipedia.org/wiki/Gir%C3%B3scopo%22), [acelerómetros](http://5hertz.com/tutoriales/?p=228%22), [magentómetros](http://es.wikipedia.org/wiki/Magnet%C3%B3metro%22), [barómetros](http://es.wikipedia.org/wiki/Bar%C3%B3metro%22), [GPS](http://gutovnik.com/como_func_sist_gps.htm%22), [tubos de Pitot](https://abcienciade.wordpress.com/2009/06/19/tubo-de-pitot-en-los-aviones/%22) y [sensores de ultrasonido](http://www.superrobotica.com/S320110.htm%22) entre otros, tiene la capacidad de evaluar su posición y estado y actuar en consecuencia, formando un lazo cerrado:
+Para lograrlo se basa en una unidad central de procesamiento llamada **autopiloto** , que valiéndose de varios sensores como [giróscopos](https://es.wikipedia.org/wiki/Gir%C3%B3scopo), [acelerómetros](https://5hertz.com/tutoriales/?p=228), [magentómetros](https://es.wikipedia.org/wiki/Magnet%C3%B3metro), [barómetros](https://es.wikipedia.org/wiki/Bar%C3%B3metro), [GPS](https://gutovnik.com/como_func_sist_gps.htm), [tubos de Pitot](https://abcienciade.wordpress.com/2009/06/19/tubo-de-pitot-en-los-aviones/) y [sensores de ultrasonido](https://www.superrobotica.com/S320110.htm) entre otros, tiene la capacidad de evaluar su posición y estado y actuar en consecuencia, formando un lazo cerrado:
 
 ![](/images/lazo_cerrado.jpg)
 
@@ -46,7 +46,7 @@ Lo que yo haré es dar el listado de piezas que he utilizado para el mío:
 - **Radio Control:** Turnigy 9X (Mode 2)
 - **Kit FPV:** FatShark Teleporter V3 RTF 5.8G
 
-Compré la mayoría de estos componentes en [HobbyKing](http://www.hobbyking.com/), algunos en [Dealextreme](http://www.dx.com/) y solo unos pocos en una tienda de hobbies de Madrid.  
+Compré la mayoría de estos componentes en [HobbyKing](https://www.hobbyking.com/), algunos en [Dealextreme](https://www.dx.com/) y solo unos pocos en una tienda de hobbies de Madrid.  
 Inicialmente había puesto los enlaces a cada uno de los componentes, pero mientras escribía este post, varios de ellos dejaron de funcionar, por lo que dejo únicamente sus nombres.
 
 > **NOTA:** Han pasado casi 2 años desde que hice este proyecto. Ten en cuenta que estas tecnologías avanzan excesivamente rápido, y es posible que varios de los componentes ya estén casi obsoletos, o que tengan mejores alternativas disponibles al día de la fecha.
@@ -59,7 +59,7 @@ Veremos detalles de algunos componentes que he utilizado. Con el tiempo he ido c
 
 Llamamos «frame» a la estructura básica o chasis donde van montados todos los equipos.
 
-El frame que yo utilizo es una copia del [TBS Discovery](http://team-blacksheep.com/products/product:98) y se llama **HJ X-Mode MWC Alien**
+El frame que yo utilizo es una copia del [TBS Discovery](https://team-blacksheep.com/products/product:98) y se llama **HJ X-Mode MWC Alien**
 
 ![](/images/frame.jpg)
 
@@ -71,13 +71,13 @@ Armado se ve así:
 
 ![](/images/frame2.jpg)
 
-La ventaja de este frame es que tiene bastante espacio para equipos como una cámara GoPro y un transmisor de video para [FPV](http://desdeelairerc.es/es/content/12-que-es-fpv).
+La ventaja de este frame es que tiene bastante espacio para equipos como una cámara GoPro y un transmisor de video para [FPV](https://desdeelairerc.es/es/content/12-que-es-fpv).
 
 ### Brazos
 
 Los brazos son los encargados de sujetar los motores al frame, y son los primeros en recibir el golpe en caso de un accidente, por lo que tienen que ser muy resistentes.
 
-Quise experimentar utilizando unos que [imprimí en 3D](http://matto.io/armando-una-impresora-3d-parte-1/%22):
+Quise experimentar utilizando unos que [imprimí en 3D](https://matto.io/armando-una-impresora-3d-parte-1/%22):
 
 ![](/images/brazo.jpg)
 
@@ -104,7 +104,7 @@ Algunas controladoras de vuelo traen funciones extra basándose en sensores espe
 
 ###### Multiwii Pro
 
-Inicialmente utilicé una «Multiwii Pro», que es una copia del famoso [Ardupilot Mega](http://copter.ardupilot.com/wiki/common-autopilots/common-apm25-and-26-overview/). Al ser una copia, cuesta bastante más barato e inclusive trae el módulo GPS incluído en el kit:
+Inicialmente utilicé una «Multiwii Pro», que es una copia del famoso [Ardupilot Mega](https://copter.ardupilot.com/wiki/common-autopilots/common-apm25-and-26-overview/). Al ser una copia, cuesta bastante más barato e inclusive trae el módulo GPS incluído en el kit:
 
 ![](/images/multiwii.jpg)
 
@@ -114,7 +114,7 @@ La verdad es que la calidad de las copias es siempre inferior a los productos or
 _Módulo receptor de señal GPS_
 
 La ventaja de esta controladora es que está basada en Arduino (ya todos saben que soy fan) y nos permite instalarle el firmware que más se ajuste a nuestras necesidades.  
-Para este caso, los más fuertes son dos: [Multiwii](https://code.google.com/archive/p/multiwii/) y [MegaPirate NG](http://www.megapirateng.com/). Ambos de código abierto.
+Para este caso, los más fuertes son dos: [Multiwii](https://code.google.com/archive/p/multiwii/) y [MegaPirate NG](https://www.megapirateng.com/). Ambos de código abierto.
 
 Yo me decanté por la segunda porque la cantidad de opciones que aporta MegaPirate NG es bastante superior a Multiwii.
 
@@ -196,7 +196,7 @@ Para el caso de los quadcopter, hay que configurar los parámetros _Kp_, _Ki_ y 
 
 La elección de los motores siempre es difícil. Hay que encontrar un balance entre precio y calidad. Además, hay que tener en cuenta el tipo de multicóptero en el que se van a utilizar.
 
-Para ello, hay que entender cómo se calcula la potencia de los motores brushless (sin escobillas). Esto se mide en **kV** (kilo Voltios), que son las revoluciones por minuto a las que gira el motor por cada Voltio que recibe. Una explicación un poco más extendida [aquí](http://rc.lapipadelindio.com/general/significado-kilo-volt-motor-brushless).
+Para ello, hay que entender cómo se calcula la potencia de los motores brushless (sin escobillas). Esto se mide en **kV** (kilo Voltios), que son las revoluciones por minuto a las que gira el motor por cada Voltio que recibe. Una explicación un poco más extendida [aquí](https://rc.lapipadelindio.com/general/significado-kilo-volt-motor-brushless).
 
 Por otro lado, se clasifican también en **Inrunner** (la carcaza con los imanes queda fija y lo que gira es el eje junto con las bobinas) y **Outrunner** (lo que gira es la carcaza con los imanes y las bobinas quedan fijas). Estos últimos son los más comunes en multirotores.
 
@@ -223,7 +223,7 @@ Son un poco más caras, pero duran mucho más.
 
 Un punto importante a destacar sobre las hélices es que aunque se supone que vienen balanceadas de fábrica, siempre tienen alguna imperfección, por lo que debemos balancearlas para evitar vibraciones en nuestro quad.
 
-El [proceso de equilibrado](http://rc.lapipadelindio.com/aeromodelismo/equilibrar-helice-rc-equilibrador-casero) es bastante fácil pero lleva tiempo. Nunca está de más utilizar algunas de las herramientas que nos facilitan esta tarea.
+El [proceso de equilibrado](https://rc.lapipadelindio.com/aeromodelismo/equilibrar-helice-rc-equilibrador-casero) es bastante fácil pero lleva tiempo. Nunca está de más utilizar algunas de las herramientas que nos facilitan esta tarea.
 
 ### Controladores de velocidad
 

@@ -15,7 +15,7 @@ Es increíble la cantidad de cosas que hace la gente con esta mesita. Por ejempl
 
 # Materiales
 
-Lo primero que hice fue averiguar dónde comprar los joysticks y botones, que desde mi punto de vista son lo más importante que tiene la máquina. Di con una tienda que se llama Arcade Madrid ([http://www.arcademadrid.com](http://www.arcademadrid.com)), donde compré un kit que trae todo lo necesario:
+Lo primero que hice fue averiguar dónde comprar los joysticks y botones, que desde mi punto de vista son lo más importante que tiene la máquina. Di con una tienda que se llama Arcade Madrid ([https://www.arcademadrid.com](https://www.arcademadrid.com)), donde compré un kit que trae todo lo necesario:
 
 - Dos mandos
 - 6 botones por jugador
@@ -44,14 +44,14 @@ Tenía una netbook dando vueltas por casa que no estaba usando, y me vino de pri
 A la hora de instalar el software y los juegos, me encontré con que el proceso es mucho más difícil de lo que pensaba. Esto se debe a que cada juego salió para una consola, y para cada consola hay que descargar y configurar un «emulador» diferente. Un emulador es un software que imita las condiciones de hardware sobre las que funcionaban esos juegos en su época para poder ejecutarlos. Existen muchos emuladores de cada consola, por lo que hay que investigar y probar el que mas te guste o mejor te funcione.
 
 Por otra parte, para tener una interfaz gráfica con una lista ordenada y bien presentada de todos los juegos, hay que instalar un «launcher». El launcher es un software que muestra todos los juegos que tengas instalados categorizados por consola y que lanza el emulador correspondiente a cada juego.  
-Existen muchos launchers, siendo [HyperSpin](http://www.hyperspin-fe.com/) el más famoso, pero también uno de los más complicados de configurar.
+Existen muchos launchers, siendo [HyperSpin](https://www.hyperspin-fe.com/) el más famoso, pero también uno de los más complicados de configurar.
 
 {% include embed/youtube.html id='xYmOI9EbBMM?feature=oembed' %}
 _Así se ve HyperSpin una vez configurado completamente_
 
 Cuando digo complicado me refiero a que todas las imágenes, sonidos, videos, logos, etc. que se ven por cada juego, deben ser descargadas, renombradas y ubicadas en directorios específicos por cada uno de los juegos que tengas. Y estamos hablando literalmente de miles de juegos...
 
-Luego de investigar bastante y de probar varios launchers, di con [LaunchBox](http://www.launchbox-app.com). Su ventaja es que da muchas facilidades a la hora de organizar los juegos, y se encarga de descargar todas las imágenes automágicamente. Desde mi punto de vista es el que menos tiempo de configuración lleva, y además funciona genial.
+Luego de investigar bastante y de probar varios launchers, di con [LaunchBox](https://www.launchbox-app.com). Su ventaja es que da muchas facilidades a la hora de organizar los juegos, y se encarga de descargar todas las imágenes automágicamente. Desde mi punto de vista es el que menos tiempo de configuración lleva, y además funciona genial.
 
 {% include embed/youtube.html id='AeGMjt9FJ6M' %}
 _Así se ve LaunchBox, en su modo BigBox_

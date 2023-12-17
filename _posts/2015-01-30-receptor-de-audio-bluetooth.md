@@ -11,11 +11,11 @@ tags:
 
 El siguiente es un proyecto muy simple. Tanto que casi que no merece un post, pero una de las finalidades de este blog es la de documentar y por tanto le haremos un lugar.
 
-Trata sobre un aparato que se conecta al canal de entrada de un equipo de música o un _home theatre_ y permite recibir audio proveniente de un smartphone conectado por [bluetooth](http://www.bluetooth.com/Pages/what-is-bluetooth-technology.aspx).
+Trata sobre un aparato que se conecta al canal de entrada de un equipo de música o un _home theatre_ y permite recibir audio proveniente de un smartphone conectado por [bluetooth](https://www.bluetooth.com/Pages/what-is-bluetooth-technology.aspx).
 
 De esta manera podemos reproducir música sin la necesidad de dejar el teléfono «atado» al equipo de música.
 
-Lo que hice fue simplemente desarmar unos auriculares bluetooth, desoldar los cables que van a los altavoces y soldarlos a un [adaptador jack](http://headphonespares.sennheiser.co.uk/travel-headphones/cxc-700/jack-adapter---35mm-to-635mm-gold-plated.html) de 3.5 mm a 6.35 mm.  
+Lo que hice fue simplemente desarmar unos auriculares bluetooth, desoldar los cables que van a los altavoces y soldarlos a un [adaptador jack](https://headphonespares.sennheiser.co.uk/travel-headphones/cxc-700/jack-adapter---35mm-to-635mm-gold-plated.html) de 3.5 mm a 6.35 mm.  
 Esto nos deja un conector hembra que va al _line-in_ del equipo de música.
 
 ![](/images/bt_receiver.jpg)

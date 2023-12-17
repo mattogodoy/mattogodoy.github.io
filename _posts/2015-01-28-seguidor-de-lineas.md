@@ -38,7 +38,7 @@ _Los chicos de la Universidad de Mendoza también habían instalado unas cámara
 
 **Reglamento**
 
-El documento oficial del reglamento se puede ver [aquí](http://matto.io/files/seguidor_lineas/Reglamento_Carreras_2012.pdf).  
+El documento oficial del reglamento se puede ver [aquí](https://matto.io/files/seguidor_lineas/Reglamento_Carreras_2012.pdf).  
 Está bien detallado y no deja lugar a dudas.
 
 ## Construcción
@@ -47,7 +47,7 @@ Está bien detallado y no deja lugar a dudas.
 
 Soy un poco fan de Arduino, y desde el principio supe que iba a encarar este proyecto usándolo.
 
-> [Arduino](http://arduino.cc/), para quien no sepa, es una placa de desarrollos con un microcontrolador que nos permite hacer proyectos de electrónica de manera muy simple.
+> [Arduino](https://arduino.cc/), para quien no sepa, es una placa de desarrollos con un microcontrolador que nos permite hacer proyectos de electrónica de manera muy simple.
 
 Inicialmente tenía idea de hacer un robot que usara dos motores. Uno en cada rueda delantera, y una rueda loca trasera (odio ese nombre), lo que le permitiría girar sobre su propio eje para cambiar de dirección simplemente haciendo que uno de los motores vaya más rápido que el otro, o inclusive, en sentido contrario.
 
@@ -63,10 +63,10 @@ Esto me ahorraría varios dolores de cabeza y simplificaría el diseño tanto en
 Para detectar la línea de guía pintada en la pista, inicialmente pensé en usar emisores y receptores Infra Rojos. El funcionamiento es el siguiente:
 
 - Se coloca un [LED IR](https://www.sparkfun.com/products/9349) emisor apuntando hacia el piso de la pista, y un LED receptor IR al lado, apuntando en la misma dirección.
-- El LED emisor irradia luz IR (invisible para nosotros). La pista tiene distintos colores, y cada uno absorbe un rango de longitudes de onda específicos y hace rebotar al resto (de hecho, éste fenómeno es lo que permite que veamos [diferentes colores](http://es.wikipedia.org/wiki/Color)).
+- El LED emisor irradia luz IR (invisible para nosotros). La pista tiene distintos colores, y cada uno absorbe un rango de longitudes de onda específicos y hace rebotar al resto (de hecho, éste fenómeno es lo que permite que veamos [diferentes colores](https://es.wikipedia.org/wiki/Color)).
 - El LED receptor capta la luz que rebota en la pista, y en función de la cantidad que recibe, podemos saber si lo que tenemos debajo es un color claro, o uno oscuro. Los colores claros rebotan mucha luz y los oscuros absorben mucha, por lo que rebotan poca.
 
-Para las pruebas iniciales, en vez de LEDs IR, utilicé LEDs comunes de color blanco, y como receptores utilicé [fotorresistores LDR](http://es.wikipedia.org/wiki/Fotorresistor) (sensores que varían su resistencia en función de la cantidad de luz que reciben). ¿Por qué? Porque era lo que tenía a mano, y además al funcionar con luz visible me permitió tener una idea más tangible de cómo hacer funcionar el sistema. Además, los resultados son los mismos.
+Para las pruebas iniciales, en vez de LEDs IR, utilicé LEDs comunes de color blanco, y como receptores utilicé [fotorresistores LDR](https://es.wikipedia.org/wiki/Fotorresistor) (sensores que varían su resistencia en función de la cantidad de luz que reciben). ¿Por qué? Porque era lo que tenía a mano, y además al funcionar con luz visible me permitió tener una idea más tangible de cómo hacer funcionar el sistema. Además, los resultados son los mismos.
 
 Este es el circuito. El buzzer de la parte superior era para pruebas y no lo integré al circuito final:
 
@@ -103,7 +103,7 @@ Una vez conectada al motor, mi robot ya tenía fuerza suficiente como para mover
 **Controlador del motor**
 
 Algo importante es que los Arduino no manejan grandes cantidades de corriente eléctrica, y conectar un motor a una de sus salidas directamente es garantía de que lo vas a freír.  
-Para solucionarlo, tuve que hacer un circuito que se llama [puente H](http://es.wikipedia.org/wiki/Puente_H_(electrónica)), para lo que usé un [controlador L298N](https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf) el cual me permite controlar la dirección de giro del motor.  
+Para solucionarlo, tuve que hacer un circuito que se llama [puente H](https://es.wikipedia.org/wiki/Puente_H_(electrónica)), para lo que usé un [controlador L298N](https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf) el cual me permite controlar la dirección de giro del motor.  
 Por otra parte tiene la gran ventaja de que recibe las órdenes desde el Arduino, pero utiliza una fuente de energía separada para alimentar el motor, lo cual soluciona el problema del alto consumo de corriente.
 
 Este es el resultado (no soy muy prolijo, ya lo sé):
@@ -334,7 +334,7 @@ El código es muy simple, pero bastante efectivo.
 Lo que hace es mover el servo si detecta que el sensor de un lado tiene lecturas mas bajas que el del otro, lo que significa que está sobre la línea y el robot se está saliendo de curso.  
 En el caso de que ambos sensores midan valores parecidos, significa que la línea está en medio (o que el robot ya se salió definitivamente).
 
-Al final no utilicé el sensor del medio, ni un [control PID](http://es.wikipedia.org/wiki/Proporcional_integral_derivativo) que había configurado en un principio porque preferí hacerlo lo más simple posible.
+Al final no utilicé el sensor del medio, ni un [control PID](https://es.wikipedia.org/wiki/Proporcional_integral_derivativo) que había configurado en un principio porque preferí hacerlo lo más simple posible.
 
 Había pensado en una lógica de recuperación que se active cuando el robot se salía completamente de la línea, para volver de alguna manera al circuito, pero por falta de tiempo lo dejé como está.
 
@@ -342,7 +342,8 @@ Había pensado en una lógica de recuperación que se active cuando el robot se 
 
 Todo junto y armado, terminó siendo este Frankestein:
 
-<figure class="kg-image-card kg-width-wide"><img src="/images/robot.jpg" class="kg-image"></figure>
+![](/images/robot.jpg)
+
 ## El día de la competencia
 
 El día de la competencia se nos dio algunas horas para que configuremos nuestros robots y nos preparemos para las carreras.

@@ -26,7 +26,7 @@ Luego de varias solicitudes, finalmente he añadido un diagrama esquemático de 
 
 # Introducción
 
-En lo que va del año (2017) he tenido la suerte de participar en dos rallies en moto: [Trip & Track](http://tripandtrack.es/) y [Desert Adventure](http://sectortrailalmeria.es/desert-adventure/).
+En lo que va del año (2017) he tenido la suerte de participar en dos rallies en moto: [Trip & Track](https://tripandtrack.es/) y [Desert Adventure](https://sectortrailalmeria.es/desert-adventure/).
 
 ### Hoja de ruta
 

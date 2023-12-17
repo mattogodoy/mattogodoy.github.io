@@ -10,9 +10,9 @@ tags:
 - servidores
 ---
 
-Desde hace un tiempo tengo una [Raspberry Pi](http://www.raspberrypi.org/) versión 1, modelo B.
+Desde hace un tiempo tengo una [Raspberry Pi](https://www.raspberrypi.org/) versión 1, modelo B.
 
-Para quienes no la conozcan, la Raspberry Pi es básicamente un ordenador con Linux, un procesador ARM de 700 MHz, con 512 MB de memoria RAM, un slot para tarjetas SD, un puerto Ethernet, una salida de audio, un puerto HDMI y uno RCA para la salida de video, y dos puertos USB. Dispone de un co-procesador para la reproducción de video que nos permite ver archivos a 1080p. Además, tiene 26 pines [GPIO](http://es.wikipedia.org/wiki/GPIO) para hacer nuestros propios experimentos con electrónica.
+Para quienes no la conozcan, la Raspberry Pi es básicamente un ordenador con Linux, un procesador ARM de 700 MHz, con 512 MB de memoria RAM, un slot para tarjetas SD, un puerto Ethernet, una salida de audio, un puerto HDMI y uno RCA para la salida de video, y dos puertos USB. Dispone de un co-procesador para la reproducción de video que nos permite ver archivos a 1080p. Además, tiene 26 pines [GPIO](https://es.wikipedia.org/wiki/GPIO) para hacer nuestros propios experimentos con electrónica.
 
 Increíblemente, todo esto entra en una placa del tamaño de una caja de fósforos.
 
@@ -37,20 +37,20 @@ Para que el invento sea funcional, tiene que cumplir con las siguientes condicio
 - Funcionar con WiFi como conexión a Internet.
 - Usar un disco rígido externo como almacenamiento.
 - Detectar cuando salen nuevos capítulos de las series que sigo.
-- Obtener el [Magnet Link](http://lifehacker.com/5875899/what-are-magnet-links-and-how-do-i-use-them-to-download-torrents) para cada uno de los capítulos que quiero descargar.
+- Obtener el [Magnet Link](https://lifehacker.com/5875899/what-are-magnet-links-and-how-do-i-use-them-to-download-torrents) para cada uno de los capítulos que quiero descargar.
 - Funcionar como cliente de torrents para descargar automáticamente los torrents obtenidos.
 - Descargar subtítulos para los capítulos obtenidos.
-- Hacer disponibles los capítulos en una red [DLNA](http://es.wikipedia.org/wiki/Digital_Living_Network_Alliance) para poder verlos con un Smart TV a través de WiFi.
+- Hacer disponibles los capítulos en una red [DLNA](https://es.wikipedia.org/wiki/Digital_Living_Network_Alliance) para poder verlos con un Smart TV a través de WiFi.
 
 # Configuración
 
 Vamos a ir solucionando cada uno de los requerimientos en orden. Algunos son mas simples que otros, pero no hay gran complicación en dejar todo funcionando.
 
-La manera más simple de hacer la configuración es conectado un monitor o TV a alguna de las salidas de video de la Raspberry, pero también puede hacerse íntegramente por [SSH](http://es.wikipedia.org/wiki/Secure_Shell).
+La manera más simple de hacer la configuración es conectado un monitor o TV a alguna de las salidas de video de la Raspberry, pero también puede hacerse íntegramente por [SSH](https://es.wikipedia.org/wiki/Secure_Shell).
 
 ## Alimentación de periféricos
 
-Teniendo en cuenta que [no deberíamos exigir más de 100 mA](http://raspberrypi.stackexchange.com/questions/340/how-much-power-can-be-provided-through-usb) a los puertos USB de la Raspberry para no arriesgarnos a quemarlos, y sabiendo que debemos conectar un adaptador WiFi y un disco rígido externo (ambos grandes consumidores de corriente), la solución radica en utilizar un [hub USB](http://es.wikipedia.org/wiki/Hub_USB) alimentado. A diferencia de un hub normal, estos traen un transformador que va a una toma de corriente. No solo nos da más de dos puertos USB, sino que también nos da energía de sobra para todo lo que conectemos.
+Teniendo en cuenta que [no deberíamos exigir más de 100 mA](https://raspberrypi.stackexchange.com/questions/340/how-much-power-can-be-provided-through-usb) a los puertos USB de la Raspberry para no arriesgarnos a quemarlos, y sabiendo que debemos conectar un adaptador WiFi y un disco rígido externo (ambos grandes consumidores de corriente), la solución radica en utilizar un [hub USB](https://es.wikipedia.org/wiki/Hub_USB) alimentado. A diferencia de un hub normal, estos traen un transformador que va a una toma de corriente. No solo nos da más de dos puertos USB, sino que también nos da energía de sobra para todo lo que conectemos.
 
 ![](/images/hub.jpg)
 
@@ -60,7 +60,7 @@ En mi caso, uso el de la foto: un [Sitecom CN-51](https://www.sitecom.com/en/usb
 
 Sí, el Raspberry Pi tiene una conexión Ethernet, lo que simplificaría mucho las cosas, pero mi idea es mantener todo el cablerío del «media server» lejos del router que está a plena vista.
 
-Para empezar, el Raspberry no trae WiFi incorporado, y además no todos los adaptadores USB son compatibles (aunque sí la gran mayoría). Luego de buscar en una [lista de dispositivos compatibles](http://elinux.org/RPi_USB_Wi-Fi_Adapters#Working_USB_Wi-Fi_Adapters), terminé comprando un TP-Link TL-WN823N.
+Para empezar, el Raspberry no trae WiFi incorporado, y además no todos los adaptadores USB son compatibles (aunque sí la gran mayoría). Luego de buscar en una [lista de dispositivos compatibles](https://elinux.org/RPi_USB_Wi-Fi_Adapters#Working_USB_Wi-Fi_Adapters), terminé comprando un TP-Link TL-WN823N.
 
 ![](/images/TL-WN823N.jpg)
 
@@ -217,15 +217,15 @@ De esta manera nos aseguramos de que siempre tendremos acceso al disco externo l
 
 Para que nuestro sistema pueda descargar los nuevos capítulos, debemos estar al tanto de cuando están disponibles.
 
-Para ello, nos creamos una cuenta en [ShowRSS](http://showrss.info/), una web que nos permite especificar las series que nos interesan y la calidad de los videos a bajar. Lo único que hace es generar un [feed RSS](http://es.wikipedia.org/wiki/RSS) con los magnet links de cada capítulo a medida en que van saliendo. El resultado es una URL que necesitaremos más adelante. Por ejemplo, la mía es esta:
+Para ello, nos creamos una cuenta en [ShowRSS](https://showrss.info/), una web que nos permite especificar las series que nos interesan y la calidad de los videos a bajar. Lo único que hace es generar un [feed RSS](https://es.wikipedia.org/wiki/RSS) con los magnet links de cada capítulo a medida en que van saliendo. El resultado es una URL que necesitaremos más adelante. Por ejemplo, la mía es esta:
 
-> [http://showrss.info/user/138760.rss](http://showrss.info/user/138760.rss)
+> [https://showrss.info/user/138760.rss](https://showrss.info/user/138760.rss)
 
 Siendo **138760** mi user ID en ShowRSS.
 
 ## Obtener Magnet Links
 
-Para obtener los magnet links de cada capítulo listado en nuestra RSS usaremos [Flexget](http://flexget.com/), que se encargará de pasar el link a nuestro cliente de torrents y nos da también la posibilidad de ordenar las descargas en carpetas y enviar un email al finalizar.
+Para obtener los magnet links de cada capítulo listado en nuestra RSS usaremos [Flexget](https://flexget.com/), que se encargará de pasar el link a nuestro cliente de torrents y nos da también la posibilidad de ordenar las descargas en carpetas y enviar un email al finalizar.
 
 La instalación en linux se hace por medio de [PIP](https://pypi.python.org/pypi/pip) (el repositorio de paquetes de [Python](https://www.python.org/)), y para hacerlo debes seguir estos pasos:
 
@@ -260,7 +260,7 @@ templates:
 tasks:
     rss:
     priority: 1
-    rss: http://showrss.info/user/138760.rss
+    rss: https://showrss.info/user/138760.rss
     all_series: yes
     transmission:
         host: localhost
@@ -336,11 +336,11 @@ De esta forma, hasta que un capítulo no tenga subtítulos no será movido a la 
 
 Todos estos parámetros pueden ser cambiados, y los correspondientes a nombres de usuarios, contraseñas y URL **deben** ser reemplazados por los tuyos.
 
-Flexget tiene muchos parámetros útiles para configurar. Se pueden ver en profundidad en su [wiki](http://flexget.com/wiki).
+Flexget tiene muchos parámetros útiles para configurar. Se pueden ver en profundidad en su [wiki](https://flexget.com/wiki).
 
 ## Cliente de torrents
 
-Para la descarga de los torrents usaremos [Transmission](http://www.transmissionbt.com/). Es uno de los clientes más famosos y tiene una [versión específica para Ubuntu](https://launchpad.net/ubuntu/+source/transmission/2.82-0ubuntu1) por medio de la línea de comandos.
+Para la descarga de los torrents usaremos [Transmission](https://www.transmissionbt.com/). Es uno de los clientes más famosos y tiene una [versión específica para Ubuntu](https://launchpad.net/ubuntu/+source/transmission/2.82-0ubuntu1) por medio de la línea de comandos.
 
 Además nos da la ventaja de crear un servidor web al que podemos acceder desde un navegador y agregar nuevos torrents a la descarga.
 
@@ -379,7 +379,7 @@ sudo /etc/init.d/transmission-daemon start
 
 Ya podremos acceder desde cualquier navegador al cliente web con esta dirección:
 
-> http://[ip-de-tu-raspberry]:9091
+> https://[ip-de-tu-raspberry]:9091
 
 Deberías ver la interfaz web de transmission.
 
@@ -408,13 +408,13 @@ flexget execute
 
 Esto debería consultar nuestro feed de ShowRSS, descargar los torrents de cada capítulo disponible, agregarlos a Transmission y comenzar la descarga dentro del disco externo. Una vez finalizada la descarga, eliminar los torrents de Transmission, buscar los subtítulos para todos los capítulos y moverlos junto a los archivos de video. Finalmente, debe ordenar todos los archivos en directorios separados por nombre de serie y renombrarlos especificando temporada y número de capítulo. MAGIA.
 
-Si todo va bien y los resultados son lo que esperábamos, debemos automatizar este sistema para que compruebe automáticamente y con cierta frecuencia la aparición de nuevos capítulos en ShowRSS, repitiendo el ciclo de descarga con cada uno. El encargado de hacerlo será un [cron](http://es.wikipedia.org/wiki/Cron_(Unix)) (tarea programada de unix). Abrimos el editor crontab:
+Si todo va bien y los resultados son lo que esperábamos, debemos automatizar este sistema para que compruebe automáticamente y con cierta frecuencia la aparición de nuevos capítulos en ShowRSS, repitiendo el ciclo de descarga con cada uno. El encargado de hacerlo será un [cron](https://es.wikipedia.org/wiki/Cron_(Unix)) (tarea programada de unix). Abrimos el editor crontab:
 
 ```bash
 crontab -e
 ```
 
-Esto nos abrirá básicamente un editor [VIM](http://www.vim.org/), por lo que los [comandos](http://vim.rtorr.com/) son algo particulares. Agregaremos una línea al final (aunque lo más probable es que el archivo esté vacío). Para insertar texto, presionamos la tecla «i» y pegamos lo siguiente:
+Esto nos abrirá básicamente un editor [VIM](https://www.vim.org/), por lo que los [comandos](https://vim.rtorr.com/) son algo particulares. Agregaremos una línea al final (aunque lo más probable es que el archivo esté vacío). Para insertar texto, presionamos la tecla «i» y pegamos lo siguiente:
 
 ```
 @hourly /usr/local/bin/flexget execute --cron
