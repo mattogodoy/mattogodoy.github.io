@@ -97,7 +97,7 @@ Viendo que la prueba salió aceptablemente bien, seguí con los agujeros reales.
 
 Usando la misma broca que para los huecos de la madera logré hacer los de los botones. Para mi agradable sorpresa, el joystick no necesita más espacio que el de un botón para funcionar correctamente, así que también usé la misma para eso.
 
-En el proceso arruiné la batería de mi taladro, y como estaba inspirado y no quería esperar un par de días a que llegue el repuesto de Amazon, decidí utilizar una de las baterías del [quadcopter](https://matto.io/armando-un-quadcopter/) y conectarla de manera más que precaria al taladro.
+En el proceso arruiné la batería de mi taladro, y como estaba inspirado y no quería esperar un par de días a que llegue el repuesto de Amazon, decidí utilizar una de las baterías del [quadcopter]({% post_url 2015-12-14-armando-un-quadcopter %}) y conectarla de manera más que precaria al taladro.
 
 ![](/images/arcade15.jpg)
 

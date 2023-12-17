@@ -77,7 +77,7 @@ La ventaja de este frame es que tiene bastante espacio para equipos como una cá
 
 Los brazos son los encargados de sujetar los motores al frame, y son los primeros en recibir el golpe en caso de un accidente, por lo que tienen que ser muy resistentes.
 
-Quise experimentar utilizando unos que [imprimí en 3D](https://matto.io/armando-una-impresora-3d-parte-1/%22):
+Quise experimentar utilizando unos que [imprimí en 3D]({% post_url 2015-02-03-armando-una-impresora-3d-parte-1 %}):
 
 ![](/images/brazo.jpg)
 

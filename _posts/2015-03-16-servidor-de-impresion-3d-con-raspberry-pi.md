@@ -11,13 +11,13 @@ tags:
 - servidores
 ---
 
-Ya hemos hablado en [posts anteriores](https://matto.io/descarga-automagica-de-series-con-raspberry-pi/) sobre los diversos usos que podemos dar a la todopoderosa [Raspberry Pi](https://www.raspberrypi.org/).
+Ya hemos hablado en [posts anteriores]({% post_url 2015-03-09-descarga-automagica-de-series-con-raspberry-pi %}) sobre los diversos usos que podemos dar a la todopoderosa [Raspberry Pi](https://www.raspberrypi.org/).
 
 Hoy veremos cómo transformarla en un servidor de impresión 3D gracias al excelente proyecto creado por una chica alemana llamada [Gina Häußge](https://twitter.com/foosel).
 
 # Octoprint
 
-El proyecto en cuestión se llama [Octoprint](https://octoprint.org/), y es un servidor programado en [Python](https://www.python.org/) con una interfaz web que nos permite controlar nuestra [impresora 3D](https://matto.io/armando-una-impresora-3d-parte-1/) a través de una red privada o, por qué no, desde [Internet](https://media.giphy.com/media/iYDlg0CljYqTm/giphy.gif).
+El proyecto en cuestión se llama [Octoprint](https://octoprint.org/), y es un servidor programado en [Python](https://www.python.org/) con una interfaz web que nos permite controlar nuestra [impresora 3D]({% post_url 2015-02-03-armando-una-impresora-3d-parte-1 %}) a través de una red privada o, por qué no, desde [Internet](https://media.giphy.com/media/iYDlg0CljYqTm/giphy.gif).
 
 ![](/images/octoprint.png)
 

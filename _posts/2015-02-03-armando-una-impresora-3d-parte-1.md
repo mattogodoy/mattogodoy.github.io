@@ -10,7 +10,7 @@ tags:
 - impresora-3d
 ---
 
-> Dada la longitud y complejidad de este proyecto, voy a dividirlo en 3 partes. Esta es la primera de ellas. Ya están disponibles la _[parte 2](https://matto.io/armando-una-impresora-3d-parte-2/)_ y la [parte 3](https://matto.io/armando-una-impresora-3d-parte-3/).
+> Dada la longitud y complejidad de este proyecto, voy a dividirlo en 3 partes. Esta es la primera de ellas. Ya están disponibles la _[parte 2]({% post_url 2015-02-12-armando-una-impresora-3d-parte-2 %})_ y la [parte 3]({% post_url 2015-02-28-armando-una-impresora-3d-parte-3 %}).
 
 Afortunadamente hoy en día en internet esta TODO, y eso nos da [poder ilimitado](https://en.wikipedia.org/wiki/Scientia_potentia_est).
 
@@ -19,7 +19,7 @@ Siempre lo digo: Me encanta vivir en esta época. Muchas cosas geniales estan pa
 ![](/images/3d_printer.png)
 ## Motivación
 
-[Siempre me gustó mucho la robótica](https://matto.io/seguidor-de-lineas/), pero cada vez que quería empezar algún proyecto me topaba con el mismo problema: las piezas. Los robots normalmente tiene formas complejas y normalmente distintas a las de otros robots, por lo que conseguir una plataforma para un sensor específico o un soporte para un servo es muy complicado.
+[Siempre me gustó mucho la robótica]({% post_url 2015-01-28-seguidor-de-lineas %}), pero cada vez que quería empezar algún proyecto me topaba con el mismo problema: las piezas. Los robots normalmente tiene formas complejas y normalmente distintas a las de otros robots, por lo que conseguir una plataforma para un sensor específico o un soporte para un servo es muy complicado.
 
 La idea de construír mi propia impresora 3D surge de dicho problema. Teniendo una herramienta tan potente como esa tendría acceso ilimitado a piezas para construír mis robots (y algunas otras mierdas inservibles) y hasta podría diseñarlas yo mismo.
 

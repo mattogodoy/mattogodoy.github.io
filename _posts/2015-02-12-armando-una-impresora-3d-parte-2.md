@@ -10,9 +10,9 @@ tags:
 - impresora-3d
 ---
 
-En la [parte 1](https://matto.io/armando-una-impresora-3d-parte-1/) de este post vimos una introducción al funcionamiento y los componentes de una impresora 3d.
+En la [parte 1]({% post_url 2015-02-03-armando-una-impresora-3d-parte-1 %}) de este post vimos una introducción al funcionamiento y los componentes de una impresora 3d.
 
-> Ya está disponible también la [parte 3](https://matto.io/armando-una-impresora-3d-parte-3/).
+> Ya está disponible también la [parte 3]({% post_url 2015-02-28-armando-una-impresora-3d-parte-3 %}).
 
 En esta segunda parte veremos los procesos de construcción y calibración de a impresora.
 

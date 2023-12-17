@@ -1,9 +1,14 @@
 ---
+layout: post
+icon: fas fa-hand-holding-dollar
+order: 5
+
 author: matto
 title: Donaciones
 date: 2017-06-03T19:50:00+01:00
 image: 
   path: /images/donaciones.jpg
+hidden: true
 ---
 
 La razón de la existencia de este sitio web es simplemente una manera de documentar algunos de mis proyectos personales en los que trabajo en mi tiempo libre.  

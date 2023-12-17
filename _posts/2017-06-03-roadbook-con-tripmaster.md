@@ -207,7 +207,7 @@ Como se ve en la foto, el odómetro de la moto marca 18 kms, y mi tripmaster 17,
 
 ### Carcasa
 
-Para la carcasa del tripmaster diseñé en 3D un modelo específico en el que entran todos los componentes y lo fabriqué con mi [Impresora 3D](https://matto.io/armando-una-impresora-3d-parte-1/)
+Para la carcasa del tripmaster diseñé en 3D un modelo específico en el que entran todos los componentes y lo fabriqué con mi [Impresora 3D]({% post_url 2015-02-03-armando-una-impresora-3d-parte-1 %})
 
 ![](/images/caja.png)
 

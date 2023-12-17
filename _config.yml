@@ -114,6 +114,9 @@ paginate: 10
 # The base URL of your site
 baseurl: ""
 
+include:
+  - _pages
+
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
@@ -161,6 +164,12 @@ defaults:
       path: assets/js/dist
     values:
       swcache: true
+  - scope:
+      path: _pages
+      type: pages
+    values:
+      layout: post
+      permalink: /:basename/ # make URL of pages in the folder _pages as on the root.
 
 sass:
   style: compressed

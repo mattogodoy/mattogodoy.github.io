@@ -12,7 +12,7 @@ tags:
 
 Para finalizar esta serie de posts sobre la construcción y configuración de una impresora 3D open source, nos queda por entender el proceso de preparación por el que pasa cada pieza para poder ser impresa.
 
-> Si no leíste la [parte 1](https://matto.io/armando-una-impresora-3d-parte-1/) y la [parte 2](https://matto.io/armando-una-impresora-3d-parte-2/) de la serie, te recomiendo que lo hagas antes de continuar.
+> Si no leíste la [parte 1]({% post_url 2015-02-03-armando-una-impresora-3d-parte-1 %}) y la [parte 2]({% post_url 2015-02-12-armando-una-impresora-3d-parte-2 %}) de la serie, te recomiendo que lo hagas antes de continuar.
 
 # Proceso
 

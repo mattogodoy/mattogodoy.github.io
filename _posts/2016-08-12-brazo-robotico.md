@@ -13,7 +13,7 @@ tags:
 - impresora-3d
 ---
 
-Como ya he dicho antes, mi motivación para [montar una impresora 3D](https://matto.io/armando-una-impresora-3d-parte-1/) fue, además de imprimir montones de cosas sin utilidad alguna, la de tener la posibilidad de crear piezas estructurales de robots.
+Como ya he dicho antes, mi motivación para [montar una impresora 3D]({% post_url 2015-02-03-armando-una-impresora-3d-parte-1 %}) fue, además de imprimir montones de cosas sin utilidad alguna, la de tener la posibilidad de crear piezas estructurales de robots.
 
 Este brazo robótico fue el primer proyecto que cumplió con ese cometido.
 

@@ -9,9 +9,10 @@ tags:
 - electronica
 - programacion
 - moto
+hidden: true
 ---
 
-> Este artículo también está [disponible en Español](https://matto.io/liberando-el-codigo-del-baja-pro/) 🇪🇸
+> Este artículo también está [disponible en Español]({% post_url 2021-11-01-liberando-el-codigo-del-baja-pro %}) 🇪🇸
 
 I’ve decided to release the source code and all of the schemes of the project I’ve spent the most time and effort in my entire life. In this post I’ll explain my motivation to do so.
 
@@ -84,7 +85,7 @@ It was thanks to these friends that I got hooked up to participating in roadbook
 
 # Initial prototype
 
-Electronics is one of many hobbies I have. I have always enjoyed challenges that force me to learn new stuff, so I decided to make my own equipment. [I even wrote a post about it in this same blog](https://matto.io/roadbook-con-tripmaster/).
+Electronics is one of many hobbies I have. I have always enjoyed challenges that force me to learn new stuff, so I decided to make my own equipment. [I even wrote a post about it in this same blog]({% post_url 2017-06-03-roadbook-con-tripmaster %}).
 
 The most important thing that came out of that project was the tripmaster, which was [open source](https://github.com/mattogodoy/open-trip) since the beginning, so anyone who was interested could build one.
 

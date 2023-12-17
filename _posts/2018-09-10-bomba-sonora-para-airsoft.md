@@ -11,7 +11,7 @@ tags:
 - arduino
 ---
 
-En mi [post anterior](https://matto.io/sistema-de-retroceso-para-realidad-virtual/) comentaba que desde hace un tiempo tengo una nueva afición: el [Airsoft](https://es.wikipedia.org/wiki/Airsoft).
+En mi [post anterior]({% post_url 2018-08-21-sistema-de-retroceso-para-realidad-virtual %}) comentaba que desde hace un tiempo tengo una nueva afición: el [Airsoft](https://es.wikipedia.org/wiki/Airsoft).
 
 Todo comenzó de la manera más inocente posible. Estaba investigando un poco sobre mecanismos para simular el retroceso de un arma para juegos de realidad virtual. En el proceso me encontré con que muchas de las armas de airsoft (especialmente las pistolas) usan gas comprimido para accionar el mecanismo de recarga de munición, exactamente de la misma manera en que lo hace un arma real. Esto genera como resultado un golpe de retroceso que era lo que yo estaba intentando replicar.
 

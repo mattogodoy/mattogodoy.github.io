@@ -11,7 +11,7 @@ tags:
 - moto
 ---
 
-> This article is also [available in English](https://matto.io/open-sourcing-the-baja-pro/) 🇬🇧
+> This article is also [available in English]({% post_url 2021-11-09-open-sourcing-the-baja-pro %}) 🇬🇧
 
 He decidido liberar el código y todos los esquemas del proyecto al que más tiempo y trabajo he dedicado en mi vida. En este post te contaré cual es mi motivación para hacerlo.
 
