@@ -32,7 +32,7 @@ Cada uno de mis proyectos se basa en horas y horas de investigación en internet
 
 Afortunadamente me encontré con el proyecto [RepRap](https://reprap.org/), que es un conjunto de locos dispersados por el mundo que se dedican a compartir conocimiento y experiencia acerca de la fabricación de impresoras 3D.
 
-Dentro de ese proyecto, se encuentra la rama de habla hispana: [Clone Wars](www.reprap.org/wiki/Proyecto_Clone_Wars).
+Dentro de ese proyecto, se encuentra la rama de habla hispana: [Clone Wars](https://www.reprap.org/wiki/Proyecto_Clone_Wars).
 
 Es a ellos a quienes doy gran crédito de la construcción y configuración de mi impresora, porque sin su información jamás habría logrado hacerlo. En especial al más chiflado de todos: [Obijuan](https://twitter.com/obijuan_cube).
 
