@@ -21,7 +21,7 @@ He decidido liberar el código y todos los esquemas del proyecto al que más tie
 
 - [Un poco de historia](#un-poco-de-historia)
 - [Prototipo inicial](#prototipo-inicial)
-- [Versión 1](#versió-1)
+- [Versión 1](#versión-1)
   - [La marca](#la-marca)
   - [Pantalla](#pantalla)
   - [Microcontrolador](#microcontrolador)
