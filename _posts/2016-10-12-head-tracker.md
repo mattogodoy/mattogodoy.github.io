@@ -1,7 +1,10 @@
 ---
-layout: post
+author: matto
 title: Head tracker para videojuegos
-date: '2016-10-12 19:39:00'
+date: 2016-10-12T19:39:00+01:00
+image: 
+  path: /images/headtracker3-1.jpg
+categories:
 tags:
 - electronica
 - video-juegos
@@ -17,7 +20,7 @@ Usando esa información podemos indicar a algún juego en concreto hacia dónde 
 
 Como siempre, un video dice mas que mil palabras:
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/GazOjrQ30fo?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></figure>
+{% include embed/youtube.html id='GazOjrQ30fo' %}
 
 El del video soy yo jugando al [Elite Dangerous](https://www.elitedangerous.com/), y el head tracker es el circuito impreso que se ve al costado izquierdo de mis auriculares.
 
@@ -31,39 +34,47 @@ Hay muchas variantes de head trackers, pero hay una que me llamó la atención p
 
 La lista de componentes es bastante simple:
 
-- Procesador: [Arduino Micro](https://www.arduino.cc/en/Main/ArduinoBoardMicro)
-<figure class="kg-image-card"><img src="/content/images/2018/08/arduino.jpg" class="kg-image"></figure>
+- Procesador: [Arduino Micro](https://www.arduino.cc/en/Main/ArduinoBoardMicro) &nbsp;
+
+![](/images/arduino2.jpg)
+
 - IMU (Unidad de Medición Inercial): Aquí tenemos dos posibilidades. Hay dos tipos de sensores que son compatibles; el **[MPU-6050](http://playground.arduino.cc/Main/MPU-6050)** que trae acelerómetro y giróscopo, o el **[MPU-9250](https://www.sparkfun.com/products/13762)** que es un poco más caro pero trae también un magnetómetro (brújula digital) que permite evitar un efecto no deseado llamado **drifting** (ya hablaré de esto más adelante). &nbsp;
-<figure class="kg-image-card"><img src="/content/images/2018/08/accelerometer.jpg" class="kg-image"></figure>
+
+![](/images/accelerometer.jpg)
+
 - Un [botón](https://www.sparkfun.com/products/9190). 
-<figure class="kg-image-card"><img src="/content/images/2018/08/button.jpg" class="kg-image"></figure>
+
+![](/images/button.jpg)
+
 - Un circuito impreso sobre el que montar todos los componentes. Aquí de nuevo contamos con 2 opciones; la primera es comprar la [placa con su correspondiente circuito](http://www.edtracker.co.uk/shop/my-basket/edtracker-diy-pcb) a los chicos de EdTracker. La segunda es hacer el circuito nosotros mismos usando una [placa de prototipado](https://www.sparkfun.com/products/12702) y hacer las conexiones entre componentes. Yo opté por la segunda, porque aunque queda más desprolijo, es algo que me gusta hacer. 
-<figure class="kg-image-card"><img src="/content/images/2018/08/protoboard.jpg" class="kg-image"></figure>
+
+![](/images/protoboard.jpg)
 
 ### El circuito
 
 El proceso de creación de la placa es bastante sencillo. Simplemente tenemos que hacer las conexiones entre los pines de los distintos componentes de la siguiente manera:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/pinout.png" class="kg-image"></figure>
+![](/images/pinout.png)
 
 El diagrama sería algo así:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/circuit-1.png" class="kg-image"></figure>
+![](/images/circuit-1.png)
 
 Y puesto en la placa de prototipado de la manera más compacta posible se podría lograr algo como esto:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/circuit2.png" class="kg-image"><figcaption>Nótese que algunos de los cables pasan de un lado de la placa al otro.</figcaption></figure>
+![](/images/circuit2.png)
+_Nótese que algunos de los cables pasan de un lado de la placa al otro._
 
 Lo que yo hice fue agregar unos zócalos que me permiten poner y quitar tanto el Arduino como el sensor cuando yo quiera, por si pienso usarlos para otro proyecto en un futuro.
 
 El resultado es este:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/headtracker1.jpg" class="kg-image"></figure><figure class="kg-image-card"><img src="/content/images/2018/08/headtracker2.jpg" class="kg-image"></figure><figure class="kg-image-card"><img src="/content/images/2018/08/headtracker3.jpg" class="kg-image"></figure>
+![](/images/headtracker1.jpg)![](/images/headtracker2.jpg)![](/images/headtracker3.jpg)
 
 Aquí destaca el _para nada estético pero práctico_ sistema de sujeción: Un broche para ropa :)  
 No es muy elegante, pero cumple su función.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/headtracker4.jpg" class="kg-image"></figure>
+![](/images/headtracker4.jpg)
 
 Hacer el circuito no presenta ninguna complicación. Simplemente un par de soldaduras siguiendo los diagramas y ya lo tenemos funcionando.
 
@@ -85,7 +96,7 @@ Allí también podemos encontrar los drivers de Arduino, que son indispensables 
 
 Una vez abierta la interfaz gráfica, vemos algo así:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/config.jpg" class="kg-image"></figure>
+![](/images/config.jpg)
 
 Si tenemos los drivers de Arduino correctamente instalados, la aplicación debería detectar nuestro EdTracker casi al momento.
 
@@ -97,7 +108,7 @@ La calibración es necesaria porque muchas veces el ruido generado por los senso
 
 Otra cosa que entra en juego a la hora de calibrar el sensor es la temperatura del mismo. Por lo visto las variaciones de temperatura afectan a las mediciones, por lo que lo ideal es esperar a que el sensor tome una temperatura ambiente y recién ahí aplicar las correcciones. El software nos da esta información en la parte superior derecha. Cuando la temperatura varía, la etiqueta _ **temperature** _ tiene un color rojo, indicando que no es un buen momento para hacer la calibración. Lo que tenemos que hacer es esperar un rato (normalmente es poco tiempo) hasta que las temperaturas se estabilicen y la etiqueta se ponga de color verde. En ese momento hacemos click en el botón _ **Reset View** _ y el software compensará automágicamente por el error inducido del sensor, manteniendo así la posición de manera correcta a lo largo del tiempo.
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/RToMDDz6K3A?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></figure>
+{% include embed/youtube.html id='RToMDDz6K3A' %}
 
 Como se ve en el video, los movimientos son exponenciales. Esto es a propósito para no tener que mover la cabeza mucho, hasta el punto de dejar de ver la pantalla. Esto es configurable independientemente para cada eje y lo que recomiendo es que busques los valores que te parezcan cómodos.
 
@@ -106,4 +117,3 @@ Como se ve en el video, los movimientos son exponenciales. Esto es a propósito 
 Un proyecto fácil, rápido y barato que puede hacer que los videojuegos sean todavía más divertidos.
 
 ¿Qué estas esperando?
-

@@ -1,7 +1,10 @@
 ---
-layout: post
-title: Sistema de retroceso para realidad virtual
-date: '2018-08-21 20:26:00'
+author: matto
+title: Fabricación de un Roadbook con Tripmaster
+date: 2017-06-03T19:50:00+01:00
+image: 
+  path: /images/header.jpg
+categories:
 tags:
 - electronica
 - programacion
@@ -15,7 +18,7 @@ Uno de mis juegos preferidos es "[Hot Dogs, Horseshoes & Hand Grenades](https://
 
 Acompañados de las gafas, y para incrementar la sensación de inmersión, el jugador interacciona con el mundo virtual por medio de unos mandos llamados _Oculus Touch_:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/touch-controllers.jpg" class="kg-image"></figure>
+![](/images/touch-controllers.jpg)
 
 El problema es que a pesar de que hacen un trabajo impecable detectando la posición de mis manos en el espacio real, no son capaces de reproducir el &nbsp;fuerte retroceso que genera un arma real al ser disparada. En cambio nos tenemos que conformar con una triste vibración parecida a la de cuando nos llega un mensaje de WhatsApp al móvil.  
 Ese retroceso es a mi parecer lo único que haría falta para que la inmersión sea total. La experiencia mejoraría en un 63%.
@@ -24,7 +27,14 @@ Ese retroceso es a mi parecer lo único que haría falta para que la inmersión 
 
 Luego de darle algunas vueltas decidí ponerme manos a la obra. Un par de horas de búsquedas tanto en Google como en YouTube (mi nuevo motor de búsqueda preferido) me llevaron a varios resultados. Algunos de ellos muy interesantes, como por ejemplo, patentes de mecanismos para lograr este mismo objetivo, pero con distintos fines. Algunos recreativos, otros de entrenamiento militar:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/pat3.png" class="kg-image"><figcaption>Dispositivo para entrenamiento militar adaptable a cualquier tipo de arma</figcaption></figure><figure class="kg-image-card"><img src="/content/images/2018/08/pat2.png" class="kg-image"><figcaption>Sistema de retroceso eléctrico para máquinas recreativas de arcade</figcaption></figure><figure class="kg-image-card"><img src="/content/images/2018/08/pat1.png" class="kg-image"><figcaption>Sistema de retroceso basado en aire (o gas) comprimido adaptable a pistolas reales</figcaption></figure>
+![](/images/pat3.png)
+_Dispositivo para entrenamiento militar adaptable a cualquier tipo de arma_
+
+![](/images/pat2.png)
+_Sistema de retroceso eléctrico para máquinas recreativas de arcade_
+
+![](/images/pat1.png)
+_Sistema de retroceso basado en aire (o gas) comprimido adaptable a pistolas reales_
 
 ## Requisitos
 
@@ -50,7 +60,7 @@ Uno de los resultados que encontré durante la búsqueda es el uso de gas compri
 
 Para cumplir con los requisitos antes mencionados, lo ideal sería usar cápsulas de CO2 de 12 gramos:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/co2.png" class="kg-image"></figure>
+![](/images/co2.png)
 
 Son baratas y fáciles de conseguir, pero tienen como desventaja que pueden almacenar muy poco gas. En una pistola de Airsoft se puede disparar unas 30 veces (con suerte) por cada uno de los cartuchos. Estar quitándonos las gafas y cambiando de cartuchos cada 30 tiros no ayudará mucho a la inmersión. Especialmente con armas automáticas.
 
@@ -62,11 +72,11 @@ Esta alternativa tiene mucha mejor pinta, empezando por que no es necesario el u
 
 Volviendo atrás hasta mi infancia (no tan lejana), recuerdo haber pasado mucho tiempo jugando en máquinas arcade de videojuegos. Algunas de ellas tenían armas y tenían retroceso.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/arcade-gun.png" class="kg-image"></figure>
+![](/images/arcade-gun.png)
 
 Buscando un poco me encontré con que ese efecto se lograba usando un tipo especial de electroimanes llamados _solenoides_:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/solenoide.jpg" class="kg-image"></figure>
+![](/images/solenoide.jpg)
 
 Un solenoide es simplemente un electroimán con un eje metálico y un muelle. Al hacer pasar corriente por él, el eje se contrae comprimiendo el muelle. Al dejar de pasar corriente, el electroimán pierde su energía y el muelle se encarga de extender el eje nuevamente. Se suelen usar como actuador lineal para abrir y cerrar válvulas.
 
@@ -80,57 +90,60 @@ Con todo esto en mente, compré un solenoide de 24 volts para hacer algunas prue
 Para controlar los movimientos y la repetición del solenoide, utilicé un **Arduino Nano**. Dado que la corriente que necesita el electroimán para funcionar está cerca de los 2 amperes (si, muchísimo) y el Arduino no es capaz de manejar esas capacidades, usé un relay de 5v para controlar el paso de corriente.  
 Para variar fácilmente la frecuencia de repetición de disparo usé un **potenciómetro** y como gatillo un simple botón. Lo más parecido a una pistola que tenía era una sierra para metal, asi que usé eso como cuerpo de la pistola :)
 
-<figure class="kg-image-card kg-width-wide"><img src="/content/images/2018/08/gun.jpg" class="kg-image"><figcaption>Sí, es una sierra.</figcaption></figure>
+![](/images/gun.jpg)
+_Sí, es una sierra._
 
 He agregado algunas arandelas a la punta del solenoide para que tenga más masa y el efecto del retroceso sea más notable.  
 Para que el golpe sea todavía más importante, he hecho caso omiso a la limitación de 24 volts del solenoide y lo estoy probando con 36 volts. La diferencia es bastante grande, y dado que el electroimán no está accionado de forma continua, no llega a calentarse.
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/XsdjxFZunkI?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></figure>
+{% include embed/youtube.html id='XsdjxFZunkI' %}
 
 Esta es sólo una primera aproximación. No es bonita, pero funciona y sí que da una sensación de retroceso que, aunque no es ni de cerca el de un arma real, es bastante fuerte y puede lograr el objetivo que busco.
 
 El código es extremadamente simple:
 
-    const int buttonPin = 2; // the number of the pushbutton pin
-    const int relayPin = 4; // the number of the solenoid pin
-    const int ledPin = 13; // the number of the LED pin
-    
-    int buttonState = 0;
-    int shotTime = 50;
-    int repeatTime = 400;
-    int sensorValue = 0;
-    
-    void setup() {
-      pinMode(ledPin, OUTPUT);
-      pinMode(relayPin, OUTPUT);
-      pinMode(buttonPin, INPUT);
-    }
-    
-    void loop() {
-      // read the state of the pushbutton:
-      buttonState = digitalRead(buttonPin);
-      // read the state of the potentiometer:
-      sensorValue = analogRead(A0);
-    
-      repeatTime = sensorValue;
-    
-      // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
-      if (buttonState == HIGH) {
-        // turn LED on:
-        digitalWrite(ledPin, HIGH);
-        shoot();
-      } else {
-        // turn LED off:
-        digitalWrite(ledPin, LOW);
-      }
-    }
-    
-    void shoot(){
-      digitalWrite(relayPin, HIGH);
-      delay(shotTime);
-      digitalWrite(relayPin, LOW);
-      delay(repeatTime);
-    }
+```c++
+const int buttonPin = 2; // the number of the pushbutton pin
+const int relayPin = 4; // the number of the solenoid pin
+const int ledPin = 13; // the number of the LED pin
+
+int buttonState = 0;
+int shotTime = 50;
+int repeatTime = 400;
+int sensorValue = 0;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  pinMode(relayPin, OUTPUT);
+  pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+  // read the state of the pushbutton:
+  buttonState = digitalRead(buttonPin);
+  // read the state of the potentiometer:
+  sensorValue = analogRead(A0);
+
+  repeatTime = sensorValue;
+
+  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
+  if (buttonState == HIGH) {
+    // turn LED on:
+    digitalWrite(ledPin, HIGH);
+    shoot();
+  } else {
+    // turn LED off:
+    digitalWrite(ledPin, LOW);
+  }
+}
+
+void shoot(){
+  digitalWrite(relayPin, HIGH);
+  delay(shotTime);
+  digitalWrite(relayPin, LOW);
+  delay(repeatTime);
+}
+```
 
 Lo único que hace es que al presionar el botón, acciona el solenoide por un tiempo muy breve y luego lo libera. Luego hay una espera entre disparo y disparo que depende de la posición del potenciómetro y el ciclo se repite.
 
@@ -141,4 +154,3 @@ Dada la dificultad de las restricciones he dejado el proyecto de lado. No es la 
 En el camino aprendí mucho y descubrí una nueva afición (el Airsoft), pero viendo las cantidades de electricidad necesarias para hacerlo funcionar queda prácticamente descartada la posibilidad de usar baterías (aunque con varias LiPo en serie tal vez se podría hacer algo), pero principalmente la mayor dificultad es la de sincronizar el retroceso con el momento en que se el arma se dispara dentro del juego. Para ello necesitamos integración por parte de los desarrolladores, y no creo que sea algo tan fácil de conseguir.
 
 Probablemente en algún momento haga algún prototipo de juego usando **Unity** en el que se pueda disparar y se sincronice con mi sierra-pistola. De momento, es un proyecto en stand by.
-

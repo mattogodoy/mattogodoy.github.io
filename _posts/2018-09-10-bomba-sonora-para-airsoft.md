@@ -1,7 +1,10 @@
 ---
-layout: post
+author: matto
 title: Bomba sonora para airsoft
-date: '2018-09-10 22:50:00'
+date: 2018-09-10T22:50:00+01:00
+image: 
+  path: /images/front2-1.jpg
+categories:
 tags:
 - electronica
 - programacion
@@ -16,13 +19,15 @@ Una cosa lleva a la otra, y terminé viendo videos de YouTube de [NOVRITSCH](htt
 
 Es una actividad muy interesante. Hago deporte sin darme cuenta y puedo disparar a la gente sin que la policía me pida explicaciones. Todas las armas son réplicas exactas de las reales y el equipamiento también se suele imitar de grupos especiales de asalto de todas partes del mundo.
 
-<figure class="kg-image-card"><img src="/content/images/2018/09/airsoft.jpeg" class="kg-image"><figcaption>Nuestro equipo. Yo soy el último de la derecha 👆🏻</figcaption></figure>
+![](/images/airsoft.jpeg)
+_Nuestro equipo. Yo soy el último de la derecha 👆🏻_
 
 Durante las partidas hay muchos modos de juego. Uno de ellos es que uno de los bandos pone una bomba en un lugar especificado y tiene que protegerla por un tiempo determinado hasta que "explota". El otro bando tiene que llegar hasta ese lugar e intentar desactivar la bomba antes de que explote.
 
 Esto se suele hacer con una bomba que no es mas que una caja aburrida e inanimada. Yo, habiendo sido un ávido jugador de Counter Strike hace muchos años, me imaginaba una bomba más parecida a ésta:
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/-tcK_yQ8N_E?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></figure>
+{% include embed/youtube.html id='-tcK_yQ8N_E' %}
+
 ## La bomba
 
 La idea era hacer un proyecto pequeño, que no me llevara mucho tiempo y que pudiera aportar algo a las partidas.
@@ -33,7 +38,8 @@ Como base quería una bomba basada en Arduino que tuviese una pantalla, un tecla
 
 Estos son algunos de los componentes que utilicé:
 
-<figure class="kg-image-card"><img src="/content/images/2018/09/components.jpg" class="kg-image"><figcaption>Un Arduino Nano, una pantalla LCD de 16*2 caracteres, un teclado numérico, un buzzer y una caja plástica.</figcaption></figure>
+![](/images/components.jpg)
+_Un Arduino Nano, una pantalla LCD de 16*2 caracteres, un teclado numérico, un buzzer y una caja plástica._
 
 Mas adelante, a lo que se ve en la foto agregue dos LEDs RGB que obtuve de unas tiras que usé para otro proyecto (del que hablaré más adelante) y un interruptor con llave que tenía dando vueltas por ahí.
 
@@ -41,13 +47,15 @@ Como batería para todo el sistema he usado una LiPo de 3S que tenía de [un pro
 
 Con la ayuda de un taladro, un cutter y un poco de paciencia hice los huecos necesarios para todos los componentes.
 
-<figure class="kg-image-card"><img src="/content/images/2018/09/inside.jpg" class="kg-image"><figcaption>No es mi mejor trabajo, pero cumple su función.</figcaption></figure>
+![](/images/inside.jpg)
+_No es mi mejor trabajo, pero cumple su función._
 
 El interior es muy poco atractivo, pero he pegado todos los componentes con silicona para que la bomba aguante golpes y caídas. Las partidas pueden ser muy intensas.
 
 El resultado es éste:
 
-<figure class="kg-image-card"><img src="/content/images/2018/09/front1.jpg" class="kg-image"><figcaption>Disposición final de los componentes.</figcaption></figure>
+![](/images/front1.jpg)
+_Disposición final de los componentes._
 ### Modos de juego
 
 Mi idea era hacer que el código de la bomba fuese muy simple y con pocos modos de juego, pero que permita agregar nuevos modos si se me ocurren más adelante.
@@ -79,7 +87,8 @@ Una vez configurada los jugadores no necesitan hacer nada aparte de activarla o 
 
 Aquí se puede ver el proceso de configuración, armado y desarmado de la bomba:
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/O8ZCUXwC3zo?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><figcaption>Configuración y uso de la bomba</figcaption></figure>
+{% include embed/youtube.html id='O8ZCUXwC3zo' %}
+_Configuración y uso de la bomba_
 
 Como se puede ver en el video, si el jugador suelta el botón antes de que se cumpla el tiempo de armado/desarmado la cuenta empieza nuevamente desde cero, por lo que deberá mantener presionado el botón de manera ininterrumpida durante el tiempo especificado.
 
@@ -89,36 +98,38 @@ La llave permite que la organización pueda encender la bomba y que no pueda ser
 
 Las conexiones entre el Arduino Nano y los distintos componentes son las siguientes:
 
-    Arduino Pin Module - Pin
-    ----------- ------------
-    
-    5V LCD - 2
-    5V LCD - 15
-    5V LEDs
-    
-    GND LCD - 1
-    GND LCD - 3
-    GND LCD - 5
-    GND LCD - 16
-    GND Buzzer - Negative
-    GND LEDs
-    
-    D2 Keypad - 1
-    D3 Keypad - 2
-    D4 Keypad - 3
-    D5 Keypad - 4
-    D6 Keypad - 5
-    D7 LCD - 4
-    D8 LCD - 6
-    D9 LCD - 11
-    D10 LCD - 12
-    D11 LCD - 13
-    D12 LCD - 14
-    
-    A0 (D14) Keypad - 6
-    A1 (D15) Keypad - 7
-    A2 (D16) Buzzer - Positive
-    A3 (D17) LEDs
+```
+Arduino Pin Module - Pin
+----------- ------------
+
+5V LCD - 2
+5V LCD - 15
+5V LEDs
+
+GND LCD - 1
+GND LCD - 3
+GND LCD - 5
+GND LCD - 16
+GND Buzzer - Negative
+GND LEDs
+
+D2 Keypad - 1
+D3 Keypad - 2
+D4 Keypad - 3
+D5 Keypad - 4
+D6 Keypad - 5
+D7 LCD - 4
+D8 LCD - 6
+D9 LCD - 11
+D10 LCD - 12
+D11 LCD - 13
+D12 LCD - 14
+
+A0 (D14) Keypad - 6
+A1 (D15) Keypad - 7
+A2 (D16) Buzzer - Positive
+A3 (D17) LEDs
+```
 
 ### Código fuente
 
@@ -138,11 +149,11 @@ Personalmente creo que aporta bastante a la partida. Se podría complementar con
 
 Finalmente agregué un poco de cinta amarilla alrededor de la caja para darle más visibilidad:
 
-<figure class="kg-image-card"><img src="/content/images/2018/09/front2.jpg" class="kg-image"><figcaption>Bomba terminada</figcaption></figure>
+![](/images/front2.jpg)
+_Bomba terminada_
 
 Otra mejora importante que tengo pendiente es poner un botón grande y con luz para activar y desactivar la bomba. Actualmente eso se hace con la tecla **#** del teclado numérico, pero es muy pequeña y no se ve en la oscuridad además de ser poco intuitivo.
 
 El botón ya está pedido y viene en camino. La idea es instalarlo en la parte inferior derecha de la bomba para que quede simétrico con el buzzer. Una vez llegue y lo instale actualizaré esta publicación.
 
-💣
-
+<p style="text-align: center; font-size: 80px">💣</p>

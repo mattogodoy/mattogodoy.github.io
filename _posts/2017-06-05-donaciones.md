@@ -1,7 +1,9 @@
 ---
-layout: post
+author: matto
 title: Donaciones
-date: '2017-06-05 17:49:00'
+date: 2017-06-03T19:50:00+01:00
+image: 
+  path: /images/donaciones.jpg
 ---
 
 La razón de la existencia de este sitio web es simplemente una manera de documentar algunos de mis proyectos personales en los que trabajo en mi tiempo libre.  
@@ -37,7 +39,8 @@ Siendo un sitio de tecnología sería raro que no aceptara Bitcoins como donativ
 
 **Cartera de Bitcoins:** 1Jq3vRDRQk9gPEDcfbqiQ3ozx9wpjMAY8g
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/bc.png" class="kg-image"></figure>
+![](/images/bc.png)
+
 ### Materiales
 
 ¿Tienes algún microcontrolador, sensor, motor, herramienta o loquesea que no uses y creas que puede servir para un proyecto interesante?
