@@ -1,7 +1,10 @@
 ---
-layout: post
+author: matto
 title: Armando un Quadcopter
-date: '2015-12-14 19:32:00'
+date: 2015-12-14T19:32:00+01:00
+image: 
+  path: /images/uav-v2-1.jpg
+categories:
 tags:
 - electronica
 - robotica
@@ -14,7 +17,7 @@ Lo aclaro porque hoy en día la gente llama _drone_ a cualquier cosa que vuela.
 
 Para lograrlo se basa en una unidad central de procesamiento llamada **autopiloto** , que valiéndose de varios sensores como [giróscopos](http://es.wikipedia.org/wiki/Gir%C3%B3scopo%22), [acelerómetros](http://5hertz.com/tutoriales/?p=228%22), [magentómetros](http://es.wikipedia.org/wiki/Magnet%C3%B3metro%22), [barómetros](http://es.wikipedia.org/wiki/Bar%C3%B3metro%22), [GPS](http://gutovnik.com/como_func_sist_gps.htm%22), [tubos de Pitot](https://abcienciade.wordpress.com/2009/06/19/tubo-de-pitot-en-los-aviones/%22) y [sensores de ultrasonido](http://www.superrobotica.com/S320110.htm%22) entre otros, tiene la capacidad de evaluar su posición y estado y actuar en consecuencia, formando un lazo cerrado:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/lazo_cerrado.jpg" class="kg-image"></figure>
+![](/images/lazo_cerrado.jpg)
 
 # Lista de componentes
 
@@ -58,15 +61,15 @@ Llamamos «frame» a la estructura básica o chasis donde van montados todos los
 
 El frame que yo utilizo es una copia del [TBS Discovery](http://team-blacksheep.com/products/product:98) y se llama **HJ X-Mode MWC Alien**
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/frame.jpg" class="kg-image"></figure>
+![](/images/frame.jpg)
 
 El tamaño que elegí es de **450**. Ese número define la distancia que hay en diagonal entre los motores:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/f450-quadcopter-frame-3.jpg" class="kg-image"></figure>
+![](/images/f450-quadcopter-frame-3.jpg)
 
 Armado se ve así:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/frame2.jpg" class="kg-image"></figure>
+![](/images/frame2.jpg)
 
 La ventaja de este frame es que tiene bastante espacio para equipos como una cámara GoPro y un transmisor de video para [FPV](http://desdeelairerc.es/es/content/12-que-es-fpv).
 
@@ -76,17 +79,17 @@ Los brazos son los encargados de sujetar los motores al frame, y son los primero
 
 Quise experimentar utilizando unos que [imprimí en 3D](http://matto.io/armando-una-impresora-3d-parte-1/%22):
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/brazo.jpg" class="kg-image"></figure>
+![](/images/brazo.jpg)
 
 Lo malo es que no tienen la misma resistencia que los de plástico inyectado, y se rompen muy fácilmente. Duraron poco.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/brazo2.jpg" class="kg-image"></figure>
+![](/images/brazo2.jpg)
 
 Los que vienen con el kit del frame se veían bien, pero al primer golpe fuerte se terminaron rompiendo.
 
 Finalmente terminé comprando unos de la marca DJI que son increíblemente resistentes y no me costaron caros:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/brazos.jpg" class="kg-image"></figure>
+![](/images/brazos.jpg)
 
 Estos aguantan cualquier cosa.
 
@@ -103,11 +106,12 @@ Algunas controladoras de vuelo traen funciones extra basándose en sensores espe
 
 Inicialmente utilicé una «Multiwii Pro», que es una copia del famoso [Ardupilot Mega](http://copter.ardupilot.com/wiki/common-autopilots/common-apm25-and-26-overview/). Al ser una copia, cuesta bastante más barato e inclusive trae el módulo GPS incluído en el kit:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/multiwii.jpg" class="kg-image"></figure>
+![](/images/multiwii.jpg)
 
 La verdad es que la calidad de las copias es siempre inferior a los productos originales. Esto se nota no sólo en la calidad de la construcción y los componentes, sino también a la hora de configurarlo. Las copias pueden dar algunos dolores de cabeza que normalmente los originales no causan.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/gps.jpg" class="kg-image"><figcaption>Módulo receptor de señal GPS</figcaption></figure>
+![](/images/gps.jpg)
+_Módulo receptor de señal GPS_
 
 La ventaja de esta controladora es que está basada en Arduino (ya todos saben que soy fan) y nos permite instalarle el firmware que más se ajuste a nuestras necesidades.  
 Para este caso, los más fuertes son dos: [Multiwii](https://code.google.com/archive/p/multiwii/) y [MegaPirate NG](http://www.megapirateng.com/). Ambos de código abierto.
@@ -121,19 +125,19 @@ Aprovechando esto, yo le hice un par de modificaciones:
 
 Instalé un módulo Bluetooth **JY-MCU** que me permitía, por ejemplo, cambiar todos los parámetros de configuración y ver la posición y actitud del quadcopter desde mi móvil de manera inalámbrica:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/bluetooth.jpg" class="kg-image"></figure>
+![](/images/bluetooth.jpg)
 
 Por otro lado, a pesar de que la Multiwii Pro trae un sensor barométrico para calcular en todo momento la altura de la aeronave, la presión atmosférica como referencia de altura no nos permite una gran resolución ni precisión, por lo que instalé también un sensor ultrasónico **HC-SR04** :
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/ultrasound.jpg" class="kg-image"></figure>
+![](/images/ultrasound.jpg)
 
 Y aquí ya instalado en el frame:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/ultrasound2.jpg" class="kg-image"></figure>
+![](/images/ultrasound2.jpg)
 
 La ventaja de este sensor es que tiene muy buena resolución para medir distancias de hasta 4 metros, entonces para alturas inferiores a 4 metros, el quadcopter utiliza como referencia el sensor ultrasónico. Para alturas mayores utiliza directamente el sensor barométrico.
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/ThoqL8WakUw?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></figure>
+{% include embed/youtube.html id='ThoqL8WakUw' %}
 
 Esto ayuda al quadcopter a despegar y aterrizar automáticamente, y a mantener siempre la misma altura en su modo de vuelo **ALT HOLD**. Dependiendo del firmware instalado, habrá también otros modos que permitirán vuelos más estables, acrobáticos, etc.
 
@@ -147,13 +151,13 @@ Es por esto que en pos de la simplicidad me decanté por una placa mucho mas sen
 
 Esta placa no dispone de sensores como GPS, barómetro, ultrasonido, Bluetooth, etc. Simplemente acelerómetros y giróscopos.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/kk215.jpg" class="kg-image"></figure>
+![](/images/kk215.jpg)
 
 Está pensada únicamente para vuelo manual, por lo que no dispone de ningún modo de vuelo autónomo.
 
 La configuración se hace de manera muy sencilla utilizando sólo la pantalla LCD y los botones que trae incorporados:
 
-<figure class="kg-image-card kg-width-full"><img src="/content/images/2018/08/maxresdefault-1.jpg" class="kg-image"></figure>
+![](/images/maxresdefault-1.jpg)
 
 Esta placa es ideal para salir a volar rápido y sin complicaciones, pero no dispone de las opciones geniales que trae la Multiwii Pro.
 
@@ -163,11 +167,12 @@ Cada una es ideal para cada situación específica. Actualmente, la **KK 2.1.5**
 
 La configuración de la **Multiwii Pro** no es tan sencilla dada la cantidad de parámetros disponibles, pero a su vez, eso es lo que la convierte en una controladora muy versátil y adaptable a cualquier misión.
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/Ok42NJXCp2g?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></figure>
+{% include embed/youtube.html id='Ok42NJXCp2g' %}
 
 Para configurarla se conecta por medio de un cable USB, un adaptador bluetooth o un módulo de telemetría a un ordenador. El software que se usa para la configuración dependerá del firmware instalado en la controladora.
 
-<figure class="kg-embed-card"><iframe width="459" height="344" src="https://www.youtube.com/embed/smH35BnKmrY?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><figcaption>Mis disculpas por el video vertical. Yo también lo odio.</figcaption></figure>
+{% include embed/youtube.html id='smH35BnKmrY' %}
+_Mis disculpas por el video vertical. Yo también lo odio._
 
 Para el caso de la **KK 2.1.5** la configuración es mucho más sencilla porque se hace directamente desde la pantalla LCD que trae incorporada, y la simplicidad de la controladora hace que los parámetros a configurar no sean demasiados.
 
@@ -181,7 +186,7 @@ Las nuevas controladoras vienen con procesadores de 32 bits que permiten hacer c
 
 Hay montones de tutoriales y muchísima información sobre este tema en Internet, pero mi recomendación es que entiendas cómo funciona y te hagas amigo del sistema de control PID:
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/UR0hOmjaHp0?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></figure>
+{% include embed/youtube.html id='UR0hOmjaHp0' %}
 
 El modelo PID se utiliza muchísimo tanto en robótica como en sistemas industriales de todo tipo.
 
@@ -197,7 +202,7 @@ Por otro lado, se clasifican también en **Inrunner** (la carcaza con los imanes
 
 En mi caso utilicé unos **Turnigy D2830/11 de 1000 kV** :
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/motor-uav.jpg" class="kg-image"></figure>
+![](/images/motor-uav.jpg)
 
 Los motores traen 3 cables, los cuales reciben corriente en una secuencia predeterminada, con la cuál se puede regular la dirección y la velocidad de giro.  
 Para ello utilizamos variadores, también llamados «Controladores de velocidad».
@@ -208,11 +213,11 @@ Una vez elegido el motor, normalmente en las características del mismo se espec
 
 Inicialmente utilizaba hélices plásticas de 10x45:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/helices.jpg" class="kg-image"></figure>
+![](/images/helices.jpg)
 
 El problema es que se rompen muy fácilmente ante el más mínimo golpe. Es por ello que me pasé a las de fibra de carbono:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/helices2.jpg" class="kg-image"></figure>
+![](/images/helices2.jpg)
 
 Son un poco más caras, pero duran mucho más.
 
@@ -228,7 +233,7 @@ A la hora de elegirlos, hay que tener en cuenta el consumo de corriente que tien
 
 En mi caso, compré unos **Turnigy Plush de 30A** :
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/esc.jpg" class="kg-image"></figure>
+![](/images/esc.jpg)
 
 Elegí estos porque me daban la posibilidad de «flashearlos». Esto significa que puedo cambiarles el firmware y poner otro con algunas mejoras como la velocidad de refresco con la que se reciben las órdenes desde la controladora de vuelo.
 
@@ -236,11 +241,12 @@ El firmware que utilicé es de código abierto (qué sorpresa) y se llama [BLHel
 
 Para poder flashearlos, tuve que quitar el plástico que los cubre y fabricar una herramienta que haga contacto en 3 puntos específicos del circuito impreso:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/esc2.jpg" class="kg-image"></figure><figure class="kg-image-card"><img src="/content/images/2018/08/esc3.jpg" class="kg-image"><figcaption>Si, es un broche de ropa</figcaption></figure><figure class="kg-image-card"><img src="/content/images/2018/08/esc4.jpg" class="kg-image"></figure>
+![](/images/esc2.jpg)![](/images/esc3.jpg)
+_Si, es un broche de ropa_![](/images/esc4.jpg)
 
 Utilizando un **Arduino Uno** como **programador AVR** USB y una máquina virtual con Windows fui capaz de ejecutar la aplicación para flashear BLHeli. El proceso es bastante rápido, pero luego tuve que volver a cubrir los ESCs con termoretráctil para que no queden a la intemperie:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/esc5.jpg" class="kg-image"></figure>
+![](/images/esc5.jpg)
 
 Luego de flasheados los ESCs, la respuesta del quad es notablemente mejor y los motores hacen menos ruido. Lo recomiendo ampliamente, aunque ya hay varios ESCs que vienen con firmwares mejorados ya flasheados de fábrica.
 
@@ -258,13 +264,13 @@ El amperaje es lo que define la cantidad de corriente que es capaz de almacenar 
 
 La que yo elegí al principio era una **Turnigy de 3 celdas y 2.6 Amperes** :
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/bateria-uav.jpg" class="kg-image"></figure>
+![](/images/bateria-uav.jpg)
 
 Con ella podía volar cerca de 6 minutos antes de agotarla.
 
 Luego de un tiempo, me pasé a una batería que en realidad es para coches eléctricos (viene dentro de una especie de caja plástica). Esta vez de 5.0 Amperes (respetando las 3 celdas que soportan mis motores), con la cual llego a volar hasta 9 minutos:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/bateria-uav2.jpg" class="kg-image"></figure>
+![](/images/bateria-uav2.jpg)
 
 Habrás notado que además, las baterías muestran un número de « **C** », que es un multiplicador que indica la cantidad máxima de energía que es capaz de entregar en un momento dado. Es decir, si la batería es de **2.6 A** y **30C** , (2.6 \* 30 = 78) significa que es capaz de entregar **78 Amperes** de manera segura.
 
@@ -276,7 +282,7 @@ Algo importante a tener en cuenta con éstas baterías es que no debemos consumi
 
 Por este motivo, y para no quedarnos sin batería a mitad del vuelo y que nuestro quad caiga cual roca, se utiliza una alarma sonora que avisa cuando la batería tiene una carga inferior a la especificada:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/lipo-meter-screamer.jpg" class="kg-image"></figure>
+![](/images/lipo-meter-screamer.jpg)
 
 Esta alarma es muy barata, pero en mi opinión indispensable para mantener la vida útil de la batería y del propio quad.
 
@@ -288,12 +294,11 @@ Algo a tener en cuenta es el número de canales que puede controlar. Esto es imp
 
 Mi recomendación es la **Turnigy 9X** , que dispone de 8 canales y un display digital con mucha información útil:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/radio.jpg" class="kg-image"></figure>
+![](/images/radio.jpg)
 
 Además, se puede cambiar el firmware por uno de código abierto llamado [ER9X](https://github.com/MikeBland/mbtx), algo que me queda pendiente, pero que quisiera hacer ya que trae muchas ventajas frente al firmware original.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/receptor.jpg" class="kg-image"></figure>
-
+![](/images/receptor.jpg)
 _«Receptor de la radio con 8 canales disponibles»_
 
 Es una buena radio, a un precio muy aceptable (poco más de 50€).
@@ -304,13 +309,13 @@ Algo que está muy de moda es el vuelo **FPV** (First Person View), que consta d
 
 Yo compré unas **Fatshark Teleporter** , que es el kit más barato de la marca e incluye todo lo necesario para salir a volar (gafas, batería, transmisor, cámara, antenas, cables).
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/fatshark.jpg" class="kg-image"></figure>
+![](/images/fatshark.jpg)
 
 Lamentablemente he volado poco con ellas, y me falta bastante práctica. Al principio da un poco de miedo porque no transmite sensación de distancia, profundidad o altura, entonces cuesta saber que tan lejos están los obstáculos, o que tan alto estas volando. Dicen que con un poco de práctica te acostumbras rápido. Veremos si es verdad :)
 
 Una pequeña mejora que les hice fue cambiar las antenas por unas llamadas « **hoja de trébol** ». La ventaja que tienen frente a las que trae el kit es que son _omnidireccionales_, brindando una mejor señal y teóricamente mejor alcance:
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/antena.jpg" class="kg-image"></figure>
+![](/images/antena.jpg)
 
 Hay algunas de mejor calidad, pero como estoy recién iniciando en el tema... compré estas.
 
@@ -318,7 +323,7 @@ Hay algunas de mejor calidad, pero como estoy recién iniciando en el tema... co
 
 Después de configurar todo en base a prueba y error, este es el primer vuelo exitoso:
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/Ki6ANzmBq4s?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></figure>
+{% include embed/youtube.html id='Ki6ANzmBq4s' %}
 
 La cámara con la que fue filmado tiene un pésimo sistema de autofoco y es por eso que el video no se ve muy bien, pero es lo que hay.
 
@@ -326,7 +331,7 @@ La cámara con la que fue filmado tiene un pésimo sistema de autofoco y es por 
 
 Siempre estoy pensando en qué mejoras hacer al sistema que ya tengo. He pensado en agregar un gimbal para la cámara, pero de momento sólo he agregado un servo controlado desde un canal en la radio que me permite mover la cámara hacia arriba y abajo:
 
-<figure class="kg-embed-card"><iframe width="480" height="270" src="https://www.youtube.com/embed/4OSl-cKKpMQ?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></figure>
+{% include embed/youtube.html id='4OSl-cKKpMQ' %}
 
 También he agregado una cámara GoPro para filmar los vuelos desde arriba.
 
@@ -334,9 +339,10 @@ También he agregado una cámara GoPro para filmar los vuelos desde arriba.
 
 Es un proyecto muy divertido con el que he aprendido muchísimo. Lamentablemente, como todo hobbie, no es barato pero por suerte los precios van bajando de a poco.
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/uav-v1.jpg" class="kg-image"><figcaption>Versión 1</figcaption></figure>
+![](/images/uav-v1.jpg)
+_Versión 1_
 
-<figure class="kg-image-card"><img src="/content/images/2018/08/uav-v2.jpg" class="kg-image"><figcaption>Versión 2</figcaption></figure>
+![](/images/uav-v2.jpg)
+_Versión 2_
 
 No es fácil, pero es justamente eso lo que nos atrae, no?
-
