@@ -11,6 +11,7 @@ tags:
 - programacion
 - cnc
 - moto
+hidden: true
 ---
 
 # Estado actual
