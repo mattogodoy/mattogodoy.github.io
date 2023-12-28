@@ -24,11 +24,11 @@ Este tipo de competencias es muy común, y a estos robots se los llama "Seguidor
 
 Cada vuelta consta de dos robots sobre la pista, compitiendo entre sí.
 
-**Robots**
+### Robots
 
 Estan limitados en dimensiones, y deben tener un pulsador en la parte delantera. Con esto nos aseguramos de que al momento de la largada, los robots estaran frente a una compuerta que mantiene el pulsador presionado, y ni bien se abre, ambos robots salen a la vez.
 
-**Pista**
+### Pista
 
 La pista era un circuito de unos 40 cm de ancho, de color negro y tenía dos líneas blancas pintadas. Una para cada robot.  
 Además tenía una pendiente de 20º que formaba un puente, y un area de zig-zag.
@@ -36,14 +36,14 @@ Además tenía una pendiente de 20º que formaba un puente, y un area de zig-zag
 ![](/images/pista_seguidor_lineas.jpg)
 _Los chicos de la Universidad de Mendoza también habían instalado unas cámaras en los puntos mas críticos, para poder verlos de cerca y lo proyectaban en una pared._
 
-**Reglamento**
+### Reglamento
 
 El documento oficial del reglamento se puede ver [aquí](https://matto.io/files/seguidor_lineas/Reglamento_Carreras_2012.pdf).  
 Está bien detallado y no deja lugar a dudas.
 
 ## Construcción
 
-**Idea inicial**
+### Idea inicial
 
 Soy un poco fan de Arduino, y desde el principio supe que iba a encarar este proyecto usándolo.
 
@@ -58,7 +58,7 @@ Hice un prototipo y una rutina de pruebas:
 Luego de algunas pruebas llegué a la conclusión de que la manera más fácil sería usar sólo un motor para la tracción, y un servo para la dirección, girando las ruedas frontales como un auto común.  
 Esto me ahorraría varios dolores de cabeza y simplificaría el diseño tanto en el hardware como en el software del robot.
 
-**Sensores**
+### Sensores
 
 Para detectar la línea de guía pintada en la pista, inicialmente pensé en usar emisores y receptores Infra Rojos. El funcionamiento es el siguiente:
 
@@ -80,13 +80,13 @@ Como se ve en la imagen, lo que hice fue usar 3 "sensores". El del medio deberí
 
 Por otra parte, encapsulé cada sensor con unas piezas de plástico (sí, viste bien, es un resaltador cortado) para que la luz de cada sensor no genere "ruido" en sus vecinos.
 
-**Motor**
+### Motor
 
 Para la tracción del robot utilicé un motor DC común y silvestre.
 
 ![](/images/motor.jpg)
 
-**Caja reductora**
+### Caja reductora
 
 El mayor de los problemas fue conseguir una caja reductora. Estos motores llegan a velocidades bastante altas, pero no tienen mucha fuerza.  
 Sin una caja reductora nunca iba a mover mi robot.  
@@ -100,7 +100,7 @@ Tras muchas pruebas, terminé comprando un par de juguetes chinos de los que qui
 
 Una vez conectada al motor, mi robot ya tenía fuerza suficiente como para moverse, y a una buena velocidad.
 
-**Controlador del motor**
+### Controlador del motor
 
 Algo importante es que los Arduino no manejan grandes cantidades de corriente eléctrica, y conectar un motor a una de sus salidas directamente es garantía de que lo vas a freír.  
 Para solucionarlo, tuve que hacer un circuito que se llama [puente H](https://es.wikipedia.org/wiki/Puente_H_(electrónica)), para lo que usé un [controlador L298N](https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf) el cual me permite controlar la dirección de giro del motor.  
@@ -115,7 +115,7 @@ No es muy elegante, pero funciona.
 
 Lamentablemente no puedo encontrar los planos del circuito, pero es muy simple y se puede encontrar fácilmente en internet.
 
-**Dirección**
+### Dirección
 
 Respecto a la dirección, el servo que utilicé es uno de los más baratos, llamado 9g (porque pesa en total 9 gramos).
 
@@ -123,13 +123,13 @@ Respecto a la dirección, el servo que utilicé es uno de los más baratos, llam
 
 Este consume mucha menos corriente, y por tanto sí va conectado directamente al Arduino. Además tiene la ventaja de que traen la caja reductora integrada (como se ve en la foto), por lo que tienen mucha fuerza.
 
-**Alimentación**
+### Alimentación
 
 Para alimentar el Arduino utilicé 4 pilas AA, y para el motor una batería de 6 volts que, ni bien es grande y pesa mucho, me daría la autonomía y la potencia que necesitaba.
 
 ![](/images/bateria.jpg)
 
-**Código**
+### Código
 
 El código que controla todo esto es el siguiente:
 
@@ -338,7 +338,7 @@ Al final no utilicé el sensor del medio, ni un [control PID](https://es.wikiped
 
 Había pensado en una lógica de recuperación que se active cuando el robot se salía completamente de la línea, para volver de alguna manera al circuito, pero por falta de tiempo lo dejé como está.
 
-**Resultado**
+### Resultado
 
 Todo junto y armado, terminó siendo este Frankestein:
 

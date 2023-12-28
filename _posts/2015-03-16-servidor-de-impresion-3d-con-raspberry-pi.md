@@ -15,7 +15,7 @@ Ya hemos hablado en [posts anteriores]({% post_url 2015-03-09-descarga-automagic
 
 Hoy veremos cómo transformarla en un servidor de impresión 3D gracias al excelente proyecto creado por una chica alemana llamada [Gina Häußge](https://twitter.com/foosel).
 
-# Octoprint
+## Octoprint
 
 El proyecto en cuestión se llama [Octoprint](https://octoprint.org/), y es un servidor programado en [Python](https://www.python.org/) con una interfaz web que nos permite controlar nuestra [impresora 3D]({% post_url 2015-02-03-armando-una-impresora-3d-parte-1 %}) a través de una red privada o, por qué no, desde [Internet](https://media.giphy.com/media/iYDlg0CljYqTm/giphy.gif).
 
@@ -25,13 +25,13 @@ Esto nos da la libertad de no tener que dejar un ordenador conectado a la impres
 
 Otra ventaja interesante es que Octoprint tiene soporte para conectar una cámara web con la cual podremos hacer un [time-lapse](https://es.wikipedia.org/wiki/Time-lapse) o transmitir un video en [tiempo real](https://en.wikipedia.org/wiki/Streaming_media) mostrando el proceso de impresión.
 
-# Raspberry Pi
+## Raspberry Pi
 
 La Raspberry es perfecta para hacer este tipo de proyectos debido a su pequeño tamaño y bajo consumo eléctrico en contraste con su más que aceptable potencia.
 
 Una buena noticia es que gracias a un proyecto Open Source llamado [OctoPi](https://github.com/guysoft/OctoPi), tenemos disponible una [distro](https://es.wikipedia.org/wiki/Distribución_Linux) de Linux específica para Raspberry que viene con todo lo necesario ya pre-instalado y pre-configurado. Esto nos simplifica mucho las cosas para los pasos que siguen.
 
-# Configuración
+## Configuración
 
 Para empezar, lo que debemos hacer es ir al repositorio de Github de OctoPi y descargar la última versión estable de la imagen de disco:
 
@@ -80,7 +80,7 @@ Esto debería mantener la Raspberry conectada a la red local y a Internet.
 
 Ya podemos desconectar el monitor, el teclado y el mouse. Ya no los necesitaremos.
 
-# Acceso
+## Acceso
 
 Teniendo todo configurado, ya podemos acceder a la Raspberry desde cualquier dispositivo conectado a la red.
 
@@ -98,7 +98,7 @@ La primera vez que accedamos a la pantalla principal de OctoPrint, nos pedirá q
 
 Una vez ingresados los datos, le damos al botón «Keep Access Control Enabled». También nos da la opción de acceder sin pedir autenticación, pero no lo recomiendo.
 
-# Usando OctoPrint
+## Usando OctoPrint
 
 Una vez dentro de OctoPrint, lo primero que debemos hacer es conectar con la impresora. Para ello, seleccionamos los datos correctos en la sección «Connection» del menú de la izquierda y le damos a «Connect».
 
@@ -106,19 +106,19 @@ Una vez dentro de OctoPrint, lo primero que debemos hacer es conectar con la imp
 
 Si todo sale bien, el estado cambiará a «Operational», y ya estamos listos para interactuar con la impresora.
 
-## Archivos
+### Archivos
 
 Para imprimir un archivo GCODE basta con darle al botón «Upload» en el menú de la izquierda y seleccionarlo en el navegador de archivos.
 
 Una alternativa es arrastrar el archivo y soltarlo en la pantalla de OctoPrint.
 
-## Temperaturas
+### Temperaturas
 
 En esa misma pantalla, en la pestaña «Temperature», podemos ver y asignar los valores de temperatura de la cama caliente y el hot-end, que se mostrarán en un gráfico en función del tiempo.
 
 Esto normalmente es bastante útil para llevar un control sobre las temperaturas en tiempo real, y ver si los valores son los correctos.
 
-## Control
+### Control
 
 En la pestaña «Control» tenemos algunos controles básicos sobre los ejes y los motores de la impresora, así como de sus ventiladores:
 
@@ -126,7 +126,7 @@ En la pestaña «Control» tenemos algunos controles básicos sobre los ejes y l
 
 Si tenemos una webcam conectada, aquí es donde la veremos.
 
-## Visor de GCODE
+### Visor de GCODE
 
 En la pestaña «GCode Viewer» veremos la pieza que estamos imprimiendo:
 
@@ -134,7 +134,7 @@ En la pestaña «GCode Viewer» veremos la pieza que estamos imprimiendo:
 
 Aquí vemos también el avance de la impresión, lo que nos permite ver en tiempo real por qué parte del proceso vamos.
 
-## Terminal
+### Terminal
 
 En la pestaña «Terminal» tenemos, como su nombre lo indica, una terminal para interactuar con la impresora a un nivel más bajo, permitiéndonos enviar comandos específicos directamente:
 
@@ -142,7 +142,7 @@ En la pestaña «Terminal» tenemos, como su nombre lo indica, una terminal para
 
 También tiene la ventaja de que nos muestra el [log](https://en.wikipedia.org/wiki/Server_log) que devuelve la impresora en cada momento.
 
-## Timelapse
+### Timelapse
 
 Finalmente, en la pestaña «Timelapse» tenemos la opción de generar un video basado en fotos tomadas cada cierto tiempo, mostrando la evolución de la pieza impresa:
 
@@ -152,7 +152,7 @@ Siendo el resultado algo como esto:
 
 {% include embed/youtube.html id='jWqcX-dUo1o' %}
 
-# Conclusión
+## Conclusión
 
 Una vez más queda demostrado que los usos para la Raspberry son incontables, y que la comunidad Open Source tiene proyectos excelentes para compartir.
 

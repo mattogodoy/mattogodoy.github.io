@@ -26,14 +26,14 @@ Luego de investigar bastante, di con un par de proveedores que, si bien no lo ti
 
 Siendo un elemento tan simple me cuesta entender el por qué de ese precio tan elevado, así que me dispuse a fabricar los míos propios.
 
-# Requisitos
+## Requisitos
 
 - El soporte tiene que ser lo más pesado posible para sostener la placa en su lugar al soldar los componentes
 - Tiene que ser pequeño para no ocupar demasiado lugar en la mesa de trabajo
 - Tiene que ser cómodo de utilizar, emulando la simplicidad del original
 - Tiene que ser barato
 
-# Componentes
+## Componentes
 
 Para cumplir con el requisito del peso, estuve buscando trozos de metal macizo que tengan una rosca en el centro. Como te puedes imaginar, no es una cosa fácil de encontrar pero después de algunas vueltas di con los _bloques de maquinista_, también conocidos como _bloques 1-2-3._ Se llaman así porque miden 1 pulgada de ancho por 2 pulgadas de largo por 3 pulgadas de alto.
 
@@ -61,7 +61,8 @@ _Bloques 1-2-3, insertos de cobre, varilla roscada y perillas_
 
 ![](/images/image-4.1.png)
 _Gomas de alta densidad_
-# Lista de compras
+
+## Lista de compras
 
 Esta es la lista de componentes que he usado:
 
@@ -73,7 +74,7 @@ Esta es la lista de componentes que he usado:
 
 Precio total en materiales para fabricar 2 unidades: **41.84 €**
 
-# Proceso de fabricación
+## Proceso de fabricación
 
 El proceso es muy simple. Sólo hay que juntar todos los componentes con unas modificaciones mínimas.
 
@@ -111,7 +112,8 @@ _Usando los dos a la vez para placas grandes_
 Incluso se pueden llegar a combinar si la placa es pesada o necesitamos más estabilidad:
 
 ![](/images/image-14.png)
-# Conclusión
+
+## Conclusión
 
 Todavía no he llegado a usar los soportes, pero por las pruebas que he estado haciendo a simple vista parece que cumplirán perfectamente con su función.
 

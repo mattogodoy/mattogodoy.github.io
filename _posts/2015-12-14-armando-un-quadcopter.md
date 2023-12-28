@@ -19,7 +19,7 @@ Para lograrlo se basa en una unidad central de procesamiento llamada **autopilot
 
 ![](/images/lazo_cerrado.jpg)
 
-# Lista de componentes
+## Lista de componentes
 
 Una de las partes que más me costó a la hora de armar mi quadcopter fue encontrar un listado completo de piezas necesarias.
 
@@ -51,11 +51,11 @@ Inicialmente había puesto los enlaces a cada uno de los componentes, pero mient
 
 > **NOTA:** Han pasado casi 2 años desde que hice este proyecto. Ten en cuenta que estas tecnologías avanzan excesivamente rápido, y es posible que varios de los componentes ya estén casi obsoletos, o que tengan mejores alternativas disponibles al día de la fecha.
 
-## Detalle de los componentes
+### Detalle de los componentes
 
 Veremos detalles de algunos componentes que he utilizado. Con el tiempo he ido cambiando algunos por cuestiones de practicidad o destrucción.
 
-### Frame
+#### Frame
 
 Llamamos «frame» a la estructura básica o chasis donde van montados todos los equipos.
 
@@ -73,7 +73,7 @@ Armado se ve así:
 
 La ventaja de este frame es que tiene bastante espacio para equipos como una cámara GoPro y un transmisor de video para [FPV](https://desdeelairerc.es/es/content/12-que-es-fpv).
 
-### Brazos
+#### Brazos
 
 Los brazos son los encargados de sujetar los motores al frame, y son los primeros en recibir el golpe en caso de un accidente, por lo que tienen que ser muy resistentes.
 
@@ -93,7 +93,7 @@ Finalmente terminé comprando unos de la marca DJI que son increíblemente resis
 
 Estos aguantan cualquier cosa.
 
-### Controladora
+#### Controladora
 
 La parte más importante del quadcopter es el «Flight Controller», o controladora de vuelo. Es el cerebro de la aeronave y es la que efectúa todos los cálculos para mantenerla en una posición estable.
 
@@ -102,7 +102,7 @@ Para lograrlo, la controladora trae de base giróscopos y acelerómetros, que le
 
 Algunas controladoras de vuelo traen funciones extra basándose en sensores especiales como GPS, barómetros y sensores de ultrasonido que permiten al controlador cumplir misiones de vuelo basadas en puntos marcados en un mapa, o conocer su altura exacta usando la presión atmosférica como referencia.
 
-###### Multiwii Pro
+##### Multiwii Pro
 
 Inicialmente utilicé una «Multiwii Pro», que es una copia del famoso [Ardupilot Mega](https://copter.ardupilot.com/wiki/common-autopilots/common-apm25-and-26-overview/). Al ser una copia, cuesta bastante más barato e inclusive trae el módulo GPS incluído en el kit:
 
@@ -147,7 +147,7 @@ El problema de esta placa es que a veces tantas opciones pueden convertirse en u
 
 Es por esto que en pos de la simplicidad me decanté por una placa mucho mas sencilla, sin tanta historia, fácil de configurar y de volar:
 
-###### KK 2.15
+##### KK 2.15
 
 Esta placa no dispone de sensores como GPS, barómetro, ultrasonido, Bluetooth, etc. Simplemente acelerómetros y giróscopos.
 
@@ -163,7 +163,7 @@ Esta placa es ideal para salir a volar rápido y sin complicaciones, pero no dis
 
 Cada una es ideal para cada situación específica. Actualmente, la **KK 2.1.5** es la estoy utilizando en mi quadcopter.
 
-###### Configuración de la controladora de vuelo
+##### Configuración de la controladora de vuelo
 
 La configuración de la **Multiwii Pro** no es tan sencilla dada la cantidad de parámetros disponibles, pero a su vez, eso es lo que la convierte en una controladora muy versátil y adaptable a cualquier misión.
 
@@ -192,7 +192,7 @@ El modelo PID se utiliza muchísimo tanto en robótica como en sistemas industri
 
 Para el caso de los quadcopter, hay que configurar los parámetros _Kp_, _Ki_ y _Kd_ por medio de prueba y error hasta lograr un vuelo estable, pero ágil.
 
-### Motores
+#### Motores
 
 La elección de los motores siempre es difícil. Hay que encontrar un balance entre precio y calidad. Además, hay que tener en cuenta el tipo de multicóptero en el que se van a utilizar.
 
@@ -207,7 +207,7 @@ En mi caso utilicé unos **Turnigy D2830/11 de 1000 kV** :
 Los motores traen 3 cables, los cuales reciben corriente en una secuencia predeterminada, con la cuál se puede regular la dirección y la velocidad de giro.  
 Para ello utilizamos variadores, también llamados «Controladores de velocidad».
 
-### Hélices
+#### Hélices
 
 Una vez elegido el motor, normalmente en las características del mismo se especifican las hélices recomendadas.
 
@@ -225,7 +225,7 @@ Un punto importante a destacar sobre las hélices es que aunque se supone que vi
 
 El [proceso de equilibrado](https://rc.lapipadelindio.com/aeromodelismo/equilibrar-helice-rc-equilibrador-casero) es bastante fácil pero lleva tiempo. Nunca está de más utilizar algunas de las herramientas que nos facilitan esta tarea.
 
-### Controladores de velocidad
+#### Controladores de velocidad
 
 Llamados **ESCs** (Electronic Speed Controller), estos dispositivos son los encargados de traducir las señales que envía la controladora de vuelo en la cantidad de energía que se envía a los motores.
 
@@ -250,7 +250,7 @@ Utilizando un **Arduino Uno** como **programador AVR** USB y una máquina virtua
 
 Luego de flasheados los ESCs, la respuesta del quad es notablemente mejor y los motores hacen menos ruido. Lo recomiendo ampliamente, aunque ya hay varios ESCs que vienen con firmwares mejorados ya flasheados de fábrica.
 
-### Batería
+#### Batería
 
 La batería es uno de los aspectos más importantes del quadcopter y hay que tener en cuenta varias cosas a la hora de elegir una.
 
@@ -276,7 +276,7 @@ Habrás notado que además, las baterías muestran un número de « **C** », qu
 
 Para cargarlas, es importante hacerlo con un cargador especial para baterías LiPo que balancee el voltaje en cada una de las celdas y las mantenga parejas.
 
-### Alarma de batería baja
+#### Alarma de batería baja
 
 Algo importante a tener en cuenta con éstas baterías es que no debemos consumir más del 20% de su carga. Si lo hacemos, las baterías se van arruinando y cada vez duran menos, por no mencionar que se pueden hinchar y puede llegar a ser peligroso dado que son altamente inflamables.
 
@@ -286,7 +286,7 @@ Por este motivo, y para no quedarnos sin batería a mitad del vuelo y que nuestr
 
 Esta alarma es muy barata, pero en mi opinión indispensable para mantener la vida útil de la batería y del propio quad.
 
-### Radio control
+#### Radio control
 
 Una de los principales componentes de este sistema es la radio. Es con lo que controlaremos el quad, por lo que debe ser de una calidad aceptable. Las radios modernas funcionan a altas frecuencias (2.4 GHz) y algunas disponen incluso de telemetría.
 
@@ -303,7 +303,7 @@ _«Receptor de la radio con 8 canales disponibles»_
 
 Es una buena radio, a un precio muy aceptable (poco más de 50€).
 
-### Kit FPV
+#### Kit FPV
 
 Algo que está muy de moda es el vuelo **FPV** (First Person View), que consta de unas gafas especiales, a través de las cuales podemos ver en tiempo real lo que transmite una pequeña cámara montada en el quadcopter. La sensación es como si estuvieras subido al quad y conduciéndolo desde arriba.
 
@@ -319,7 +319,7 @@ Una pequeña mejora que les hice fue cambiar las antenas por unas llamadas « **
 
 Hay algunas de mejor calidad, pero como estoy recién iniciando en el tema... compré estas.
 
-# Primer vuelo
+## Primer vuelo
 
 Después de configurar todo en base a prueba y error, este es el primer vuelo exitoso:
 
@@ -327,7 +327,7 @@ Después de configurar todo en base a prueba y error, este es el primer vuelo ex
 
 La cámara con la que fue filmado tiene un pésimo sistema de autofoco y es por eso que el video no se ve muy bien, pero es lo que hay.
 
-# Mejoras
+## Mejoras
 
 Siempre estoy pensando en qué mejoras hacer al sistema que ya tengo. He pensado en agregar un gimbal para la cámara, pero de momento sólo he agregado un servo controlado desde un canal en la radio que me permite mover la cámara hacia arriba y abajo:
 
@@ -335,7 +335,7 @@ Siempre estoy pensando en qué mejoras hacer al sistema que ya tengo. He pensado
 
 También he agregado una cámara GoPro para filmar los vuelos desde arriba.
 
-# Conclusión
+## Conclusión
 
 Es un proyecto muy divertido con el que he aprendido muchísimo. Lamentablemente, como todo hobbie, no es barato pero por suerte los precios van bajando de a poco.
 

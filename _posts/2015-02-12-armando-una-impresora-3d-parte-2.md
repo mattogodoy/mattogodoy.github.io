@@ -16,7 +16,7 @@ En la [parte 1]({% post_url 2015-02-03-armando-una-impresora-3d-parte-1 %}) de e
 
 En esta segunda parte veremos los procesos de construcción y calibración de a impresora.
 
-# Construcción
+## Construcción
 
 Es en mi opinión la parte más divertida de todo el proceso. Es el momento en que unimos todos los componentes y realmente empezamos a entender cómo funciona este aparato.
 
@@ -246,7 +246,7 @@ Ahora que sabemos que funciona, atornillamos el extrusor en la parte superior de
 
 ¡Ya casi estamos! Nos queda calibrar y configurar algunas cosas, pero lo más difícil ya está hecho.
 
-# Calibración y configuración
+## Calibración y configuración
 
 La calidad de nuestras impresiones dependerá en su gran mayoría de la precisión con la que configuremos los parámetros de nuestra impresora.
 
@@ -322,7 +322,7 @@ La altura ideal es la utilizada para la primera capa. Normalmente alrededor de 0
 
 Además de la cantidad de pasos por milímetro de los motores, el archivo [Configuration.h](https://github.com/MarlinFirmware/Marlin/blob/Development/Marlin/Configuration.h) contiene algunos parámetros que pueden servirnos para dejar todo funcionando correctamente.
 
-**Termistores**
+#### Termistores
 
 Debemos definir qué tipo de termistor tenemos en el extrusor (_TEMP\_SENSOR\_0_) y en la cama caliente (_TEMP\_SENSOR\_BED_). Para mi caso los valores son **5** y **1** respectivamente, pero pueden variar.
 
@@ -337,7 +337,7 @@ El valor **0** indica que los sensores están desactivados, como es el caso de _
 
 Normalmente los fabricantes brindan esta información. De todas maneras el código está bien comentado y en la parte superior tiene un listado de todos los tipos de termistor posibles.
 
-**PID**
+#### PID
 
 Para mantener una temperatura constante tanto en el hot-end como en la cama caliente, se utiliza control del tipo _[Proporcional Integral Derivativo](https://es.wikipedia.org/wiki/Proporcional_integral_derivativo)_ (PID), por lo que debemos establecer los parámetros correctos para que el comportamiento sea el que buscamos. &nbsp;Por suerte el firmware nos da la opción de descubrirlos por su cuenta de manera empírica, ahorrándonos muchísimo trabajo.
 
@@ -363,7 +363,7 @@ Al igual que con el calibrado de los pasos de los motores, mientras más veces r
 
 Esto nos permitirá ahorrar energía y mantener las temperaturas en los valores correctos.
 
-**Temperatura mínima de extrusión**
+#### Temperatura mínima de extrusión
 
 Por un tema de protección, es importante que no permitamos que se de la orden de extruír si el hot-end no está a la temperatura correcta. Si eso pasara, el filamento entraría en el hot-end frío y no se derretiría. Teniendo en cuenta la fuerza que tiene el extrusor, es muy probable que rompamos algo.
 
@@ -375,7 +375,7 @@ Para evitar eso, tenemos el siguiente parámetro:
 
 Yo lo he puesto en **210º** dado que es la temperatura en la que el plástico ya está derretido, a pesar de que la ideal sean **230º**.
 
-**Otros**
+#### Otros
 
 Hay muchos parámetros muy útiles y muy bien documentados. [Te invito a que veas el código](https://github.com/MarlinFirmware/Marlin/blob/Development/Marlin/Configuration.h) y decidas por tu cuenta qué cambiarías y qué no.
 

@@ -15,13 +15,13 @@ Como puedes ver, [matto.io](https://matto.io) ya dispone de una conexión segura
 
 Para mi sorpresa, el proceso es muy simple y rápido. En unos 10 o 15 minutos puedes tener todo configurado y funcionando.
 
-# Configuración en un servidor Nginx
+## Configuración en un servidor Nginx
 
 El servidor HTTP de [matto.io](https://matto.io) es un Nginx. Este proceso variará dependiendo de cuál utilices, pero si usas Apache, aparentemente el proceso es todavía más simple.
 
 Puedes ver [aquí](https://letsencrypt.readthedocs.org/en/latest/using.html) una guía de usuario que explica los pasos para la instalación bajo cada uno de los servidores más importantes. Aquí veremos únicamente Nginx.
 
-## Instalación
+### Instalación
 
 El primer paso es acceder vía SSH a nuestro servidor.
 
@@ -52,7 +52,7 @@ En el siguiente paso, nos pedirá los dominios para los cuales queremos generar 
 
 Le damos a «OK» y luego de unos momentos tendremos nuestros certificados generados.
 
-## Configuración
+### Configuración
 
 El siguiente paso es configurar Nginx especificando que queremos utilizar SSL y la ubicación de los certificados.
 

@@ -17,7 +17,7 @@ He decidido liberar el código y todos los esquemas del proyecto al que más tie
 
 [https://github.com/mattogodoy/open-rally-computer](https://github.com/mattogodoy/open-rally-computer)
 
-# Índice
+## Índice
 
 - [Un poco de historia](#un-poco-de-historia)
 - [Prototipo inicial](#prototipo-inicial)
@@ -68,7 +68,7 @@ He decidido liberar el código y todos los esquemas del proyecto al que más tie
 
 * * *
 
-# Un poco de historia
+## Un poco de historia
 
 Soy un amante de las motos desde que tengo uso de razón. Lo primero que hice cuando conseguí mi primer trabajo (a los 18 años) fue comprarme una moto.
 
@@ -80,9 +80,9 @@ Fue durante ese mismo año que me dispuse a buscar compañeros de ruta y mentore
 
 Fue por culpa de (o gracias a?) estos amigos que me enganché con los rallies de [navegación con roadbook](https://www.youtube.com/watch?v=gUxTGKPrCos). Una de las primeras cosas que noté fue que el coste de los equipos necesarios para participar de este tipo de eventos era demasiado elevado, sobre todo para un piloto principiante como yo.
 
-# Prototipo inicial
+## Prototipo inicial
 
-Uno de mis tantos hobbies es la electrónica y siempre me han gustado los desafíos con los que pueda aprender cosas nuevas, por lo que me dispuse a fabricar mis propios equipos. Incluso [escribí un post al respecto en este mismo blog](https://matto.io/roadbook-con-tripmaster/).
+Uno de mis tantos hobbies es la electrónica y siempre me han gustado los desafíos con los que pueda aprender cosas nuevas, por lo que me dispuse a fabricar mis propios equipos. Incluso [escribí un post al respecto en este mismo blog]({% post_url 2017-06-03-roadbook-con-tripmaster %}).
 
 Lo más importante que salió de ese proyecto fue el tripmaster, que desde un primer momento fue de [código abierto](https://github.com/mattogodoy/open-trip) para que cualquier persona interesada pudiera fabricarse uno.
 
@@ -95,7 +95,7 @@ Para marcar el rumbo disponía de un magnetómetro digital.
 
 El primer prototipo funcionó muy bien, incluso lo usé para correr algunos rallies, pero quería llevar el proyecto un poco más allá.
 
-# Versión 1
+## Versión 1
 
 Una nueva versión implicaba un rediseño total del tripmaster, dejando atrás todo lo que había hecho en la versión anterior.
 
@@ -234,7 +234,7 @@ Algunos amigos me pidieron que les fabrique una unidad, por lo que hice unas 4 o
 
 A día de hoy, un par de ellos las tienen funcionando luego de muchos años y rallies a cuestas. Eso si, han tenido que repararlos más de una vez :)
 
-# Versión 2
+## Versión 2
 
 El uso de la versión 1 en un entorno real me enseñó muchas cosas, siendo la principal que las condiciones a las que son sometidos los aparatos electrónicos que van en una moto de rally son mucho más extremas de lo que yo habría imaginado.
 
@@ -294,7 +294,7 @@ De esta versión sólo hubo una tirada de 7 unidades.
 {% include embed/youtube.html id='GV5TdtcInaw' %}
 _Una explicación de las funcionalidades_
 
-# Versión 3
+## Versión 3
 
 Luego de muchas pruebas con la versión 2 del Baja Pro llegamos a la conclusión de que, si bien el tripmaster funcionaba como era esperado, la caja era demasiado grande y pesada para montarla en la moto. Tenía que encontrar una solución al bendito problema de las cajas, cuya búsqueda nunca había cesado desde los comienzos del proyecto.
 
@@ -358,7 +358,7 @@ Con esto ya tenía una versión muy robusta y del tamaño que estaba buscando. T
 ![](/images/20190101_173942.jpg)
 _El primer Baja Pro v3_
 
-# Versión 4
+## Versión 4
 
 Una vez tuve la versión 3 funcionando y bien probada, decidí hacer la que sería la versión definitiva. La que saldría a la venta.
 
@@ -484,7 +484,7 @@ _Un Baja Pro v4 terminado_
 
 Esto ya estaba empezando a parecer un producto que se podía vender.
 
-# La web
+## La web
 
 Hoy en día es difícil promocionar cualquier producto sin tener una web.
 
@@ -498,7 +498,7 @@ La web sigue funcional a día de hoy:
 
 En la misma web se podía descargar el manual de instrucciones, apuntarse en la lista de correos para recibir novedades, había algunas reviews y una zona de preguntas frecuentes.
 
-# Las primeras (y únicas) unidades
+## Las primeras (y únicas) unidades
 
 Con todas estas mejoras ya estaba listo para fabricar la primera tanda de Baja Pros y ponerlos a la venta.
 
@@ -534,7 +534,7 @@ _Probando una pantalla recién soldada_
 ![](/images/20191117_125513.jpg)
 _Control de calidad: Probando unidad por unidad para confirmar que funcionan correctamente_
 
-# El momento de la venta
+## El momento de la venta
 
 Había llegado el momento. Ya tenía 25 unidades completamente probadas y funcionales.
 
@@ -552,7 +552,7 @@ _Los pedidos listos para ser enviados por correo_
 
 Afortunadamente, a día de hoy (2 años después de la venta) ninguna de las unidades ha fallado, por lo que no he tenido que reemplazar ni una.
 
-# La experiencia
+## La experiencia
 
 Cualquiera diría que luego de un éxito de ventas como ese me pondría inmediatamente a fabricar más unidades para poder seguir vendiéndolas y transformar esto en un gran negocio. Mejor dicho, cualquiera que no haya tenido que pasar por el proceso de fabricación por el que he pasado yo diría esto.
 
@@ -615,7 +615,7 @@ Si bien el precio al que vendí esas unidades era bastante más bajo de lo que c
 
 No había logrado mi objetivo principal.
 
-# Aprendizaje
+## Aprendizaje
 
 La verdad es que durante todo este proceso he aprendido innumerables cosas nuevas y es lo que me llevo del proyecto.
 
@@ -625,7 +625,7 @@ Siempre me ha gustado resolver problemas, aprender cosas nuevas y enfrentarme a 
 
 Ir a un rally y ver a pilotos que llevan un Baja Pro instalado en sus motos y que están contentos con el producto es una sensación bastante genial y difícil de explicar.
 
-# Liberando el código
+## Liberando el código
 
 Luego de darle muchas vueltas he decidido transformar este proyecto en uno de código abierto.
 
@@ -635,7 +635,7 @@ Por otra parte me da muchísima curiosidad saber qué aportes y mejoras hará la
 
 Creo honestamente que esto es algo que podría beneficiar a esos pilotos que se están iniciando, o incluso a pilotos profesionales que echen de menos algunas funcionalidades en los actuales y retrógrados tripmasters que tan caros cuestan.
 
-# Presentando a Open Rally Computer
+## Presentando a Open Rally Computer
 
 Mi empresa “Baja Rally Computers” seguirá existiendo por si se me ocurre alguna otra locura.
 
@@ -659,7 +659,7 @@ En este caso yo he elegido [GPL v3](https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Eso es lo que más me gusta de esta licencia. Es como un virus. Un virus bueno que contagia a otros proyectos haciendo que pasen a ser de código abierto.
 
-# Conclusión
+## Conclusión
 
 El desarrollo del Baja Pro ha sido un largo y tortuoso camino, pero me ha dejado innumerables enseñanzas y una experiencia que espero aplicar a futuras aventuras.
 

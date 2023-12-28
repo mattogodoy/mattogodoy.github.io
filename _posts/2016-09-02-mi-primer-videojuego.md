@@ -18,7 +18,7 @@ El hecho de que hay que aprender un montón de cosas nuevas espanta a muchos, pe
 
 Actualmente (y desde hace ya varios años) soy desarrollador front-end de aplicaciones web. Tengo el problema de que me aburro muy rápido de las cosas, y mi actual trabajo no es una excepción. Esto fue lo que me motivó a aprender a hacer juegos en mi tiempo libre.
 
-# Comienzos
+## Comienzos
 
 Hace ya algunos meses, junto a [Alberto Fernandez](https://twitter.com/AlbertoFdzM) decidimos crear un pequeño estudio independiente de desarrollo de videojuegos. Así nació [ZombieUnicorn](https://zombieunicorn.studio/)
 
@@ -32,7 +32,7 @@ _Gameplay de The Seeker_
 
 Este proyecto está parado de momento por cuestiones de tiempo, pero ya está encaminado y planeamos continuarlo en cuanto sea posible.
 
-# JetFight
+## JetFight
 
 Dado que el proyecto que tenemos en ZombieUnicorn está en pausa, decidí aprovechar algo de tiempo libre y crear un nuevo juego por mi cuenta. De esa manera aprendería muchas cosas que luego podría aportar al estudio.
 
@@ -46,7 +46,7 @@ Yo quería hacer un juego que pudiera empezar y terminar.
 
 La idea detrás de **JetFight** era hacer un juego de peleas para dos jugadores. Los personajes serían pequeños y podrían usar jetpacks para volar por todo el nivel. Simple, pero potencialmente divertido.
 
-### Motor
+## Motor
 
 Cuando decidí a que quería hacer juegos, estuve investigando bastante sobre los motores que hay disponibles. Son muchos, y para muchísimas plataformas. También depende del lenguaje en el que quieras programar. Los hay desde _JavaScritpt_ hasta _C_ puro y duro, pasando por _Lua_ que es un lenguaje bastante común para el desarrollo de juegos.
 
@@ -57,7 +57,7 @@ Después de mucho leer me decidí por [Unity 3D](https://unity3d.com), porque te
 Lo único que me tiraba para atrás era el lenguaje de programación que usa Unity: **C#**  
 Debo decir que estaba equivocado y no eran más que prejuicios. C# me ha demostrado ser un lenguaje sólido y fácil de escribir. No me costó absolutamente nada aprenderlo y empezar a escribir código rápidamente (y no es que yo sea el más listo del barrio).
 
-### Gráficos
+## Gráficos
 
 Algo que he descubierto es que, por obvio que suene, los juegos entran por lo ojos. A lo que me refiero es que por más divertido que sea el juego, si los gráficos no son buenos o llamativos, no gusta a los jugadores. Es un hecho.
 
@@ -68,7 +68,7 @@ _Parte del spritesheet usado para JetFight_
 
 Otros de los gráficos, como por ejemplo la sierra circular, los tuve que crear yo por mi cuenta.
 
-### Mecánica de juego
+## Mecánica de juego
 
 Mi idea desde el principio era hacer que el juego sea rápido y que se sienta como tal. Para ello tuve que modificar algunos parámetros del motor de físicas y aumentar la gravedad, dado que usando valores reales de gravedad (-9.8 m/s2) el juego daba la sensación de movimento "lunar".
 
@@ -90,7 +90,7 @@ El resultado es una sensación mucho más realista al jugar, sobre todo cuando e
 
 Esto atrae otro tipo de problemas, pero creo que vale la pena solucionarlos. En general, durante el desarrollo de un juego surgen innumerables problemas. Muchos de ellos muy tontos, pero que puede costar mucho solucionarlos haciéndote perder una tarde entera tratando de resolverlo, y que finalmente se logra con sólo una línea de código.
 
-### Niveles
+## Niveles
 
 JetFight tiene por ahora sólo un nivel. En él hay varias amenazas para los jugadores y está pensado para representar un buen campo de batalla para las peleas entre los 2 personajes.
 
@@ -109,11 +109,11 @@ _Exportando el nivel a Unity_
 
 En este proceso además se crean Colliders sobre los tiles en los que así lo especifiquemos, facilitando mucho el desarrollo del lado de Unity y permitiendo que el personaje se pueda posar sobre las plataformas y colisionar contra las paredes.
 
-### Desafíos
+## Desafíos
 
 Además de los ya mencionados (físicas, lenguaje, etc) me encontré con algún que otro desafío en el camino. Que recuerde los más importantes fueron:
 
-**Cambiar el color del personaje**
+### Cambiar el color del personaje
 
 Para diferenciar a Jugar 1 del Jugador 2, los personajes tendrían que ser de distinto color. Esto suena obvio a primera vista, pero desde un punto de vista técnico es más complicado de lo que parece.  
 Como ya he mencionado, los gráficos de personaje que tengo son sprites (imágenes) que ya existen, y los colores que tiene son los que hay.
@@ -217,12 +217,13 @@ El jugador es básicamente el mismo y no he tenido que duplicar código ni imág
 
 Et voilá!
 
-**Controles**
+### Controles
 
 Este tipo de juegos es siempre más divertido usando joysticks. El problema es que Unity tiene una manera un poco críptica de administrarlos, pero investigando un poco logré hacerlos funcionar. De hecho, todos los controles pueden ser modificados desde la pestaña _Input_ en la pantalla de configuración que se lanza al inicio del juego:
 
 ![](/images/jetfight2.png)
-### Resultado
+
+## Resultado
 
 El resultado final es un juego bastante entretenido y con todas las funcionalidades que, aunque básicas, funcionan relativamente bien para se la primera versión.
 
@@ -235,7 +236,8 @@ El resultado final es un juego bastante entretenido y con todas las funcionalida
 ![](/images/jetfight5.jpg)
 
 ![](/images/jetfight6.jpg)
-### Publicación y distribución
+
+## Publicación y distribución
 
 Hay varias plataformas para la distribución de juegos independientes, siendo [Steam](https://store.steampowered.com/) por mucho la mas importante. La desventaja que tiene es que como desarrollador te obligan a pasar por un proceso de registro en el cual es obligatorio hacer un pago inicial de U$D 100 y ademas tener a tu nombre una empresa con la cual facturar la venta de cada una de las copias de tu juego. No sólo eso, si no que deberás pagar al estado los impuestos correspondientes por cada venta, más los gastos fijos que suponen tener una empresa, más la comisión que te cobra Steam, que al momento de escribir este artículo es de un nada despreciable 15% del valor de cada venta. Finalmente, PayPal se queda con U$D0.30 + 2.9% del valor de cada venta.  
 No hace falta ser un astrofísico de la NASA para darse cuenta de que a menos que te dediques a ello y tengas un estudio serio, no conviene publicar tu juego en su plataforma bajo ningún concepto.  
@@ -253,7 +255,7 @@ Dispone también de un simple, pero útil tablero en el que te muestra datos ana
 ![](/images/analytics.png)
 _Tablero de analíticas de itch.io_
 
-### Sonidos
+## Sonidos
 
 Considero que una parte importante de los juegos son los sonidos que se utilizan.
 
@@ -272,7 +274,7 @@ _Edición de sonidos en Audacity_
 
 De esta forma logré que el audio del juego esté un poco más a tono con el tema del mismo.
 
-### Descarga
+## Descarga
 
 Después de tanto texto, finalmente te dejo el link para que te descargues el juego.
 
@@ -281,7 +283,7 @@ Después de tanto texto, finalmente te dejo el link para que te descargues el ju
 También dejo el link a la página del juego en la que se explican los controles y algún que otro detalle:  
 [https://mattogodoy.itch.io/jetfight](https://mattogodoy.itch.io/jetfight)
 
-### ¿Qué sigue?
+## ¿Qué sigue?
 
 Siempre hay cosas para añadir o mejorar en un juego. Es un proceso que podría transformarse en infinito y soy consciente de ello.
 

@@ -12,19 +12,19 @@ tags:
 - moto
 ---
 
-# Actualización:
+## Actualización:
 
 Gracias al interés de todos vosotros en el proyecto he seguido desarrollándolo y evolucionando a nuevas versiones. Más detalles en:
 
 [https://baja.matto.io/](https://baja.matto.io/)
 
-# Actualización 2:
+## Actualización 2:
 
 Luego de varias solicitudes, finalmente he añadido un diagrama esquemático de las conexiones, que es algo que debería haber puesto en el post desde el principio.
 
 * * *
 
-# Introducción
+## Introducción
 
 En lo que va del año (2017) he tenido la suerte de participar en dos rallies en moto: [Trip & Track](https://tripandtrack.es/) y [Desert Adventure](https://sectortrailalmeria.es/desert-adventure/).
 
@@ -82,7 +82,7 @@ Para ello, el tripmaster dispone de 3 botones que van cerca de la piña izquierd
 
 Generalmente dispone de 3 botones: Aumentar distancia (los aumentos van de a 100 metros), reducir distancia y resetear distancia parcial.
 
-### El problema
+## El problema
 
 Hasta aquí todo muy bien. Ya sabía lo que necesitaba, cómo funcionaba y cómo se acoplaba a la moto. El problema llegó a la hora de ver precios:
 
@@ -103,7 +103,7 @@ Cuando se trata de accesorios para moto siempre pasa lo mismo. Si vas a una tien
 
 Entiendo que son dispositivos electrónicos que van a estar expuestos a los elementos y a muchas, muchísimas vibraciones, pero que tres botones con un switch pegado cuesten 220€ me parece injustificable.
 
-# Fabricación
+## Fabricación
 
 El precio absurdo de los componentes sumado a que me gusta construir este tipo de cosas me llevó a la decisión de que lo haría yo mismo.
 
@@ -243,7 +243,7 @@ Y finalmente la impresión, montaje y soldadura de sus componentes:
 
 Nuevamente utilicé silicona para mantener los componentes en su sitio y evitar vibraciones, polvo y agua.
 
-# Porta Roadbook
+## Porta Roadbook
 
 El paso siguiente fue fabricar el porta roadbook eléctrico. Para ello utilicé un porta roadbook manual que es muy barato, y por lo tanto muy MUY malo:
 
@@ -311,7 +311,7 @@ Después de mucho probar, descubrí que en el peor de los casos el papel se irí
 
 Con las fechas de los rallies acercándose y muy poco tiempo disponible decidí dejarlo así por el momento. A pesar de no ser ideal, no representaba ningún problema grave y la funcionalidad, aunque no del todo eficiente, no se veía afectada.
 
-# Fusión
+## Fusión
 
 Para unir el roadbook con el tripmaster y tener todo en una sola pieza, utilicé ángulos metálicos y remaches:
 
@@ -333,7 +333,7 @@ Una vez terminado todo, sólo quedaba hacer una prueba final:
 
 ¡Nada mal!
 
-# La hora de la verdad
+## La hora de la verdad
 
 La verdad es que no tenía ningún tipo de confianza en la abominación que había creado. Lo hice a las apuradas y aprendiendo en el camino. Imaginaba que funcionaría durante los 3 primeros kilómetros y fallaría de forma catastrófica.
 
@@ -355,13 +355,13 @@ _Trip &amp; Track Cuenca 2017_
 {% include embed/youtube.html id='U3ZXECd14i0' %}
 _Desert Adventure Costa de Almería 2017_
 
-# Conclusión
+## Conclusión
 
 Entiendo que el coste de estas cosas suele ser alto porque lleva su investigación y desarrollo detrás, y que además tienen que ser de una gran calidad para soportar las condiciones a las que las sometemos, pero creo que el motivo principal de su elevado precio es la falta de competencia en el mercado. Son muy pocas las empresas que fabrican estos productos y por tanto cobran lo que quieran por ellos. Creo que es momento de entrar en el mercado ;)
 
 Yo por mi parte ya estoy pensado en la versión 2, que incluirá varias mejoras en todos los niveles: Otra placa base, otro lenguaje de programación y otras pantallas. A ver si me da el tiempo...
 
-# Recursos
+## Recursos
 
 Listado de piezas necesarias, sus precios y conexiones con pines de Arduino:  
 [https://goo.gl/jzX4uB](https://goo.gl/jzX4uB)

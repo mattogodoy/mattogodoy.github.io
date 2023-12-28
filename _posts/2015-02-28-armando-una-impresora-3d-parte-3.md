@@ -14,17 +14,17 @@ Para finalizar esta serie de posts sobre la construcción y configuración de un
 
 > Si no leíste la [parte 1]({% post_url 2015-02-03-armando-una-impresora-3d-parte-1 %}) y la [parte 2]({% post_url 2015-02-12-armando-una-impresora-3d-parte-2 %}) de la serie, te recomiendo que lo hagas antes de continuar.
 
-# Proceso
+## Proceso
 
 Nuestra impresora no entiende de archivos 3D. Lo que entiende son instrucciones que ella seguirá en un orden secuencial. Por tanto, tenemos que lograr transformar la pieza que queremos imprimir a un formato que nuestra impresora pueda entender.
 
-## Recursos
+### Recursos
 
 Antes que nada, debemos saber qué es lo que queremos imprimir. La ventaja es que podemos imprimir prácticamente cualquier archivo que esté modelado en 3D, viéndonos limitados sólo por algunos aspectos que veremos más adelante.
 
 Las posibilidades y aplicaciones que nos brinda una impresora de este tipo son infinitas. Desde la fabricación de adornos, juguetes o prototipos, hasta la impresión de piezas de repuestos imposibles de conseguir o de coste muy elevado.
 
-### Ya creados
+#### Ya creados
 
 La principal fuente de objetos ya modelados al día de hoy es [Thingiverse](https://www.thingiverse.com/), un repositorio de piezas de los creadores de la [Makerbot](https://www.makerbot.com/), una impresora que ha causado grandes debates en internet.
 
@@ -40,7 +40,7 @@ Si lo pienso un poco, es bastante loco que la gente alrededor del mundo esté ma
 
 Existen [algunas alternativas](https://www.reddit.com/r/3Dprinting/comments/26do2z/alternative_repositories_to_thingiverse/) a Thingiverse en las que también podemos encontrar cosas interesantes.
 
-### Para crear
+#### Para crear
 
 Prácticamente cualquier pieza modelada en 3D puede ser impresa, independientemente del programa que utilicemos para crearla.
 
@@ -57,7 +57,7 @@ El programa utilizado es indistinto, lo único importante es que el objeto resul
 
 A diferencia de los modelos 3D comunes, un modelo STL dispone de una superficie única para todo el objeto, simplificando al máximo el proceso de _cortado_.
 
-# Proceso de cortado
+## Proceso de cortado
 
 Como ya he explicado antes, un objeto impreso en 3D es una sucesión de capas de plástico apiladas verticalmente, formando el volumen de la pieza. Cada capa se pega a la anterior debido a que el plástico que sale del extrusor está derretido al momento de la impresión. Las capas se van secando lentamente formando un objeto sólido.
 
@@ -70,7 +70,7 @@ _Vista del resultado de un modelo 3D cortado en capas y transformado a instrucci
 
 Estas instrucciones siguen las mismas convenciones que las máquinas de corte numérico (CNC) vienen utilizando desde hace años.
 
-## Herramientas de cortado
+### Herramientas de cortado
 
 Son cada vez más las herramientas de software que tenemos a disposición para cortar las piezas. La elección de una depende de los resultados obtenidos con la experiencia. En mi caso me quedo con [Slic3r](https://slic3r.org/), que es la que mejores resultados me ha dado.
 
@@ -86,7 +86,7 @@ En mi caso, copio el archivo a una tarjeta de memoria SD que va en el panel LCD,
 
 Una alternativa es utilizar algún software como [Pronterface](https://www.pronterface.com/) o el propio Cura del que hablamos antes para enviar las instrucciones una a una desde nuestra computadora a la impresora por medio de un cable USB. La desventaja es que tenemos que tener la computadora encendida y conectada a la impresora durante todo el proceso de impresión.
 
-## Limitaciones
+### Limitaciones
 
 La mayor de las limitaciones con la que nos encontramos a la hora de imprimir aparece cuando queremos hacer piezas que tienen partes que «cuelgan».
 
@@ -103,7 +103,7 @@ Para esto existe una solución, y consta de imprimir unos soportes como parte de
 
 Como se ve en la imagen, el material de soporte hace las veces de superficie de apoyo para las capas colgantes, permitiendo que la pieza no se deforme. También se ve cómo la densidad del soporte es mucho menor a la de la pieza en sí. Esto permite que una vez finalizada la impresión, podamos removerlo con poco esfuerzo y sin afectar mucho a la calidad de la pieza final.
 
-# Conclusiones
+## Conclusiones
 
 La contrucción de esta impresora ha sido para mí el mayor de los desafíos a los que me he enfrentado en cuanto a proyectos personales. Es por eso que disfruté tanto todo el proceso. Es curioso, pero me gusta mucho más construirla, calibrarla y mejorarla que imprimir cosas en sí.
 

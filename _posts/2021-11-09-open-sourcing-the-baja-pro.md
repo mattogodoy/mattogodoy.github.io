@@ -18,7 +18,7 @@ I’ve decided to release the source code and all of the schemes of the project 
 
 [https://github.com/mattogodoy/open-rally-computer](https://github.com/mattogodoy/open-rally-computer)
 
-# Index
+## Index
 
 - [A bit of history](#a-bit-of-history)
 - [Initial prototype](#initial-prototype)
@@ -71,7 +71,7 @@ I’ve decided to release the source code and all of the schemes of the project 
 
 > **Disclaimer** : English is not my first language, so I apollogise beforehand for any typos or grammatical errors that you might find in this post.
 
-# A bit of history
+## A bit of history
 
 I am a big fan of motorcycles since I was a little kid. The first thing I did when I got my first job (when I was 18) was to buy a motorcycle.
 
@@ -83,7 +83,7 @@ It was during that same year when I started looking for companion to go on off-r
 
 It was thanks to these friends that I got hooked up to participating in roadbook navigation rallies. One of the first things that caught my attention was the price of the necessary equipment to participate in these kind of events. It was too expensive, especially for a beginner pilot like myself.
 
-# Initial prototype
+## Initial prototype
 
 Electronics is one of many hobbies I have. I have always enjoyed challenges that force me to learn new stuff, so I decided to make my own equipment. [I even wrote a post about it in this same blog]({% post_url 2017-06-03-roadbook-con-tripmaster %}).
 
@@ -98,7 +98,7 @@ To indicate heading it used a digital magnetometer.
 
 The first prototype worked really well. I even used it to participate in a few rallies. But I wanted to take the project one step further.
 
-# Version 1
+## Version 1
 
 A new version implied a complete redesign of the tripmaster, leaving behind all that I had done in the previous version.
 
@@ -236,7 +236,7 @@ Some of my friends asked me to make a unit for them, so I made 4 or 5 and sold t
 
 A few of them are still working even today after a good number of rallies. They had to go through some fixed though :)
 
-# Version 2
+## Version 2
 
 Using the version 1 in a real environment taught me a lot. The main one was understanding that the conditions under which we subject the electronic devices installed in a rally motorcycle are way more extreme than I had ever expected.
 
@@ -294,7 +294,7 @@ _Finished Baja Pro v2_
 {% include embed/youtube.html id='GV5TdtcInaw' %}
 _A review of all the features (in Spanish - you can turn on the subtitles)_
 
-# Version 3
+## Version 3
 
 After a lot of testing on the version 2 we reached to the conclusion that, even though the tripmaster worked as expected, the enclosure was too heavy and bulky to be installed in a rally motorcycle. I had to find a definitive solution to the damn enclosure problem.
 
@@ -355,7 +355,7 @@ At this point I had a sturdy device with a size that was more like what I was lo
 ![](/images/20190101_173942.jpg)
 _The first Baja Pro v3_
 
-# Version 4
+## Version 4
 
 Once I had version 3 tested and working, I decided to make the definitive versión. The one that would be out for sale.
 
@@ -479,7 +479,7 @@ _A finished Baja Pro v4_
 
 This was starting to look like a product that could be sold.
 
-# The web
+## The web
 
 Nowadays it’s very difficult to promote a product without having a webpage.
 
@@ -493,7 +493,7 @@ The web is still up and running:
 
 In the same web you could download the user manual, subscribe to the mailing list to get updates, read some reviews and a FAQ section.
 
-# The first (and only) batch
+## The first (and only) batch
 
 Having all of these improvements I was ready to fabricate the first Baja Pro batch and put them for sale.
 
@@ -529,7 +529,7 @@ _Testing a recently soldered display_
 ![](/images/20191117_125513.jpg)
 _Quality test: Checking units one by one to confirm that they worked as expected_
 
-# The moment of the sale
+## The moment of the sale
 
 This was it. The moment had arrived. I had 25 units already assembled and tested.
 
@@ -547,7 +547,7 @@ _Orders ready to be shipped_
 
 Luckily, up until today (2 years after the sale) none of the units has failed, so I have not had the need to replace any of them.
 
-# The experience
+## The experience
 
 Anyone would think that after a success like that I would immediately get back to work and build more units. Well… anyone that didn’t go through the whole process would think that.
 
@@ -610,7 +610,7 @@ Even though the sale price for the Baja Pro was quite lower than a regular ICO (
 
 I had not achieved my main objective.
 
-# Learning
+## Learning
 
 The truth is that along this process I’v learnt countless new skills, and that’s the biggest reward I got from this project.
 
@@ -620,7 +620,7 @@ I always liked solving problems, learning new stuff and face new challenges. The
 
 Going to a rally and seeing pilots that have a Baja Pro installed in their motorcycles and knowing that they are happy with it is a great experience that’s hard to explain with words.
 
-# Releasing the code
+## Releasing the code
 
 After much thinking I’ve decided to make this an open source project.
 
@@ -630,7 +630,7 @@ On the other hand, I am very curious to know what improvements and features will
 
 I honestly think that this is something that could benefit those new pilots, or even professional pilots that miss some of the functionalities that the current and outdated tripmasters don’t offer.
 
-# Presenting Open Rally Computer
+## Presenting Open Rally Computer
 
 My company “Baja Rally Computers” will continue to exist just in case I come up with some new crazy idea.
 
@@ -654,7 +654,7 @@ In this case I chose [GPL v3](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 That is what I like the most about this license. It’s like a computer virus. A good virus that spreads other projects turning them into open source too.
 
-# Conclusion
+## Conclusion
 
 Developing the Baja Pro has been a rough and long way, but has left me with countless valuable skills and an experience that I hope to apply to future adventures.
 

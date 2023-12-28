@@ -13,7 +13,7 @@ tags:
 Dando vueltas por internet me encontré con un proyecto que consta de montar una máquina arcade de videojuegos retro en una de las famosas mesitas Lack de IKEA (creo que todo el mundo tiene una) y decidí construirla.  
 Es increíble la cantidad de cosas que hace la gente con esta mesita. Por ejemplo, el LackRack: [https://wiki.eth0.nl/index.php/LackRack](https://wiki.eth0.nl/index.php/LackRack)
 
-# Materiales
+## Materiales
 
 Lo primero que hice fue averiguar dónde comprar los joysticks y botones, que desde mi punto de vista son lo más importante que tiene la máquina. Di con una tienda que se llama Arcade Madrid ([https://www.arcademadrid.com](https://www.arcademadrid.com)), donde compré un kit que trae todo lo necesario:
 
@@ -39,7 +39,7 @@ Para la pantalla, pasé por una tienda de segunda mano y compré un monitor LCD 
 Para la parte del hardware de la máquina, pensé en utilizar una Raspberry Pi, pero inclusive el último modelo no es lo suficientemente potente como para correr algunos emuladores un poco mas exigentes.  
 Tenía una netbook dando vueltas por casa que no estaba usando, y me vino de primera para el proyecto. No es muy potente, pero mueve los emuladores de distintas consolas sin problemas.
 
-# Software
+## Software
 
 A la hora de instalar el software y los juegos, me encontré con que el proceso es mucho más difícil de lo que pensaba. Esto se debe a que cada juego salió para una consola, y para cada consola hay que descargar y configurar un «emulador» diferente. Un emulador es un software que imita las condiciones de hardware sobre las que funcionaban esos juegos en su época para poder ejecutarlos. Existen muchos emuladores de cada consola, por lo que hay que investigar y probar el que mas te guste o mejor te funcione.
 
@@ -61,7 +61,7 @@ Además su desarrollador mantiene actualizaciones constantes y hace sesiones en 
 ![](/images/launchbox.jpg)
 _LaunchBox instalado en la Netbook_
 
-# Construcción
+## Construcción
 
 Lo primero que hice fue desarmar el monitor, para quitarle el pie y todos los plásticos que ocupan mucho espacio, y como va a ir dentro de la mesa no los vamos a necesitar.
 

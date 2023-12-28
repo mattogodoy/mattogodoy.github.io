@@ -32,7 +32,7 @@ Podría dedicarme a fabricarlos en serie, ¿no?
 
 * * *
 
-### Actualización:
+## Actualización:
 
 Este proyecto fue desarrollado varios años antes de crear este post. El post fue publicado el 30 de Enero de 2015. A mediados de Septiembre de 2015 Google anunció su nuevo dispositivo: el [Chromecast Audio](https://store.google.com/product/chromecast_audio).
 

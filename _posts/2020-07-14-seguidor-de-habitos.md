@@ -58,6 +58,7 @@ pero después de pensarlo un poco me di cuenta de que no sería muy agradable a 
 Finalmente me decanté por estos:
 
 ![](/images/image-5.png)
+
 ## Diseño
 
 Como dije antes, el diseño tendría que ser propio. En ese momento todavía no tenía mi fresadora CNC, por lo que opté por hacer el diseño en Autocad y enviarlo a una empresa de corte láser.

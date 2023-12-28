@@ -20,7 +20,7 @@ Increíblemente, todo esto entra en una placa del tamaño de una caja de fósfor
 
 Todas estas especificaciones han sido mejoradas por los sucesivos modelos que han ido saliendo con el tiempo.
 
-# Motivación
+## Motivación
 
 Son muchas las series de televisión que sigo, y para estar al día, el tiempo que hay que invertir en descargarlas no es poco. Buscar subtítulos y llevar la cuenta de lo que he visto y lo que no. Además, una vez descargados los capítulos, los paso a un disco externo para luego conectarlo a la TV y recién poder verlos.
 
@@ -30,7 +30,7 @@ Dicho esto, pensé en dar una utilidad real a mi Raspberry transformándola en u
 
 Si, suena pretencioso, pero como todo, se puede hacer. Además no hay nada mejor que automatizar procesos repetitivos :D
 
-# Idea
+## Idea
 
 Para que el invento sea funcional, tiene que cumplir con las siguientes condiciones:
 
@@ -42,13 +42,13 @@ Para que el invento sea funcional, tiene que cumplir con las siguientes condicio
 - Descargar subtítulos para los capítulos obtenidos.
 - Hacer disponibles los capítulos en una red [DLNA](https://es.wikipedia.org/wiki/Digital_Living_Network_Alliance) para poder verlos con un Smart TV a través de WiFi.
 
-# Configuración
+## Configuración
 
 Vamos a ir solucionando cada uno de los requerimientos en orden. Algunos son mas simples que otros, pero no hay gran complicación en dejar todo funcionando.
 
 La manera más simple de hacer la configuración es conectado un monitor o TV a alguna de las salidas de video de la Raspberry, pero también puede hacerse íntegramente por [SSH](https://es.wikipedia.org/wiki/Secure_Shell).
 
-## Alimentación de periféricos
+### Alimentación de periféricos
 
 Teniendo en cuenta que [no deberíamos exigir más de 100 mA](https://raspberrypi.stackexchange.com/questions/340/how-much-power-can-be-provided-through-usb) a los puertos USB de la Raspberry para no arriesgarnos a quemarlos, y sabiendo que debemos conectar un adaptador WiFi y un disco rígido externo (ambos grandes consumidores de corriente), la solución radica en utilizar un [hub USB](https://es.wikipedia.org/wiki/Hub_USB) alimentado. A diferencia de un hub normal, estos traen un transformador que va a una toma de corriente. No solo nos da más de dos puertos USB, sino que también nos da energía de sobra para todo lo que conectemos.
 
@@ -56,7 +56,7 @@ Teniendo en cuenta que [no deberíamos exigir más de 100 mA](https://raspberryp
 
 En mi caso, uso el de la foto: un [Sitecom CN-51](https://www.sitecom.com/en/usb-hub-7-port/cn-051/p/7), pero cualquiera servirá.
 
-## WiFi como conexión a Internet
+### WiFi como conexión a Internet
 
 Sí, el Raspberry Pi tiene una conexión Ethernet, lo que simplificaría mucho las cosas, pero mi idea es mantener todo el cablerío del «media server» lejos del router que está a plena vista.
 
@@ -68,7 +68,7 @@ La configuración es relativamente sencilla, y puede hacerse directamente accedi
 
 Para conectar la Raspberry a una red con seguridad WPA2-PSK, los pasos a seguir son los siguientes:
 
-### 1. Adaptador
+#### 1. Adaptador
 
 Para asegurarnos de que todo va a funcionar correctamente, primero debemos asegurarnos de que nuestro sistema está actualizado:
 
@@ -85,7 +85,7 @@ sudo shutdown -h now
 
 Instalamos el módulo USB y encendemos nuevamente la Raspberry.
 
-### 2. Interfaces
+#### 2. Interfaces
 
 Debemos agregar la interfaz correspondiente al adaptador. Para eso editamos el archivo correspondiente:
 
@@ -125,7 +125,7 @@ wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
 
 **NOTA:** Esto sobreescribirá la configuración de las interfaces de red.
 
-### 3. Configurar la seguridad
+#### 3. Configurar la seguridad
 
 El siguiente paso es especificar la red a la que queremos conectarnos, y la contraseña de la misma editando el archivo **wpa\_supplicant** :
 
@@ -149,7 +149,7 @@ network={
 }
 ```
 
-### 4. Reinicio
+#### 4. Reinicio
 
 Para asegurarnos de que la nueva configuración hará efecto, reiniciamos:
 
@@ -167,7 +167,7 @@ ping 192.168.1.100
 
 Vamos al siguiente requerimiento...
 
-## Disco externo
+### Disco externo
 
 Para lograr que nuestra Raspberry sea capaz de leer y escribir archivos en el disco externo, primero debemos montarlo.
 
@@ -213,7 +213,7 @@ y al final del archivo, agregamos esta línea:
 
 De esta manera nos aseguramos de que siempre tendremos acceso al disco externo luego de reiniciar.
 
-## Detectar nuevos capítulos
+### Detectar nuevos capítulos
 
 Para que nuestro sistema pueda descargar los nuevos capítulos, debemos estar al tanto de cuando están disponibles.
 
@@ -223,7 +223,7 @@ Para ello, nos creamos una cuenta en [ShowRSS](https://showrss.info/), una web q
 
 Siendo **138760** mi user ID en ShowRSS.
 
-## Obtener Magnet Links
+### Obtener Magnet Links
 
 Para obtener los magnet links de cada capítulo listado en nuestra RSS usaremos [Flexget](https://flexget.com/), que se encargará de pasar el link a nuestro cliente de torrents y nos da también la posibilidad de ordenar las descargas en carpetas y enviar un email al finalizar.
 
@@ -338,7 +338,7 @@ Todos estos parámetros pueden ser cambiados, y los correspondientes a nombres d
 
 Flexget tiene muchos parámetros útiles para configurar. Se pueden ver en profundidad en su [wiki](https://flexget.com/wiki).
 
-## Cliente de torrents
+### Cliente de torrents
 
 Para la descarga de los torrents usaremos [Transmission](https://www.transmissionbt.com/). Es uno de los clientes más famosos y tiene una [versión específica para Ubuntu](https://launchpad.net/ubuntu/+source/transmission/2.82-0ubuntu1) por medio de la línea de comandos.
 
@@ -383,7 +383,7 @@ Ya podremos acceder desde cualquier navegador al cliente web con esta dirección
 
 Deberías ver la interfaz web de transmission.
 
-## Descarga de subtítulos
+### Descarga de subtítulos
 
 En la configuración que hicimos para Flexget, uno de los parámetros especifica la búsqueda y descarga de subtítulos, pero para que eso funcione, primero debemos instalar [Periscope](https://code.google.com/p/periscope/), un módulo programado en python que busca subtítulos en base a los nombres de los archivos de video descargados.
 
@@ -398,7 +398,7 @@ mkdir /home/pi/.config
 
 _El último comando es por un bug de Periscope, que si no tiene la carpeta .config falla._
 
-## Automatización
+### Automatización
 
 Ya tenemos «casi» todo configurado. Lo que debemos hacer ahora es probar si todo funciona correctamente:
 
@@ -424,7 +424,7 @@ Hecho esto, guardamos el archivo con la siguiente secuencia de comandos: «ESC»
 
 Esto hace que se ejecute Flexget cada una hora. Si no encuentra nuevos capítulos, no hace nada. Si hay nuevos capítulos en nuestro feed, comienza el ciclo de descarga.
 
-## Configuración del servidor DLNA
+### Configuración del servidor DLNA
 
 Para facilitar aun más las cosas, pondremos nuestros capítulos a disposición de cualquier dispositivo que se encuentre conectado a la red. En mi caso es mi smart TV, pero podrías usar tu Play Station, tu iPad o tu smartphone para ver los capítulos directamente.
 
@@ -478,7 +478,7 @@ sudo service minidlna start
 
 De ahora en adelante todos nuestros dispositivos verán la red con nombre «Raspi DLNA».
 
-# Conclusiones
+## Conclusiones
 
 Me encanta la Raspberry y la gran cantidad de cosas que se puede hacer con ella. Más adelante postearé sobre otros proyectos que he desarrollado usándola.
 

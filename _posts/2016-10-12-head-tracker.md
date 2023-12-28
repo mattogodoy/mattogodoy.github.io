@@ -12,7 +12,7 @@ tags:
 
 Con toda esta moda de la realidad virtual están apareciendo montones de ideas innovadoras para hacer que la experiencia sea lo más inmersiva posible. Una de ellas es el "Head tracking", o "seguimiento de cabeza" en español.
 
-# ¿Qué es un Head Tracker?
+## ¿Qué es un Head Tracker?
 
 Un poco antes de la salida de las nuevas [Oculus Rift](https://www3.oculus.com/en-us/rift/) o las [HTC Vive](https://www.vive.com/eu/product/), lo más cercano a esto era un dispositivo simple basado en Arduino (cómo no) que al sujetarlo a los auriculares, y basándose en mediciones tomadas por [acelerómetros](https://es.wikipedia.org/wiki/Aceler%C3%B3metro), [giróscopos](https://es.wikipedia.org/wiki/Gir%C3%B3scopo) y [magnetómetros](https://es.wikipedia.org/wiki/Magnet%C3%B3metro) es capaz de saber en qué posicion se encuentra nuestra cabeza en todo momento.
 
@@ -26,11 +26,11 @@ El del video soy yo jugando al [Elite Dangerous](https://www.elitedangerous.com/
 
 Al mover la cabeza como si estuviera mirando, el personaje del juego mira en la misma dirección en la que yo lo hago.
 
-# Construcción
+## Construcción
 
 Hay muchas variantes de head trackers, pero hay una que me llamó la atención por ser completamente open hardware y open software: **[EdTracker](https://www.edtracker.org.uk/)**.
 
-### Componentes
+## Componentes
 
 La lista de componentes es bastante simple:
 
@@ -50,7 +50,7 @@ La lista de componentes es bastante simple:
 
 ![](/images/protoboard.jpg)
 
-### El circuito
+## El circuito
 
 El proceso de creación de la placa es bastante sencillo. Simplemente tenemos que hacer las conexiones entre los pines de los distintos componentes de la siguiente manera:
 
@@ -80,7 +80,7 @@ Hacer el circuito no presenta ninguna complicación. Simplemente un par de solda
 
 El botón sirve para "resetear" la vista. Es decir que una vez estemos dentro de un juego, debemos poner nuestra cabeza en una posición centrada mirando a la pantalla y presionar el botón. En ese momento el head tracker tomará esa posición como la inicial y pasará a ser el centro de todos los ejes (0, 0, 0).
 
-### Firmware
+## Firmware
 
 Para que el sistema funcione, necesitamos flashear el firmware del head tracker dentro del Arduino.
 
@@ -100,7 +100,7 @@ Una vez abierta la interfaz gráfica, vemos algo así:
 
 Si tenemos los drivers de Arduino correctamente instalados, la aplicación debería detectar nuestro EdTracker casi al momento.
 
-### Calibrado
+## Calibrado
 
 Como no podía ser de otra manera, este bicho tiene que pasar por un proceso de calibrado. Afortunadamente es bastante simple y gracias al software que descargamos en el paso anterior el proceso es muy rápido.
 
@@ -112,7 +112,7 @@ Otra cosa que entra en juego a la hora de calibrar el sensor es la temperatura d
 
 Como se ve en el video, los movimientos son exponenciales. Esto es a propósito para no tener que mover la cabeza mucho, hasta el punto de dejar de ver la pantalla. Esto es configurable independientemente para cada eje y lo que recomiendo es que busques los valores que te parezcan cómodos.
 
-### Conclusión
+## Conclusión
 
 Un proyecto fácil, rápido y barato que puede hacer que los videojuegos sean todavía más divertidos.
 

@@ -54,7 +54,7 @@ Por otra parte, habría que convencer a los desarrolladores de juegos de que int
 
 Conociendo las restricciones, me tengo que decidir por alguna de las alternativas posibles, que según veo son dos:
 
-#### Gas
+### Gas
 
 Uno de los resultados que encontré durante la búsqueda es el uso de gas comprimido, utilizado ampliamente en réplicas de armas de **Airsoft** y marcadoras de **Paintball**. Esto me abrió un mundo nuevo y me arrastró a una nueva afición (porque por lo visto no tengo suficientes 😒) de la que hablaré un poco más en mi próximo post.
 
@@ -66,7 +66,7 @@ Son baratas y fáciles de conseguir, pero tienen como desventaja que pueden alma
 
 Se podría considerar también usar una botella más grande, como las utilizadas en las marcadoras de Paintball, pero eso trae consigo muchas complicaciones (como la rellenas??) y así y todo la cantidad de disparos antes de que se acabe el gas es bastante limitada.
 
-#### Electroimanes
+### Electroimanes
 
 Esta alternativa tiene mucha mejor pinta, empezando por que no es necesario el uso de ningún consumible (como el CO2).
 

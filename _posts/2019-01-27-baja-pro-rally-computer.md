@@ -14,13 +14,13 @@ tags:
 hidden: true
 ---
 
-# Estado actual
+## Estado actual
 
 En esta página encontrarás actualizaciones acerca del estado del desarrollo y pruebas del Baja Pro. Para recibir estas actualizaciones en tu e-mail [suscríbete a la lista de correos](https://baja.matto.io/#newsletter-area).
 
-# 08/10/2019
+## 08/10/2019
 
-## Primera prueba superada
+### Primera prueba superada
 
 Mi amigo Jaime Lozano de [Cabras Sobre Ruedas](https://www.cabrassobreruedas.com) me ha dado una gran alegría este fin de semana, dado que ha participado en la [xTrem 300](https://www.xtrem300.com) de Huéneja con su KTM 990R y llevaba una unidad de prueba del nuevo modelo del Baja Pro.
 
@@ -37,9 +37,9 @@ Me alegra mucho que todo haya salido bien y me da más fuerzas para continuar co
 
 Próxima parada: el [1000 Dunas Raid](https://1000dunas.com)
 
-# 13/09/2019
+## 13/09/2019
 
-## Instagram
+### Instagram
 
 Esta es una pequeña actualización para comentaros que he creado una cuenta de Instagram en la que he añadido algunas fotos mostrando la evolución histórica del proyecto, y en la que iré posteando más en la medida en que el proyecto vaya avanzando.
 
@@ -47,13 +47,13 @@ El nombre de la cuenta es [**bajarallycomputers**](https://www.instagram.com/baj
 
 ¡Os espero por allí!
 
-# 25/08/2019
+## 25/08/2019
 
-## Noticias
+### Noticias
 
 Lentamente voy avanzando con el proyecto. Durante estos últimos meses no he podido progresar a la velocidad a la que me gustaría. Un cambio de empleo, varios proyectos y la vida se han puesto en el camino, pero sigo adelante.
 
-### Materiales
+#### Materiales
 
 He estado comprando materiales de a poco para poder avanzar en el proyecto. La idea es hacer una primera tirada de unas 20 unidades y si todo va bien seguir haciendo más unidades.
 
@@ -67,7 +67,7 @@ _Pantallas para el Baja Pro_
 
 Con esto ya podría empezar a cortar cajas y protectores de pantalla, y soldar algunos de los componentes.
 
-### Dificultades
+#### Dificultades
 
 Afortunadamente, luego de mucho indagar he resuelto el problema del plástico transparente para el protector de la pantalla. Usaré **policarbonato compacto**. Es lo que se usa para la mayoría de productos ya que es mucho más resistente a impactos que el metacrilato.
 
@@ -75,7 +75,7 @@ Muchos de los componentes son bastante caros y necesito muchos, por lo que me ha
 
 Por algún motivo los módulos GPS han aumentado su precio al doble en estos últimos meses. No he logrado encontrar una explicación, pero ahora todos los proveedores lo venden al nuevo precio. Esto me da bastante que pensar en cuanto al coste base de producción de cada unidad. Si los precios de los componentes varían tan radicalmente en tan poco tiempo, me será difícil estimar un precio final y estable de venta del producto.
 
-### Proceso de venta
+#### Proceso de venta
 
 Una de las cosas que más me preocupan actualmente es cómo vender las unidades. Recordad que esto es un proyecto que hago durante mi tiempo libre. No soy autónomo y por lo tanto no puedo emitir facturas.
 
@@ -86,7 +86,7 @@ Darme de alta como autónomo no está en mis planes, siendo dos los motivos prin
 
 En España hay pocas o ninguna ayuda para emprendedores con pequeños proyectos como el mío. Es un problema que tendré que solucionar de alguna manera y me quitará tiempo que podría estar dedicando al avance del proyecto. Es increíble que el estado no me dé herramientas para pagar impuestos de manera sencilla sobre los productos que quiero vender de forma legal.
 
-### Próximos pasos
+#### Próximos pasos
 
 En las siguientes semanas empezaré a cortar las cajas y los protectores de pantalla. Empezaré también a soldar los componentes que tengo. Con esto ya tengo muchísimo trabajo.
 
@@ -96,13 +96,13 @@ Seguimos en contacto!
 
 * * *
 
-# 24/04/2019
+## 24/04/2019
 
-## Algunos avances
+### Algunos avances
 
 Es verdad que no envío novedades desde hace un tiempo, pero eso no significa que haya dejado de trabajar en el Baja Pro. Mas bien todo lo contrario.
 
-### Cajas
+#### Cajas
 
 Me atrevo a decir que he dedicado la misma cantidad de horas a buscar una carcasa que se ajuste a mis necesidades que a desarrollar el software y el hardware de este proyecto. Es muy difícil dado que necesitaba un tamaño y unas características bastante particulares, y sobre todo, que tenga un acabado aceptable y no parezca una caja de luz.
 
@@ -132,7 +132,7 @@ Y el resultado final con el hardware montado es el siguiente:
 ![](/images/20190416_205926.jpg)
 _Caja terminada_
 
-### Cristal protector
+#### Cristal protector
 
 El cristal (en realidad es un policarbonato transparente) que estoy utilizando actualmente es especial. Está pensado para evitar reflejos. En teoría está muy bien, pero en la práctica tiene algunos problemas.
 
@@ -145,7 +145,7 @@ De todas formas la información de la pantalla se distingue perfectamente. Esto 
 
 Finalmente he decidido que usaré un cristal convencional como los que llevan los tableros de nuestras motos. El problema es que no sé exactamente que material usar. Hay mucha variedad. Es por eso que **os pido un favor** : si alguien conoce algún material transparente de alta resistencia y que no se raye fácilmente, agradecería me lo mencione en un mail a [baja@matto.io](mailto: baja@matto.io)
 
-### GPS
+#### GPS
 
 Las novedades no terminan allí. Otra cosa a la que he dedicado MUCHO tiempo es a la elección del módulo GPS que utilizaré.
 
@@ -160,7 +160,7 @@ Otra gran ventaja es que los nuevos módulos pueden entregar actualizaciones de 
 
 He estado haciendo pruebas con los nuevos módulos y los resultados son realmente satisfactorios, por lo que he decidido que los usaré para el producto final.
 
-### Próximos pasos
+#### Próximos pasos
 
 Tengo que encontrar y probar un material que se adapte a mis necesidades para usar como cristal protector de pantalla. Estoy en ello y como he dicho antes, agradecería cualquier recomendación de vuestra parte.
 
@@ -170,13 +170,13 @@ En cuanto al GPS, si bien ya lo he probado y va perfecto, quisiera aprovechar la
 
 * * *
 
-# 28/02/2019
+## 28/02/2019
 
-## ¡Buenas noticias!
+### ¡Buenas noticias!
 
 Hoy os traigo algunas novedades.
 
-### Memoria
+#### Memoria
 
 Ya están aquí los nuevos chips de memoria. He comprado varios y de diferentes tipos, para dar con el modelo que mejor se ajuste a mis necesidades.
 
@@ -186,11 +186,11 @@ Después de muchas (de verdad, muchas) horas de prueba y error y dolores de cabe
 
 En este preciso momento estoy haciendo una prueba de estrés para ver si la memoria resiste la escritura de datos a alta frecuencia durante periodos largos de tiempo. Por ahora tiene buena pinta.
 
-### Ubicación de los tornillos
+#### Ubicación de los tornillos
 
 Han llegado también algunos de los microcontroladores de montaje superficial que os comentaba en la actualización anterior. De momento funcionan bien. Si bien tendré que hacer modificaciones importantes en la placa y el código del Baja Pro, esto me dejará lugar suficiente para la correcta ubicación de los tornillos de fijación.
 
-### Próximos pasos
+#### Próximos pasos
 
 En caso de que las pruebas de la memoria den resultados satisfactorios, el siguiente paso será rediseñar la placa base para adaptar el nuevo tipo de microcontrolador y la memoria, además de los nuevos componentes necesarios para que todo funcione correctamente. Si bien esto lleva tiempo, espero poder ponerme con ello en los próximos días.
 
@@ -200,9 +200,9 @@ Os mantendré al tanto.
 
 * * *
 
-# 27/01/2019
+## 27/01/2019
 
-## Creación de página web
+### Creación de página web
 
 Hoy finalmente he terminado con el desarrollo de una página web en la que se pueden ver algunas de las características del nuevo modelo del Baja Pro.
 
@@ -210,11 +210,11 @@ Puedes ver la nueva página en:
 
 **[https://baja.matto.io](https://baja.matto.io)**
 
-## Avances
+### Avances
 
 Actualmente me encuentro con algunos problemas que debo resolver antes de poner a la venta el Baja Pro:
 
-### Memoria
+#### Memoria
 
 El microcontrolador que hace las veces de cerebro del Baja Pro cuenta con una memoria interna llamada EEPROM. Esta memoria nos permite almacenar valores que no queremos perder al apagar el dispositivo. En el caso del Baja Pro, estos valores son las opciones seleccionadas del menú y las distancias y tiempos de recorrido de carrera.  
 El problema en cuestión es que las memorias EEPROM tienen una cantidad limitada de veces en las que pueden ser escritas (aproximadamente 100.000 veces).
@@ -231,7 +231,7 @@ Como solución a este problema estoy haciendo unas pruebas con un tipo de memori
 
 Os mantendré al tanto de cualquier novedad respecto al resultado de dichas pruebas.
 
-### Ubicación de los tornillos
+#### Ubicación de los tornillos
 
 La nueva carcasa del Baja Pro es extremadamente pequeña, liviana y resistente. Esto trae como consecuencia la reducción de espacio interior para los componentes electrónicos y los tornillos de fijación (los utilizados para montar el Baja Pro en el soporte del RoadBook).
 

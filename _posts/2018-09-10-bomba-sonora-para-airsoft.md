@@ -34,7 +34,7 @@ La idea era hacer un proyecto pequeño, que no me llevara mucho tiempo y que pud
 
 Como base quería una bomba basada en Arduino que tuviese una pantalla, un teclado numérico, luces y un altavoz para dar el aviso de alarma o "explosión".
 
-### Componentes
+## Componentes
 
 Estos son algunos de los componentes que utilicé:
 
@@ -56,7 +56,8 @@ El resultado es éste:
 
 ![](/images/front1.jpg)
 _Disposición final de los componentes._
-### Modos de juego
+
+## Modos de juego
 
 Mi idea era hacer que el código de la bomba fuese muy simple y con pocos modos de juego, pero que permita agregar nuevos modos si se me ocurren más adelante.
 
@@ -68,7 +69,7 @@ Por ahora los modos de los que dispone son:
 
 Los modos son bastante simples porque siempre es complicado explicar las reglas del juego, y a eso sumar el funcionamiento de de la bomba. Especialmente cuando hay mucha gente (las partidas suelen ser de 20 contra 2o personas aproximadamente).
 
-### Configuración
+## Configuración
 
 La bomba cuenta con varios parámetros configurables:
 
@@ -83,7 +84,7 @@ Estos valores se establecen antes de empezar la partida usando el teclado numér
 
 Una vez configurada los jugadores no necesitan hacer nada aparte de activarla o desactivarla. La idea es que sea lo más fácil de usar posible para los participantes de la partida.
 
-### Funcionamiento
+## Funcionamiento
 
 Aquí se puede ver el proceso de configuración, armado y desarmado de la bomba:
 
@@ -94,7 +95,7 @@ Como se puede ver en el video, si el jugador suelta el botón antes de que se cu
 
 La llave permite que la organización pueda encender la bomba y que no pueda ser apagada por los usuarios.
 
-### Conexiones
+## Conexiones
 
 Las conexiones entre el Arduino Nano y los distintos componentes son las siguientes:
 
@@ -131,13 +132,13 @@ A2 (D16) Buzzer - Positive
 A3 (D17) LEDs
 ```
 
-### Código fuente
+## Código fuente
 
 El código es bastante simple y está comentado en su mayoría:
 
 [https://github.com/mattogodoy/airsoft-bomb](https://github.com/mattogodoy/airsoft-bomb)
 
-### Pruebas
+## Pruebas
 
 Hace algunos días fue el aniversario de _La Atalaya_, el campo al que solemos ir a jugar. Ese día se hizo una partida nocturna en la que tuve la suerte de probar la bomba.
 
@@ -145,7 +146,7 @@ La verdad es que funcionó perfectamente, y al haber sido de noche las luces se 
 
 Personalmente creo que aporta bastante a la partida. Se podría complementar con cosas como tener que buscar el código en algún lugar para luego poder desactivar la bomba que está en otro sitio.
 
-### Mejoras
+## Mejoras
 
 Finalmente agregué un poco de cinta amarilla alrededor de la caja para darle más visibilidad:
 
