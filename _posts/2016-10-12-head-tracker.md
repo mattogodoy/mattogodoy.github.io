@@ -3,7 +3,7 @@ author: matto
 title: Head tracker para videojuegos
 date: 2016-10-12T19:39:00+01:00
 image: 
-  path: /images/headtracker3-1.jpg
+  path: /assets/images/headtracker3-1.jpg
 categories:
 tags:
 - electronica
@@ -36,45 +36,45 @@ La lista de componentes es bastante simple:
 
 - Procesador: [Arduino Micro](https://www.arduino.cc/en/Main/ArduinoBoardMicro) &nbsp;
 
-![](/images/arduino2.jpg)
+![](/assets/images/arduino2.jpg)
 
 - IMU (Unidad de Medición Inercial): Aquí tenemos dos posibilidades. Hay dos tipos de sensores que son compatibles; el **[MPU-6050](https://playground.arduino.cc/Main/MPU-6050)** que trae acelerómetro y giróscopo, o el **[MPU-9250](https://www.sparkfun.com/products/13762)** que es un poco más caro pero trae también un magnetómetro (brújula digital) que permite evitar un efecto no deseado llamado **drifting** (ya hablaré de esto más adelante). &nbsp;
 
-![](/images/accelerometer.jpg)
+![](/assets/images/accelerometer.jpg)
 
 - Un [botón](https://www.sparkfun.com/products/9190). 
 
-![](/images/button.jpg)
+![](/assets/images/button.jpg)
 
 - Un circuito impreso sobre el que montar todos los componentes. Aquí de nuevo contamos con 2 opciones; la primera es comprar la [placa con su correspondiente circuito](https://www.edtracker.co.uk/shop/my-basket/edtracker-diy-pcb) a los chicos de EdTracker. La segunda es hacer el circuito nosotros mismos usando una [placa de prototipado](https://www.sparkfun.com/products/12702) y hacer las conexiones entre componentes. Yo opté por la segunda, porque aunque queda más desprolijo, es algo que me gusta hacer. 
 
-![](/images/protoboard.jpg)
+![](/assets/images/protoboard.jpg)
 
 ## El circuito
 
 El proceso de creación de la placa es bastante sencillo. Simplemente tenemos que hacer las conexiones entre los pines de los distintos componentes de la siguiente manera:
 
-![](/images/pinout.png)
+![](/assets/images/pinout.png)
 
 El diagrama sería algo así:
 
-![](/images/circuit-1.png)
+![](/assets/images/circuit-1.png)
 
 Y puesto en la placa de prototipado de la manera más compacta posible se podría lograr algo como esto:
 
-![](/images/circuit2.png)
+![](/assets/images/circuit2.png)
 _Nótese que algunos de los cables pasan de un lado de la placa al otro._
 
 Lo que yo hice fue agregar unos zócalos que me permiten poner y quitar tanto el Arduino como el sensor cuando yo quiera, por si pienso usarlos para otro proyecto en un futuro.
 
 El resultado es este:
 
-![](/images/headtracker1.jpg)![](/images/headtracker2.jpg)![](/images/headtracker3.jpg)
+![](/assets/images/headtracker1.jpg)![](/assets/images/headtracker2.jpg)![](/assets/images/headtracker3.jpg)
 
 Aquí destaca el _para nada estético pero práctico_ sistema de sujeción: Un broche para ropa :)  
 No es muy elegante, pero cumple su función.
 
-![](/images/headtracker4.jpg)
+![](/assets/images/headtracker4.jpg)
 
 Hacer el circuito no presenta ninguna complicación. Simplemente un par de soldaduras siguiendo los diagramas y ya lo tenemos funcionando.
 
@@ -96,7 +96,7 @@ Allí también podemos encontrar los drivers de Arduino, que son indispensables 
 
 Una vez abierta la interfaz gráfica, vemos algo así:
 
-![](/images/config.jpg)
+![](/assets/images/config.jpg)
 
 Si tenemos los drivers de Arduino correctamente instalados, la aplicación debería detectar nuestro EdTracker casi al momento.
 

@@ -3,7 +3,7 @@ author: matto
 title: Hola, mundo
 date: 2015-01-21T00:00:00+01:00
 image: 
-  path: /images/hello.jpeg
+  path: /assets/images/hello.jpeg
 categories:
 tags:
 ---

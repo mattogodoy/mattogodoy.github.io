@@ -3,7 +3,7 @@ author: matto
 title: Fabricación de un Roadbook con Tripmaster
 date: 2017-06-03T19:50:00+01:00
 image: 
-  path: /images/header.jpg
+  path: /assets/images/header.jpg
 categories:
 tags:
 - electronica
@@ -18,7 +18,7 @@ Uno de mis juegos preferidos es "[Hot Dogs, Horseshoes & Hand Grenades](https://
 
 Acompañados de las gafas, y para incrementar la sensación de inmersión, el jugador interacciona con el mundo virtual por medio de unos mandos llamados _Oculus Touch_:
 
-![](/images/touch-controllers.jpg)
+![](/assets/images/touch-controllers.jpg)
 
 El problema es que a pesar de que hacen un trabajo impecable detectando la posición de mis manos en el espacio real, no son capaces de reproducir el &nbsp;fuerte retroceso que genera un arma real al ser disparada. En cambio nos tenemos que conformar con una triste vibración parecida a la de cuando nos llega un mensaje de WhatsApp al móvil.  
 Ese retroceso es a mi parecer lo único que haría falta para que la inmersión sea total. La experiencia mejoraría en un 63%.
@@ -27,13 +27,13 @@ Ese retroceso es a mi parecer lo único que haría falta para que la inmersión 
 
 Luego de darle algunas vueltas decidí ponerme manos a la obra. Un par de horas de búsquedas tanto en Google como en YouTube (mi nuevo motor de búsqueda preferido) me llevaron a varios resultados. Algunos de ellos muy interesantes, como por ejemplo, patentes de mecanismos para lograr este mismo objetivo, pero con distintos fines. Algunos recreativos, otros de entrenamiento militar:
 
-![](/images/pat3.png)
+![](/assets/images/pat3.png)
 _Dispositivo para entrenamiento militar adaptable a cualquier tipo de arma_
 
-![](/images/pat2.png)
+![](/assets/images/pat2.png)
 _Sistema de retroceso eléctrico para máquinas recreativas de arcade_
 
-![](/images/pat1.png)
+![](/assets/images/pat1.png)
 _Sistema de retroceso basado en aire (o gas) comprimido adaptable a pistolas reales_
 
 ## Requisitos
@@ -60,7 +60,7 @@ Uno de los resultados que encontré durante la búsqueda es el uso de gas compri
 
 Para cumplir con los requisitos antes mencionados, lo ideal sería usar cápsulas de CO2 de 12 gramos:
 
-![](/images/co2.png)
+![](/assets/images/co2.png)
 
 Son baratas y fáciles de conseguir, pero tienen como desventaja que pueden almacenar muy poco gas. En una pistola de Airsoft se puede disparar unas 30 veces (con suerte) por cada uno de los cartuchos. Estar quitándonos las gafas y cambiando de cartuchos cada 30 tiros no ayudará mucho a la inmersión. Especialmente con armas automáticas.
 
@@ -72,11 +72,11 @@ Esta alternativa tiene mucha mejor pinta, empezando por que no es necesario el u
 
 Volviendo atrás hasta mi infancia (no tan lejana), recuerdo haber pasado mucho tiempo jugando en máquinas arcade de videojuegos. Algunas de ellas tenían armas y tenían retroceso.
 
-![](/images/arcade-gun.png)
+![](/assets/images/arcade-gun.png)
 
 Buscando un poco me encontré con que ese efecto se lograba usando un tipo especial de electroimanes llamados _solenoides_:
 
-![](/images/solenoide.jpg)
+![](/assets/images/solenoide.jpg)
 
 Un solenoide es simplemente un electroimán con un eje metálico y un muelle. Al hacer pasar corriente por él, el eje se contrae comprimiendo el muelle. Al dejar de pasar corriente, el electroimán pierde su energía y el muelle se encarga de extender el eje nuevamente. Se suelen usar como actuador lineal para abrir y cerrar válvulas.
 
@@ -90,7 +90,7 @@ Con todo esto en mente, compré un solenoide de 24 volts para hacer algunas prue
 Para controlar los movimientos y la repetición del solenoide, utilicé un **Arduino Nano**. Dado que la corriente que necesita el electroimán para funcionar está cerca de los 2 amperes (si, muchísimo) y el Arduino no es capaz de manejar esas capacidades, usé un relay de 5v para controlar el paso de corriente.  
 Para variar fácilmente la frecuencia de repetición de disparo usé un **potenciómetro** y como gatillo un simple botón. Lo más parecido a una pistola que tenía era una sierra para metal, asi que usé eso como cuerpo de la pistola :)
 
-![](/images/gun.jpg)
+![](/assets/images/gun.jpg)
 _Sí, es una sierra._
 
 He agregado algunas arandelas a la punta del solenoide para que tenga más masa y el efecto del retroceso sea más notable.  

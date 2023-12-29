@@ -4,7 +4,7 @@ layout: post
 title: Seguidor de líneas
 date: '2015-01-28 01:31:00'
 image: 
-  path: /images/arduino.jpg
+  path: /assets/images/arduino.jpg
 tags:
 - electronica
 - robotica
@@ -33,12 +33,12 @@ Estan limitados en dimensiones, y deben tener un pulsador en la parte delantera.
 La pista era un circuito de unos 40 cm de ancho, de color negro y tenía dos líneas blancas pintadas. Una para cada robot.  
 Además tenía una pendiente de 20º que formaba un puente, y un area de zig-zag.
 
-![](/images/pista_seguidor_lineas.jpg)
+![](/assets/images/pista_seguidor_lineas.jpg)
 _Los chicos de la Universidad de Mendoza también habían instalado unas cámaras en los puntos mas críticos, para poder verlos de cerca y lo proyectaban en una pared._
 
 ### Reglamento
 
-El documento oficial del reglamento se puede ver [aquí](https://matto.io/files/seguidor_lineas/Reglamento_Carreras_2012.pdf).  
+El documento oficial del reglamento se puede ver [aquí](/assets/uploads/Reglamento_Carreras_2012.pdf).  
 Está bien detallado y no deja lugar a dudas.
 
 ## Construcción
@@ -70,11 +70,11 @@ Para las pruebas iniciales, en vez de LEDs IR, utilicé LEDs comunes de color bl
 
 Este es el circuito. El buzzer de la parte superior era para pruebas y no lo integré al circuito final:
 
-![](/images/Arduino-line-follower.png)
+![](/assets/images/Arduino-line-follower.png)
 
 Y este es el array de sensores terminado:
 
-![](/images/sensor.jpg)
+![](/assets/images/sensor.jpg)
 
 Como se ve en la imagen, lo que hice fue usar 3 "sensores". El del medio debería detectar siempre color blanco (significaría que estoy dentro de la línea). Los de los extremos son los que detectarán que me estoy desviando y actuarán en consecuencia. Si el de la iquierda detecta la línea, significa que me estoy yendo a la derecha y debo corregir doblando a la izquierda. El mismo caso se aplica para el sensor derecho.
 
@@ -84,7 +84,7 @@ Por otra parte, encapsulé cada sensor con unas piezas de plástico (sí, viste 
 
 Para la tracción del robot utilicé un motor DC común y silvestre.
 
-![](/images/motor.jpg)
+![](/assets/images/motor.jpg)
 
 ### Caja reductora
 
@@ -96,7 +96,7 @@ Normalmente, en el mundo civilizado, son muy fáciles de encontrar, y además mu
 
 Tras muchas pruebas, terminé comprando un par de juguetes chinos de los que quité y adapté las cajas reductoras, y además aproveché las ruedas que traían.
 
-![](/images/seguidor_lineas.jpg)
+![](/assets/images/seguidor_lineas.jpg)
 
 Una vez conectada al motor, mi robot ya tenía fuerza suficiente como para moverse, y a una buena velocidad.
 
@@ -108,7 +108,7 @@ Por otra parte tiene la gran ventaja de que recibe las órdenes desde el Arduino
 
 Este es el resultado (no soy muy prolijo, ya lo sé):
 
-![](/images/puente_h.jpg)
+![](/assets/images/puente_h.jpg)
 
 De paso, aproveché la placa y agregué resistencias para los leds de los sensores, sus respectivos conectores, un potenciómetro para la velocidad del motor y un botón de reset para reiniciar el software.  
 No es muy elegante, pero funciona.
@@ -119,7 +119,7 @@ Lamentablemente no puedo encontrar los planos del circuito, pero es muy simple y
 
 Respecto a la dirección, el servo que utilicé es uno de los más baratos, llamado 9g (porque pesa en total 9 gramos).
 
-![](/images/servo.jpg)
+![](/assets/images/servo.jpg)
 
 Este consume mucha menos corriente, y por tanto sí va conectado directamente al Arduino. Además tiene la ventaja de que traen la caja reductora integrada (como se ve en la foto), por lo que tienen mucha fuerza.
 
@@ -127,7 +127,7 @@ Este consume mucha menos corriente, y por tanto sí va conectado directamente al
 
 Para alimentar el Arduino utilicé 4 pilas AA, y para el motor una batería de 6 volts que, ni bien es grande y pesa mucho, me daría la autonomía y la potencia que necesitaba.
 
-![](/images/bateria.jpg)
+![](/assets/images/bateria.jpg)
 
 ### Código
 
@@ -342,17 +342,17 @@ Había pensado en una lógica de recuperación que se active cuando el robot se 
 
 Todo junto y armado, terminó siendo este Frankestein:
 
-![](/images/robot.jpg)
+![](/assets/images/robot.jpg)
 
 ## El día de la competencia
 
 El día de la competencia se nos dio algunas horas para que configuremos nuestros robots y nos preparemos para las carreras.
 
-![](/images/robot2.jpg)
+![](/assets/images/robot2.jpg)
 
 Los robots de todos los participantes estaban muy bien. Es interesante ver la creatividad de cada uno y la manera de resolver los problemas desde distintos puntos de vista.
 
-![](/images/robots.jpg)
+![](/assets/images/robots.jpg)
 
 _El mío es el último de la derecha._
 

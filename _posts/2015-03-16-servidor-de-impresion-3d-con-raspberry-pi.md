@@ -3,7 +3,7 @@ author: matto
 title: Servidor de impresión 3D con Raspberry Pi
 date: 2015-03-16T18:54:00+01:00
 image: 
-  path: /images/octo-raspi.jpg
+  path: /assets/images/octo-raspi.jpg
 categories:
 tags:
 - impresora-3d
@@ -19,7 +19,7 @@ Hoy veremos cómo transformarla en un servidor de impresión 3D gracias al excel
 
 El proyecto en cuestión se llama [Octoprint](https://octoprint.org/), y es un servidor programado en [Python](https://www.python.org/) con una interfaz web que nos permite controlar nuestra [impresora 3D]({% post_url 2015-02-03-armando-una-impresora-3d-parte-1 %}) a través de una red privada o, por qué no, desde [Internet](https://media.giphy.com/media/iYDlg0CljYqTm/giphy.gif).
 
-![](/images/octoprint.png)
+![](/assets/images/octoprint.png)
 
 Esto nos da la libertad de no tener que dejar un ordenador conectado a la impresora. Podemos comenzar una impresión desde la oficina, o ver como avanza el proceso desde nuestro smartphone en tiempo real desde cualquier parte del mundo.
 
@@ -52,7 +52,7 @@ Una vez instalado OctoPi en la SD, debemos conectar todos los periféricos neces
 
 Instalamos la tarjeta SD en la Raspberry y la encendemos. Durante el primer arranque, se nos abrirá una pantalla en la que debemos configurar un par de cosas:
 
-![](/images/raspi-config.png)
+![](/assets/images/raspi-config.png)
 
 Lo primero es hacer una expansión del sistema de archivos. Esto permite que podamos hacer uso de toda lac apacidad disponible dentro de la tarjeta SD. Para ello, marcamos «Expand Filesystem» y le damos _Enter_.
 
@@ -94,7 +94,7 @@ Para el caso en que hayamos conectado una webcam, podemos ver el streaming en vi
 
 La primera vez que accedamos a la pantalla principal de OctoPrint, nos pedirá que creemos un usario y una contraseña. Es importante destacar que este usuario no guarda ninguna relación con el que establecimos durante la configuración de la Raspberry. En este caso es un usuario que servirá únicamente para conectarnos a OctoPrint:
 
-![](/images/user.png)
+![](/assets/images/user.png)
 
 Una vez ingresados los datos, le damos al botón «Keep Access Control Enabled». También nos da la opción de acceder sin pedir autenticación, pero no lo recomiendo.
 
@@ -102,7 +102,7 @@ Una vez ingresados los datos, le damos al botón «Keep Access Control Enabled»
 
 Una vez dentro de OctoPrint, lo primero que debemos hacer es conectar con la impresora. Para ello, seleccionamos los datos correctos en la sección «Connection» del menú de la izquierda y le damos a «Connect».
 
-![](/images/octo.png)
+![](/assets/images/octo.png)
 
 Si todo sale bien, el estado cambiará a «Operational», y ya estamos listos para interactuar con la impresora.
 
@@ -122,7 +122,7 @@ Esto normalmente es bastante útil para llevar un control sobre las temperaturas
 
 En la pestaña «Control» tenemos algunos controles básicos sobre los ejes y los motores de la impresora, así como de sus ventiladores:
 
-![](/images/control.jpg)
+![](/assets/images/control.jpg)
 
 Si tenemos una webcam conectada, aquí es donde la veremos.
 
@@ -130,7 +130,7 @@ Si tenemos una webcam conectada, aquí es donde la veremos.
 
 En la pestaña «GCode Viewer» veremos la pieza que estamos imprimiendo:
 
-![](/images/gcodeviewer.png)
+![](/assets/images/gcodeviewer.png)
 
 Aquí vemos también el avance de la impresión, lo que nos permite ver en tiempo real por qué parte del proceso vamos.
 
@@ -138,7 +138,7 @@ Aquí vemos también el avance de la impresión, lo que nos permite ver en tiemp
 
 En la pestaña «Terminal» tenemos, como su nombre lo indica, una terminal para interactuar con la impresora a un nivel más bajo, permitiéndonos enviar comandos específicos directamente:
 
-![](/images/serial.png)
+![](/assets/images/serial.png)
 
 También tiene la ventaja de que nos muestra el [log](https://en.wikipedia.org/wiki/Server_log) que devuelve la impresora en cada momento.
 
@@ -146,7 +146,7 @@ También tiene la ventaja de que nos muestra el [log](https://en.wikipedia.org/w
 
 Finalmente, en la pestaña «Timelapse» tenemos la opción de generar un video basado en fotos tomadas cada cierto tiempo, mostrando la evolución de la pieza impresa:
 
-![](/images/timelapse.png)
+![](/assets/images/timelapse.png)
 
 Siendo el resultado algo como esto:
 

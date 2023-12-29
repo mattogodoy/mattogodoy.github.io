@@ -3,7 +3,7 @@ author: matto
 title: Persistence of vision
 date: 2015-08-29T18:11:00+01:00
 image: 
-  path: /images/persistence.jpg
+  path: /assets/images/persistence.jpg
 categories:
 tags:
 - electronica
@@ -16,7 +16,7 @@ Si hay algo más divertido que programar, es hacer que tu código haga cosas en 
 
 Como Arduino nació recién en 2005 y no se hizo conocido hasta bastante más tarde, mi interés se desvió hacia el mítico **[PIC16F84](https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC16F84)**, un microcontrolador muy básico con una arquitectura de [8 bits](https://histinf.blogs.upv.es/2011/01/12/computadores-de-8-bits/) y 18 pines:
 
-![](/images/PIC16F84.png)
+![](/assets/images/PIC16F84.png)
 
 Se programa en lenguaje máquina (assembler), por tanto, escribir un programa por simple que sea es un suplicio (aunque también existen compiladores que interpretan **C** o **Basic** ).
 

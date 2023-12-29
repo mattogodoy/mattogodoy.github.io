@@ -3,7 +3,7 @@ author: matto
 title: Armando una Impresora 3D - Parte 1
 date: 2015-02-03T19:24:00+01:00
 image: 
-  path: /images/Prusa-i2-1.jpg
+  path: /assets/images/Prusa-i2-1.jpg
 categories:
 tags:
 - electronica
@@ -16,7 +16,7 @@ Afortunadamente hoy en día en internet esta TODO, y eso nos da [poder ilimitado
 
 Siempre lo digo: Me encanta vivir en esta época. Muchas cosas geniales estan pasando. Los desarrolladores de software estamos entendiendo que el conocimiento pertenece a las personas y estamos [compartiendo más](https://github.com), lo que nos lleva a lograr avances más interesantes. [Multimillonarios chiflados que quieren viajar a Marte](https://www.spacex.com/), máquinas autoreplicantes (como la que veremos hoy), [drones civiles](https://www.dji.com/), robótica cada vez mas inteligente y apta para [usos de la vida real](https://www.irobot.com/For-the-Home/Vacuum-Cleaning/Roomba.aspx) y [realidad virtual](https://www.oculus.com/dk2/) convincente entre una infinidad de otras pequeñas revoluciones que están sucediendo en el mundo de la tecnología.
 
-![](/images/3d_printer.png)
+![](/assets/images/3d_printer.png)
 ## Motivación
 
 [Siempre me gustó mucho la robótica]({% post_url 2015-01-28-seguidor-de-lineas %}), pero cada vez que quería empezar algún proyecto me topaba con el mismo problema: las piezas. Los robots normalmente tiene formas complejas y normalmente distintas a las de otros robots, por lo que conseguir una plataforma para un sensor específico o un soporte para un servo es muy complicado.
@@ -59,70 +59,70 @@ Para construir una Prusa i2 hace falta una [extensa cantidad de piezas](https://
 
 En mi caso particular, me puse en contacto con una persona que se dedica a juntar todas las piezas, meterlas en una caja y enviarlas por correo.
 
-![](/images/prusa1.jpg)
+![](/assets/images/prusa1.jpg)
 
 Me costó algo de 50€ más caro que comprarlo todo por mi cuenta, pero me ahorro tiempo y dolores de cabeza.
 
-![](/images/prusa2.jpg)
+![](/assets/images/prusa2.jpg)
 _Contenido de la caja con todos los componentes necesarios para armar tu impresora 3D_
 
 Los componentes más importantes son:
 
 - **Fuente** : Mucha gente utiliza [fuentes de ordenadores](https://en.wikipedia.org/wiki/Power_supply_unit_(computer)) de sobremesa, que son muy baratas y confiables. En mi caso utilizo una fuente industrial de 12 volts y 20 amperes de salida.
 
-![](/images/fuente.jpg)
+![](/assets/images/fuente.jpg)
 
 - **Arduino** : Para mi satisfacción el cerebro de este aparato es un [Arduino Mega](https://arduino.cc/en/Main/arduinoBoardMega), y su funcionamiento emula básicamente a una [máquina de corte numérico](https://es.wikipedia.org/wiki/Control_numérico) (CNC), con la diferencia de que agrega el [eje Z](https://www.vitutor.com/analitica/vectores/vectores_espacio.html) al plano de coordenadas.
 
-![](/images/mega.jpg)
+![](/assets/images/mega.jpg)
 
 - **RAMPS** : Es un [shield](https://arduino.cc/en/Main/ArduinoShields) de Arduino que hace de interfaz para controlar los motores, end-stops, coolers, hot-end y cama caliente. Va montada sobre el Arduino y tiene la capacidad de manejar corrientes bastante altas necesarias para los calentadores y los motores.
 
-![](/images/ramps.jpg)
+![](/assets/images/ramps.jpg)
 
 - **Drivers de motor** : Es lo que nos permite controlar los motores y regular la corriente, velocidad y dirección de cada uno. Necesitamos 5; uno por cada motor. Van montados sobre la RAMPS.
 
-![](/images/pololu.jpg)
+![](/assets/images/pololu.jpg)
 
 - **Extrusor** : Es el mecanismo más importante de la impresora. Fabricado en base a piezas impresas, es el encargado de empujar el filamento hacea adentro del _hot-end_ utilizando uno de los motores para hacer girar el _hobbed bolt_.
 
-![](/images/extrusor.jpg)
+![](/assets/images/extrusor.jpg)
 
 - **Hobbed bolt** : Es un tornillo que tiene una ranura dentada en el centro. La cabeza del tornillo encaja en el engranaje principal del extrusor, y al girar, empuja el filamento dentro del hot-end.
 
-![](/images/hobbed.jpg)
+![](/assets/images/hobbed.jpg)
 
 - **Motores** : En total hacen falta 5 [motores paso a paso](https://reprap.org/wiki/Stepper_motor). Normalmente de tipo [NEMA 17](https://reprap.org/wiki/NEMA_17_Stepper_motor). Se utiliza uno para el eje X (cama caliente), otro para el eje Y (carro del extrusor en el eje horizontal), dos para el eje Z (carro del extrusor en el eje vertical) y uno para el extrusor (empuja el filamento hacia el interior del hot-end).
 
-![](/images/nema.jpg)
+![](/assets/images/nema.jpg)
 
 - **Hot-end** : Es la «punta caliente». Se encarga de derretir el filamento usando un [calentador](https://reprap.org/wiki/RepRapPro_Mendel_hot_end_assembly) y reporta su temperatura por medio de un [termistor](https://es.wikipedia.org/wiki/Termistor). Es una de las partes más importantes de la impresora, tanto para su buen funcionamiento como para la calidad de las piezas impresas. Existen de distintos tipos, tamaños y formas. En un principio utilicé un [Farynozzle](https://reprap.org/wiki/Farynozzle2.0/es) que funcionó muy bien por un tiempo, pero empecé a tener atascos de filamento. Intenté con un[M-02](https://www.makeables.nl/products/hot-end-m-02-for-3mm-filament-0-3mm-nozzle/) que nunca funcionó bien, y terminé pasándome a un [E3D v6](https://e3d-online.com/E3D-v6) que es una maravilla (por el momento). Su temperatura de funcionamiento es de 110ºC para PLA y 230ºC para ABS.
 
-![](/images/hot_end.jpg)
+![](/assets/images/hot_end.jpg)
 
 - **Boquilla** : Se enrosca en la punta del hot-end y tiene un pequeño agujero por el que sale el plástico derretido. Éste puede ser de distintos diámetros, siendo los mas comunes 0.3mm, 0.4mm y 0.5mm. Actualmente yo utilizo 0.4mm. A menor diámetro, más calidad de las piezas impresas, pero más tiempo de impresión.
 
-![](/images/nozzle.jpg)
+![](/assets/images/nozzle.jpg)
 
 - **Filamento** : Es el plástico en bruto que viene enrollado en una bobina. Mientras más pasa el tiempo, mayor es la diversidad de materiales con las que se puede imprimir. Los más utilizados son plásticos de tipo [ABS](https://reprap.org/wiki/ABS) o [PLA](https://reprap.org/wiki/PLA) de varios colores. Cada uno tiene sus características particulares y hay que tenerlas en cuenta a la hora de la configuración. Otra característica es el diámetro del filamento. Los más comunes son de 1.75mm y 3mm. Yo utilizo ABS de 3mm.
 
-![](/images/filamento.jpg)
+![](/assets/images/filamento.jpg)
 
 - **Cama caliente** : También conocida como «heated bed», es una superficie de 200mm X 200mm cubierta con una resistencia que genera calor. Se utiliza para plásticos ABS y su función es la de aminorar la velocidad de enfriamiento del plástico una vez impreso, evitando que la pieza se deforme. Debido a las características térmicas del ABS, éste se contrae cuando se enfría, lo cual afecta a la calidad de las piezas haciendo que se doblen(sobre todo a las de gran superficie). También controlamos su temperatura por medio de un termistor, y trabaja a una temperatura promedio de 110ºC.
 
-![](/images/heated_bed.jpg)
+![](/assets/images/heated_bed.jpg)
 
 - **Endstops** : También llamados «sensores de fin de carrera». Son simplemente [pulsadores](https://reprap.org/wiki/Endstop) que detectan cuando alguno de los ejes de la impresora ha llegado a su límite y los motores debe detenerse para evitar daños en la estructura.
 
-![](/images/endstop.jpg)
+![](/assets/images/endstop.jpg)
 
 - **LCD** : Normalmente durante el proceso de impresión la impresora debe estar conectada a un ordenador, el cual va dando las instrucciones que tiene que ir siguiendo en cada momento. Con este módulo tenemos la ventaja que la impresora pasa a ser completamente independiente, procesando los archivos que encuentra dentro de una tarjeta SD y mostrándonos información útil por la pantalla. También tiene una rueda de control que nos permite ajustar parámetros, seleccionar los archivos a imprimir, iniciar o detener el proceso, etc. 
 
-![](/images/lcd.jpg)
+![](/assets/images/lcd.jpg)
 
 - **Estructura** : Hace un momento mencioné el tema de las máquinas autorreplicantes. Es para esta parte de la impresora donde hacen falta piezas creadas con otra impresora. Las vigas de la estructura están formadas por [varillas roscadas](https://www.arqhys.com/construccion/varilla-roscada.html)_, pero los elementos que mantienen todo unido, y hasta los engranajes del extrusor están hechos de piezas impresas en 3D. El listado de piezas y sos modelos 3D correspondientes_ [_están disponibles_](https://reprap.org/wiki/Prusa_Mendel%28iteration_2%29#Printed_Parts) _en la página del proyecto RepRap.Estas son sólo las piezas más importantes. Para ver el listado completo, te recomiendo que vayas a la [página de RepRap](https://reprap.org/wiki/Prusa_Mendel%28iteration_2%29)_. 
 
-![](/images/Prusa-i2.jpg)
+![](/assets/images/Prusa-i2.jpg)
 
 ## Funcionamiento
 
@@ -137,7 +137,7 @@ Ahora que conocemos los nombres de los componentes, el funcionamiento (muy simpl
 
 {% include embed/youtube.html id='N3Arm4q7p-g' %}
 
-![](/images/hr.png)
+![](/assets/images/hr.png)
 
 Así finaliza la primera de tres partes de este proyecto. En la siguiente veremos el proceso de construcción y calibración de la impresora.
 

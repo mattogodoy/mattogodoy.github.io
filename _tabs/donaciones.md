@@ -7,7 +7,7 @@ author: matto
 title: Donaciones
 date: 2017-06-03T19:50:00+01:00
 image: 
-  path: /images/donaciones.jpg
+  path: /assets/images/donaciones.jpg
 hidden: true
 ---
 
@@ -44,7 +44,7 @@ Siendo un sitio de tecnología sería raro que no aceptara Bitcoins como donativ
 
 **Cartera de Bitcoins:** 1Jq3vRDRQk9gPEDcfbqiQ3ozx9wpjMAY8g
 
-![](/images/bc.png)
+![](/assets/images/bc.png)
 
 ### Materiales
 

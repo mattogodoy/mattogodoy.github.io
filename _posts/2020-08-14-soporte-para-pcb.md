@@ -3,7 +3,7 @@ author: matto
 title: Soporte para circuitos impresos
 date: 2020-08-14T13:00:00+01:00
 image: 
-  path: /images/20200813_201603.jpg
+  path: /assets/images/20200813_201603.jpg
 categories:
 tags:
 - electronica
@@ -13,14 +13,14 @@ Hace poco me crucé sin querer con uno de esos canales de YouTube que son exacta
 
 En varios de sus videos he visto que utiliza una herramienta que no había visto nunca antes. Un soporte para placas de circuito impreso con un diseño muy peculiar:
 
-![](/images/image0.png)
+![](/assets/images/image0.png)
 _Hakko Omnivise C1390C_
 
 El soporte es el **Omnivise** , de la marca **Hakko** ([https://www.hakkousa.com/products/accessories/pcb-holders/omnivise-pcb-holder.html](https://www.hakkousa.com/products/accessories/pcb-holders/omnivise-pcb-holder.html))
 
 Sirve para sujetar una placa mientras intentas soldar componentes en ella. Hay muchos soportes para esta finalidad con formas de todo tipo, pero este me gusta por su simplicidad.
 
-![](/images/image-1.1.png)
+![](/assets/images/image-1.1.png)
 
 Luego de investigar bastante, di con un par de proveedores que, si bien no lo tienen en stock, podrían llegar a traérmelo bajo pedido. El problema es, como siempre, su precio: _67 € + IVA_ ( **81.07 € en total** ). ¡Y eso es por cada uno!
 
@@ -37,7 +37,7 @@ Siendo un elemento tan simple me cuesta entender el por qué de ese precio tan e
 
 Para cumplir con el requisito del peso, estuve buscando trozos de metal macizo que tengan una rosca en el centro. Como te puedes imaginar, no es una cosa fácil de encontrar pero después de algunas vueltas di con los _bloques de maquinista_, también conocidos como _bloques 1-2-3._ Se llaman así porque miden 1 pulgada de ancho por 2 pulgadas de largo por 3 pulgadas de alto.
 
-![](/images/image-2.png)
+![](/assets/images/image-2.png)
 _Bloques 1-2-3_
 
 Se utilizan para hacer trabajos de carpintería metálica, sobre todo con tornos y taladros. Se caracterizan por ser muy precisos en sus medidas.
@@ -56,10 +56,10 @@ Finalmente, conseguí unas gomas de alta densidad cortadas en forma circular con
 
 Aquí todos los materiales necesarios:
 
-![](/images/image-3.1.png)
+![](/assets/images/image-3.1.png)
 _Bloques 1-2-3, insertos de cobre, varilla roscada y perillas_
 
-![](/images/image-4.1.png)
+![](/assets/images/image-4.1.png)
 _Gomas de alta densidad_
 
 ## Lista de compras
@@ -80,38 +80,38 @@ El proceso es muy simple. Sólo hay que juntar todos los componentes con unas mo
 
 Para empezar, los insertos de cobre son más grandes que los agujeros de los bloques 1-2-3, por lo que después una buena sesión de dremmel se pueden ajustar al tamaño necesario para que entren:
 
-![](/images/image-5.1.png)
+![](/assets/images/image-5.1.png)
 _Derecha: inserto original - Izquierda: Inserto limado_
 
-![](/images/image-6.1.png)
+![](/assets/images/image-6.1.png)
 _¡Ahora sí!_
 
 Para asegurarme de que la rosca no se va a mover, añadí pegamento de dos componentes, que al secar queda muy resistente:
 
-![](/images/image-7.png)
+![](/assets/images/image-7.png)
 
 A continuación hice huecos en el centro de las gomas para poder pasar la varilla roscada:
 
-![](/images/image-8.png)
+![](/assets/images/image-8.png)
 
 Luego corté la varilla en trozos de 5 cm:
 
-![](/images/image-9.png)
+![](/assets/images/image-9.png)
 
 Y así es como queda la parte superior al instalar las varillas en las perillas y añadir las gomas:
 
-![](/images/image-10.png)
+![](/assets/images/image-10.png)
 
 Durante el proceso, me di cuenta de que tenía guardada una goma que tiene adhesivo en una de sus caras, así que corté dos trozos y los pegué a los bloques 1-2-3. De esa forma la placa queda siempre sujeta por goma, tanto en la parte superior como en la inferior.
 
 Y así es como quedan los soportes terminados:
 
-![](/images/image-11.png)![](/images/image-12.png)![](/images/image-13.png)
+![](/assets/images/image-11.png)![](/assets/images/image-12.png)![](/assets/images/image-13.png)
 _Usando los dos a la vez para placas grandes_
 
 Incluso se pueden llegar a combinar si la placa es pesada o necesitamos más estabilidad:
 
-![](/images/image-14.png)
+![](/assets/images/image-14.png)
 
 ## Conclusión
 

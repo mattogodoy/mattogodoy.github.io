@@ -3,7 +3,7 @@ author: matto
 title: Seguidor de hábitos
 date: 2020-07-14T16:19:00+01:00
 image: 
-  path: /images/20181218_230124-1.jpg
+  path: /assets/images/20181218_230124-1.jpg
 categories:
 tags:
 - corte-laser
@@ -25,7 +25,7 @@ Por supuesto tenía que contar con algunos requisitos:
 
 Después de mucho pensar, se me ocurrió que Laura tenía algunas tareas diarias que muchas veces se le olvidaban. Buscando por internet me encontré con que ya había soluciones para este tipo de cosas. Están basadas en papel, y se llaman "Habit Trackers"
 
-![](/images/image-1.png)
+![](/assets/images/image-1.png)
 
 Lo primero que había que solucionar era el tema del papel. ¿¿Papel?? ¿Qué estamos, en 1870?
 
@@ -35,7 +35,7 @@ Quería que sobre todas las cosas primase la sencillez. Tenía que ser práctico
 
 Al ser un calendario de un sólo mes, y dado que dependiendo del año y del mes actual la distribución de días cambia, el orden de los días tenía que estar bien pensado antes de empezar. Para ello hice una planilla con todas las combinaciones posibles:
 
-![](/images/image-3.png)
+![](/assets/images/image-3.png)
 
 Dado un mes de 31 días (el mas largo posible), el día 1 podría caer en Lunes, Martes, etc. Esto nos da 7 combinaciones diferentes, y necesitamos cubrir todos los casos. En color naranja dibujé una plantilla con la que es posible cubrir cualquier mes de cualquier año, independientemente del día de la semana en que empiece.
 
@@ -51,13 +51,13 @@ En un ataque de pragmatismo, me di cuenta de que simplemente usando interruptore
 
 Inicialmente pensé en usar interruptores de este tipo:
 
-![](/images/image-4.png)
+![](/assets/images/image-4.png)
 
 pero después de pensarlo un poco me di cuenta de que no sería muy agradable a la vista y que a lo mejor hasta podría ser incómodo de usar.
 
 Finalmente me decanté por estos:
 
-![](/images/image-5.png)
+![](/assets/images/image-5.png)
 
 ## Diseño
 
@@ -65,7 +65,7 @@ Como dije antes, el diseño tendría que ser propio. En ese momento todavía no 
 
 Después de incontables horas de aprender a usar Autocad a base de golpes, terminé con esto:
 
-![](/images/Screenshot-2020-07-14-at-16.56.56.png)
+![](/assets/images/Screenshot-2020-07-14-at-16.56.56.png)
 _Los bordes rojos indican que hay que cortar por ese contorno. Los morados y los verdes significan que es un grabado._
 
 Como se ve en la imagen, diseñé un calendario con la disposición que había calculado antes, añadí los días de la semana y alguna que otra decoración. Los rectángulos que se ven en los laterales son para hacer una especie de caja.
@@ -78,22 +78,22 @@ Generalmente suelo hacer fotos de todo lo que puedo durante el proceso de fabric
 
 De todas maneras aquí hay algunas del resto del proceso:
 
-![](/images/20181218_204514.jpg)
+![](/assets/images/20181218_204514.jpg)
 _Instalación de los botones_
 
-![](/images/20181218_204523.jpg)
+![](/assets/images/20181218_204523.jpg)
 _Parte frontal con todos los botones en su lugar_
 
-![](/images/20181218_213437.jpg)
+![](/assets/images/20181218_213437.jpg)
 _Cableado de todos los botones usando una línea en común para el positivo y otra para el negativo. Al estar en diferentes alturas y al ser un cable relativamente rígido, no se pueden tocar entre sí._
 
-![](/images/20181218_213243.jpg)
+![](/assets/images/20181218_213243.jpg)
 _Primera prueba de funcionamiento._
 
-![](/images/20181218_225819.jpg)
+![](/assets/images/20181218_225819.jpg)
 _Añadiendo los laterales de la caja y el conector para el transformador de 12 volts que daría energía a todo el sistema._
 
-![](/images/20181218_230124.jpg)
+![](/assets/images/20181218_230124.jpg)
 _Terminado!_
 
 
@@ -103,7 +103,7 @@ Para dar un toque más agradable, pinté la caja con tinte especial para maderas
 
 De esto han pasado ya casi 2 años, y me alegra saber que a día de hoy Laura utiliza su seguidor de hábitos todos los días.
 
-![](/images/image-6.png)
+![](/assets/images/image-6.png)
 _Foto tomada casi 2 años después de terminado el proyecto._
 
 A lo mejor tendría que fabricar uno para mí, para hacerme al hábito de escribir más seguido en este blog...

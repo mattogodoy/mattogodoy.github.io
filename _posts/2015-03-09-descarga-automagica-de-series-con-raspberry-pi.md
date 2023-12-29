@@ -3,7 +3,7 @@ author: matto
 title: Descarga automágica de series con Raspberry Pi
 date: 2015-03-09T18:20:00+01:00
 image: 
-  path: /images/raspberry.jpg
+  path: /assets/images/raspberry.jpg
 categories:
 tags:
 - raspberry-pi
@@ -16,7 +16,7 @@ Para quienes no la conozcan, la Raspberry Pi es básicamente un ordenador con Li
 
 Increíblemente, todo esto entra en una placa del tamaño de una caja de fósforos.
 
-![](/images/raspi.jpg)
+![](/assets/images/raspi.jpg)
 
 Todas estas especificaciones han sido mejoradas por los sucesivos modelos que han ido saliendo con el tiempo.
 
@@ -52,7 +52,7 @@ La manera más simple de hacer la configuración es conectado un monitor o TV a 
 
 Teniendo en cuenta que [no deberíamos exigir más de 100 mA](https://raspberrypi.stackexchange.com/questions/340/how-much-power-can-be-provided-through-usb) a los puertos USB de la Raspberry para no arriesgarnos a quemarlos, y sabiendo que debemos conectar un adaptador WiFi y un disco rígido externo (ambos grandes consumidores de corriente), la solución radica en utilizar un [hub USB](https://es.wikipedia.org/wiki/Hub_USB) alimentado. A diferencia de un hub normal, estos traen un transformador que va a una toma de corriente. No solo nos da más de dos puertos USB, sino que también nos da energía de sobra para todo lo que conectemos.
 
-![](/images/hub.jpg)
+![](/assets/images/hub.jpg)
 
 En mi caso, uso el de la foto: un [Sitecom CN-51](https://www.sitecom.com/en/usb-hub-7-port/cn-051/p/7), pero cualquiera servirá.
 
@@ -62,7 +62,7 @@ Sí, el Raspberry Pi tiene una conexión Ethernet, lo que simplificaría mucho l
 
 Para empezar, el Raspberry no trae WiFi incorporado, y además no todos los adaptadores USB son compatibles (aunque sí la gran mayoría). Luego de buscar en una [lista de dispositivos compatibles](https://elinux.org/RPi_USB_Wi-Fi_Adapters#Working_USB_Wi-Fi_Adapters), terminé comprando un TP-Link TL-WN823N.
 
-![](/images/TL-WN823N.jpg)
+![](/assets/images/TL-WN823N.jpg)
 
 La configuración es relativamente sencilla, y puede hacerse directamente accediendo al Raspberry por SSH.
 

@@ -3,7 +3,7 @@ author: matto
 title: Fabricación de un Roadbook con Tripmaster
 date: 2017-06-03T19:50:00+01:00
 image: 
-  path: /images/r6-1.jpg
+  path: /assets/images/r6-1.jpg
 categories:
 tags:
 - electronica
@@ -32,7 +32,7 @@ En lo que va del año (2017) he tenido la suerte de participar en dos rallies en
 
 Ambos rallies disponían de la modalidad de **navegación** , que consiste en ir siguiendo indicaciones divididas en viñetas impresas en un rollo de papel llamado «hoja de ruta». Algo así:
 
-![](/images/roadbook.jpg)
+![](/assets/images/roadbook.jpg)
 
 El funcionamiento es bastante parecido al de un GPS, sólo que analógico, y a mi parecer, bastante más divertido.
 
@@ -44,7 +44,7 @@ La tercer columna se utiliza para observaciones o notas especiales, como el indi
 
 Los rollos de papel son entregados poco tiempo antes de la carrera para que nadie pueda recorrer o aprenderse la ruta antes de tiempo.
 
-![](/images/desert.jpg)
+![](/assets/images/desert.jpg)
 
 En la foto se ven 3 rollos de papel. Se dividen por etapas, y el motivo es que de otra manera sería un rollo demasiado grueso y no entraría en el «porta roadbook».
 
@@ -52,13 +52,13 @@ En la foto se ven 3 rollos de papel. Se dividen por etapas, y el motivo es que d
 
 No es más que una caja estanca con dos ejes, en los que enrollamos el papel para poder ir pasando de viñetas en la medida en que vamos avanzando por el recorrido.
 
-![](/images/roadbook2.jpg)
+![](/assets/images/roadbook2.jpg)
 
 Existen dos tipos de porta roadbook: manuales y eléctricos. La anterior foto corresponde a uno manual, que dispone de dos ruedas en los extremos de los ejes, con las que el piloto irá pasando el papel hacia un lado o hacia el otro. La desventaja es que para pasar el papel, el piloto debe soltar el manillar de la moto, lo cual es menos que ideal en una situación en la que el terreno es complicado.
 
 Una evolución de éste, es el porta roadbook eléctrico. Tiene la ventaja de que el papel se mueve por medio de un motor, por lo que el piloto no tiene que soltar el manillar en ningún momento.
 
-![](/images/roadbook3.jpg)
+![](/assets/images/roadbook3.jpg)
 
 El control del movimiento y la dirección del papel se efectúa por medio de un switch de 3 posiciones que va sujeto cerca de la piña izquierda del manillar, y se acciona con el pulgar.  
 El modelo eléctrico se puede accionar también de forma manual para poder seguir con la ruta si algo falla.
@@ -69,7 +69,7 @@ Está muy claro que el modelo eléctrico es mucho mas práctico y evidentemente 
 
 Para poder llevar la cuenta de las distancias totales, parciales y dirección respecto al norte antes mencionadas, se utiliza un dispositivo electrónico llamado «Tripmaster». Los hay de varias marcas, pero los más comunes se valen de un sensor magnético que va en la rueda para calcular la distancia recorrida.
 
-![](/images/trip.png)
+![](/assets/images/trip.png)
 
 Hay un segundo tipo de tripmaster que utilizan GPS en vez de sensores magnéticos. Esto simplifica la instalación, pero he escuchado a más de un piloto quejarse de que no siempre cuentan bien las distancias y que a veces pierden señal, dejando de cumplir con su función.
 
@@ -78,7 +78,7 @@ Idealmente se utilizan dos contadores; uno para la distancia parcial y otro para
 A su vez, el contador debe tener la posibilidad de corregir las distancias. En el escenario (bastante común) en el que el piloto se equivoca en una indicación y sigue en una dirección incorrecta, el tripmaster seguirá contando distancia. Cuando el piloto se de cuenta de su error y vuelva al camino correcto, las distancias ya no coincidirán con las del roadbook, por tanto deberá ajustarlas.  
 Para ello, el tripmaster dispone de 3 botones que van cerca de la piña izquierda del manillar, junto con el switch de control del roadbook.
 
-![](/images/botones.jpg)
+![](/assets/images/botones.jpg)
 
 Generalmente dispone de 3 botones: Aumentar distancia (los aumentos van de a 100 metros), reducir distancia y resetear distancia parcial.
 
@@ -115,7 +115,7 @@ El precio absurdo de los componentes sumado a que me gusta construir este tipo d
 
 Para sustituir a los dos tripmasters, decidí utilizar un Arduino Nano sumado a dos pantallas de 7 secciones, parecidas a las de las calculadoras viejas. Buscaría un sensor magnético industrial para contar las vueltas de la rueda y así medir la distancia.
 
-![](/images/diagrama.jpg)
+![](/assets/images/diagrama.jpg)
 _Boceto inicial del sistema completo_
 
 ### OpenTrip
@@ -132,7 +132,7 @@ Para el primer prototipo utilicé un Arduino Nano y la pantalla de un Nokia 5110
 
 Luego de investigar bastante, me decanté por estas pantallas de LCD con luz de fondo, que se ven decentemente a la luz directa del sol:
 
-![](/images/pantallas.jpg)
+![](/assets/images/pantallas.jpg)
 
 E implementé algo de la lógica del prototipo para ver si funcionaban:
 
@@ -150,11 +150,11 @@ Cada moto tiene una rueda de distinta forma y tamaño, por lo que para calcular 
 
 Luego de ver varios sensores, compré dos de tipo industrial:
 
-![](/images/hall-sensor.jpg)
+![](/assets/images/hall-sensor.jpg)
 
 Pero debido a su tamaño, y que por algún motivo no fui capaz de hacerlos funcionar con mi Arduino, finalmente me decanté por una solución más simple, económica y pequeña; un sensor de efecto HALL (A3144):
 
-![](/images/hall-sensor2.jpg)
+![](/assets/images/hall-sensor2.jpg)
 
 Este sensor combinado a un imán de neodimio me dio resultados excelentes para detectar cada vuelta de la rueda.
 
@@ -164,7 +164,7 @@ Para instalar el sensor en la moto, llevé el cable junto con los cables de fren
 
 Teniendo en cuenta que las conexiones entre las pantallas, el mando, el sensor de velocidad y el roadbook deben ser robustas y fáciles de conectar, me decanté por estos conectores:
 
-![](/images/conectores.jpg)
+![](/assets/images/conectores.jpg)
 
 De esta forma me aseguraría de que no se iban a desconectar por las vibraciones ni se iban a ver afectados por el agua o el polvo.
 
@@ -182,7 +182,7 @@ Estas interrupciones funcionan de manera tal que cuando el sensor detecta que el
 
 Para calcular el heading, o dirección respecto al norte magnético, utilicé un sensor llamado HMC5883L, que es compatible con Arduino y hace que su utilización sea muy fácil:
 
-![](/images/HMC5883L.jpg)
+![](/assets/images/HMC5883L.jpg)
 
 Para que los valores entregados por el sensor sean correctos, hay que especificar la [declinación magnética](https://es.wikipedia.org/wiki/Declinaci%C3%B3n_magn%C3%A9tica) del lugar en que vivimos.
 
@@ -194,14 +194,14 @@ Dado que el campo magnético de la tierra no es homogéneo, estos valores varía
 
 Este es el diagrama que incluye todos los componentes necesarios y sus conexiones con el Arduino Nano:
 
-![](/images/open_trip_diagram.png)
+![](/assets/images/open_trip_diagram.png)
 _Diagrama de conexiones_
 
 ### Primeras pruebas
 
 Teniendo este prototipo ya estaba en condiciones de hacer las primeras pruebas:
 
-![](/images/prueba.jpg)
+![](/assets/images/prueba.jpg)
 
 Como se ve en la foto, el odómetro de la moto marca 18 kms, y mi tripmaster 17,3 kms. Nada que un pequeño ajuste de la circunferencia no pueda solucionar :)
 
@@ -209,21 +209,21 @@ Como se ve en la foto, el odómetro de la moto marca 18 kms, y mi tripmaster 17,
 
 Para la carcasa del tripmaster diseñé en 3D un modelo específico en el que entran todos los componentes y lo fabriqué con mi [Impresora 3D]({% post_url 2015-02-03-armando-una-impresora-3d-parte-1 %})
 
-![](/images/caja.png)
+![](/assets/images/caja.png)
 
 Una vez impreso, este es el resultado:
 
-![](/images/trip.jpg)
+![](/assets/images/trip.jpg)
 
-![](/images/trip2.jpg)
+![](/assets/images/trip2.jpg)
 
-![](/images/trip3.jpg)
+![](/assets/images/trip3.jpg)
 
-![](/images/trip4.jpg)
+![](/assets/images/trip4.jpg)
 
-![](/images/trip5.jpg)
+![](/assets/images/trip5.jpg)
 
-![](/images/trip6.jpg)
+![](/assets/images/trip6.jpg)
 
 He utilizado el componente mágico (pistola de silicona) para sujetar varios de los componentes y pegar los conectores para que no se desconecten con las vibraciones.
 
@@ -231,15 +231,15 @@ He utilizado el componente mágico (pistola de silicona) para sujetar varios de 
 
 Para fabricar el mando seguí un proceso parecido al de la carcasa del tripmaster. Primero el modelado en 3D:
 
-![](/images/botones.png)
+![](/assets/images/botones.png)
 
 Y finalmente la impresión, montaje y soldadura de sus componentes:
 
-![](/images/botones2.jpg)
+![](/assets/images/botones2.jpg)
 
-![](/images/botones3.jpg)
+![](/assets/images/botones3.jpg)
 
-![](/images/botones4.jpg)
+![](/assets/images/botones4.jpg)
 
 Nuevamente utilicé silicona para mantener los componentes en su sitio y evitar vibraciones, polvo y agua.
 
@@ -247,7 +247,7 @@ Nuevamente utilicé silicona para mantener los componentes en su sitio y evitar 
 
 El paso siguiente fue fabricar el porta roadbook eléctrico. Para ello utilicé un porta roadbook manual que es muy barato, y por lo tanto muy MUY malo:
 
-![](/images/porta-roadbook.jpg)
+![](/assets/images/porta-roadbook.jpg)
 
 La ventaja que tiene es que ya viene la caja hecha, con su tapa transparente y un o-ring de goma para que no entre agua ni polvo.  
 La desventaja es que los ejes son de plástico, y los "rodamientos" de goma. Funciona bien tal y como está durante un momento, pero los compañeros de ruta con los que participé de los rallies pueden testificar que después de algunos kilómetros, el polvo los traba y se hace casi imposible de utilizar.
@@ -256,35 +256,35 @@ La desventaja es que los ejes son de plástico, y los "rodamientos" de goma. Fun
 
 Lo primero que hice fue cambiar los ejes plásticos por unos tubos de aluminio de 10mm y los rodamientos de goma por unos rodamientos de verdad de 10mm de interior y 12mm de exterior:
 
-![](/images/rodamientos.jpg)
+![](/assets/images/rodamientos.jpg)
 
-![](/images/eje.jpg)
+![](/assets/images/eje.jpg)
 
-![](/images/eje1.jpg)
+![](/assets/images/eje1.jpg)
 
 Como se ve en las fotos, también hice un adaptador impreso en 3D para el eje de 5mm donde van las poleas.
 
 Del kit original me quedé con las ruedas para girar el papel de forma manual y las adapté a los tubos de aluminio:
 
-![](/images/eje2.jpg)
+![](/assets/images/eje2.jpg)
 
-![](/images/eje3.jpg)
+![](/assets/images/eje3.jpg)
 
 ### Motor
 
 El siguiente paso fue el motor. Para ello utilicé un motor DC de 6v que viene con una caja reductora incluida, lo que da un torque realmente sorprendente para el tamaño que tiene.
 
-![](/images/motor-1.jpg)
+![](/assets/images/motor-1.jpg)
 
 Hice un hueco en la caja plástica para que salga su eje hacia afuera, y otros para sujetarlo con bridas:
 
-![](/images/motor1.jpg)
+![](/assets/images/motor1.jpg)
 
-![](/images/motor2.jpg)
+![](/assets/images/motor2.jpg)
 
-![](/images/motor3.jpg)
+![](/assets/images/motor3.jpg)
 
-![](/images/motor4.jpg)
+![](/assets/images/motor4.jpg)
 
 La elección de un motor tan pequeño tiene su motivo, y es que al ir dentro de la caja, uno más grande interferiría con los rollos de papel. La alternativa es dejar el motor fuera como hacen muchos fabricantes, pero eso lo dejaría más expuesto y me complicaría la estructura.
 
@@ -292,11 +292,11 @@ La elección de un motor tan pequeño tiene su motivo, y es que al ir dentro de 
 
 Luego de mucho investigar y probar diferentes combinaciones, decidí que utilizaría poleas dentadas y una correa de goma para conectar los ejes con el motor.
 
-![](/images/poleas.jpg)
+![](/assets/images/poleas.jpg)
 
 Para la correa de goma, siendo imposible encontrar una que tenga la cantidad de dientes que necesitaba para mi proyecto (56 para ser exactos), tuve que fabricarla yo mismo. Para ello compré algunos metros de correa GT2 de 6mm y la corté de forma perpendicular, para poder unir las dos puntas y atravesar alfileres por sus dientes, formando una pequeña correa cerrada bastante resistente:
 
-![](/images/correas.jpg)
+![](/assets/images/correas.jpg)
 
 El resultado fue mejor de lo que esperaba:
 
@@ -304,7 +304,7 @@ El resultado fue mejor de lo que esperaba:
 
 La mala noticia es que éste método tiene un problema en el que no había pensado antes, y es que en la medida en que el papel se va enrollando en un eje, éste va aumentando su tamaño, actuando como una polea y haciendo que la velocidad de giro de ambos ejes sea distinta:
 
-![](/images/poleas2.gif)
+![](/assets/images/poleas2.gif)
 
 Por la forma en la que funciona mi monstruosidad, ambos ejes se ven forzados a girar a la misma velocidad por la correa dentada.  
 Después de mucho probar, descubrí que en el peor de los casos el papel se iría aflojando dentro del roadbook, causando que vaya bien hacia adelante, pero si quería volver el motor tenía que dar varias vueltas antes de que el papel comience a moverse en el sentido contrario.
@@ -315,13 +315,13 @@ Con las fechas de los rallies acercándose y muy poco tiempo disponible decidí 
 
 Para unir el roadbook con el tripmaster y tener todo en una sola pieza, utilicé ángulos metálicos y remaches:
 
-![](/images/r1.jpg)
+![](/assets/images/r1.jpg)
 
-![](/images/r2.jpg)
+![](/assets/images/r2.jpg)
 
-![](/images/r3.jpg)
+![](/assets/images/r3.jpg)
 
-![](/images/r4.jpg)
+![](/assets/images/r4.jpg)
 
 El conjunto quedó muy robusto y en una sola pieza. Justo lo que quería.
 
@@ -337,13 +337,13 @@ Una vez terminado todo, sólo quedaba hacer una prueba final:
 
 La verdad es que no tenía ningún tipo de confianza en la abominación que había creado. Lo hice a las apuradas y aprendiendo en el camino. Imaginaba que funcionaría durante los 3 primeros kilómetros y fallaría de forma catastrófica.
 
-![](/images/r5.jpg)
+![](/assets/images/r5.jpg)
 
 Algunos días y 2 rallies después, tengo que tragarme mis palabras. Tanto el roadbook como el tripmaster funcionaron de maravilla en todo momento.  
 En el primero de los rallies, un compañero tuvo problemas con su roadbook profesional: tiraba del papel de la hoja de ruta y lo rompía. El mío funcionó hasta el final.  
 En el segundo rally, otro de los chicos tuvo problemas con su tripmaster profesional: no contaba las distancias recorridas. El mío funcionó de forma sorprendentemente precisa hasta el final.
 
-![](/images/r6.jpg)
+![](/assets/images/r6.jpg)
 
 ### El resultado
 

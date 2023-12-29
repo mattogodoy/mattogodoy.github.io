@@ -3,7 +3,7 @@ author: matto
 title: Armando una Impresora 3D - Parte 2
 date: 2015-02-12T20:01:00+01:00
 image: 
-  path: /images/impresora2.jpg
+  path: /assets/images/impresora2.jpg
 categories:
 tags:
 - electronica
@@ -76,7 +76,7 @@ Descargamos Marlin desde su [repositorio de Github](https://github.com/MarlinFir
 
 El paso siguiente es conectar todos los controladores de motores en la RAMPS, y la RAMPS sobre el Arduino, quedando un bloque compacto que contiene toda la electrónica.
 
-![](/images/prusa3.jpg)
+![](/assets/images/prusa3.jpg)
 
 Este bloque ya se comporta como una impresora 3D, por lo que estando conectado por USB, ya podríamos utilizar algún software de impresión para enviarle órdenes y comprobar que todo funciona correctamente.
 
@@ -106,7 +106,7 @@ Para comprobar si el firmware funciona bien, conectamos los motores a la RAMPS (
 
 También es importante alimentar la RAMPS con la salida de 12 volts de la fuente. De lo contrario los motores no se moverán ಠ\_ಠ
 
-![](/images/motores.jpg)
+![](/assets/images/motores.jpg)
 
 Con los motores ya conectados, podemos probar si nuestra impresora interpreta bien las órdenes. Para ello, yo utilicé un archivo GCODE muy particular: Uno que al hacer girar los motores, lo hace en una dirección y velocidad específica generando un sonido que suena como la [Marcha Imperial](https://www.youtube.com/watch?v=n4rHGubRqpw).
 
@@ -138,11 +138,11 @@ Ahora hay que repetir este proceso 22 veces más...
 
 Lo siguiente es armar el carro del eje X, donde se une el extrusor con el hot-end.
 
-![](/images/eje_x.jpg)
+![](/assets/images/eje_x.jpg)
 
 Para ello se utilizan 2 varillas lisas de métrica 8 sobre las que se deslizará el carro utilizando 3 rodamientos lineales que harán que la fricción sea mínima:
 
-![](/images/linear-ball-bearing.jpg)
+![](/assets/images/linear-ball-bearing.jpg)
 
 También aquí instalaremos el primero de los motores que por medio de una correa de tipo T2.5 y un rodamiento de tipo 608 moverá el carro en ambas direcciones del eje X.
 
@@ -156,17 +156,17 @@ También nos adelantamos y colocamos los rodamientos lineales y las tuercas de m
 
 La estructura principal se compone de 2 triángulos formados con varillas roscadas y piezas impresas.
 
-![](/images/estructura.jpg)
+![](/assets/images/estructura.jpg)
 
 Estos triángulos se unen por medio de otras varillas roscadas que contiene las piezas necesarias para sostener el motor, los rodamientos y las varillas lisas para carro del eje Y.
 
-![](/images/estructura2.jpg)
+![](/assets/images/estructura2.jpg)
 
 El orden en que se colocan las piezas y las tuercas es muy importante. Darse cuenta de que te olvidaste algo una vez que está todo armado no es muy divertido.
 
 En la parte superior se colocan también los soportes para los motores del eje Z. Una vez armado, esto es lo que queda:
 
-![](/images/estructura3.jpg)
+![](/assets/images/estructura3.jpg)
 
 Ya se va pareciendo más a una impresora ¿No?
 
@@ -176,7 +176,7 @@ La base de este eje es una placa de madera a la cual se atornillan 3 rodamientos
 
 También se atornillan las piezas que presionarán la correa y la mantendrán tensada.
 
-![](/images/estructura4.jpg)
+![](/assets/images/estructura4.jpg)
 
 Colocamos ahora la correa del eje Y y continuamos.
 
@@ -186,7 +186,7 @@ Instalamos los 2 motores en los soportes del eje Z y pasando las varillas lisas 
 
 Los motores se conectan a varillas roscadas de métrica 8 que van dentro de las tuercas del soporte del **eje X**. Gracias a esto, cuando los motores del **eje Z** giran, hacen que el carro completo del **eje X** se eleve.
 
-![](/images/estructura5.jpg)
+![](/assets/images/estructura5.jpg)
 
 ¡Estructura lista!
 
@@ -206,7 +206,7 @@ Se utilizan 3 sensores de final de carrera y van atornillados a las piezas insta
 
 La cama caliente va apoyada sobre 4 resortes que sirven para absorber cualquier golpe que reciba en caso de que el eje Z baje más de lo normal y la empuje con el hot-end.
 
-![](/images/muelle.jpg)
+![](/assets/images/muelle.jpg)
 
 Una vez instalada conectamos los cables que van a la alimentación. Para esto mucha gente la conecta directamente a la salida que tiene la RAMPS para este fin, pero dada la cantidad de corriente que consume, el [MOSFET](https://es.wikipedia.org/wiki/MOSFET) se calienta muchísimo y corre riesgo de quemarse.
 
@@ -226,7 +226,7 @@ Para armar el cuerpo del extrusor usamos el _hobbed bolt_ como eje del engranaje
 
 Un tercer rodamiento se usa para presionar el filamento contra las ranuras del _hobbed bolt_ con la ayuda de unos resortes y unas mariposas que permiten variar la presión.
 
-![](/images/extrusor2.jpg)
+![](/assets/images/extrusor2.jpg)
 
 Hecho esto podemos comprobar la fuerza de tracción del extrusor utilizando un poco de filamento y activando el motor con Pronterface. Te sorprendería la fuerza que puede llegar a tener.
 
@@ -236,7 +236,7 @@ El hot-end va sujetado a la base del carro del eje X. Lo atornillamos y llevamos
 
 Para este caso, no necesitaremos un relay dado que la cantidad de corriente utilizada para calentar el hot-end es mucho menor y con el MOSFET de la RAMPS nos alcanza.
 
-![](/images/hot_end-1.jpg)
+![](/assets/images/hot_end-1.jpg)
 
 Como se ve en la foto, para probar el hot-end le asignamos una temperatura de 230º usando Pronterface y cuando esté bastante caliente (de nuevo, todavía no tenemos medidas precisas hasta que no configuremos el _firmware_) insertamos filamento por el agujero de entrada y presionamos levemente con la mano. El filamento debería salir derretido por la punta.
 
@@ -265,13 +265,13 @@ Dentro del array, vemos que hay 4 valores, que representan los pasos por milíme
 Para calibrar el eje X, lo que debemos hacer es medir con un [calibre](https://es.wikipedia.org/wiki/Calibre_(instrumento)) (en lo posible digital) la distancia entre el carro y uno de los soportes del eje de guía.  
 Una imagen vale más que mil palabras:
 
-![](/images/eje_x2.jpg)
+![](/assets/images/eje_x2.jpg)
 _Imagen robada de la <a href="https://www.iearobotics.com/wiki/index.php?title=Guia_de_montaje_de_la_Prusa_2">guía de Obijuan</a>_
 
 Ahora usando Pronterface damos la orden de desplazar el eje X 100 milímetros. Volvemos a medir y verificamos cuál fue el desplazamiento real del carro.  
 Nos dará un número que probablemente esté cerca de 100mm, pero seguramente tendrá un error. Eso es lo que queremos corregir.
 
-![](/images/eje_x3.jpg)
+![](/assets/images/eje_x3.jpg)
 _Imagen robada de la <a href="https://www.iearobotics.com/wiki/index.php?title=Guia_de_montaje_de_la_Prusa_2">guía de Obijuan</a>_
 
 En la imagen ya vemos un carro calibrado (99,97mm de los 100mm que le pedimos que se desplace es más que aceptable), pero imaginemos un escenario más real, en el que la medida nos dará, por ejemplo, **86mm**.
@@ -391,7 +391,7 @@ Lo primero que imprimí fue una [ficha de casino](https://www.thingiverse.com/th
 
 Por suerte todo salió como esperaba, aunque es verdad que el mantenimiento es un proceso constante durante la vida de la impresora. Es común hacer cambios frecuentemente dado que el simple hecho de cambiar de color o marca de filamento, o la época del año en que estamos (frío o calor) pueden hacer que la impresora se comporte de manera diferente y debamos ajustar algo.
 
-![](/images/impresora-1.jpg)
+![](/assets/images/impresora-1.jpg)
 
 ¡Funciona!
 
@@ -399,7 +399,7 @@ Por suerte todo salió como esperaba, aunque es verdad que el mantenimiento es u
 
 Todas las fotos y videos del proceso de construcción están en un [álbum de Flickr](https://www.flickr.com/photos/96215205@N02/sets/72157634010097482/).
 
-![](/images/hr.png)
+![](/assets/images/hr.png)
 
 Nadie dijo que sería fácil, pero sin duda es divertido y se aprende mucho en el camino.
 

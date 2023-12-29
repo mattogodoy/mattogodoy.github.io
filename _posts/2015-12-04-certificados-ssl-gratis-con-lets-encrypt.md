@@ -3,7 +3,7 @@ author: matto
 title: Certificados SSL gratis con Let's Encrypt
 date: 2015-12-04T19:20:00+01:00
 image: 
-  path: /images/lebg.jpg
+  path: /assets/images/lebg.jpg
 categories:
 tags:
 - servidores
@@ -11,7 +11,7 @@ tags:
 
 Como puedes ver, [matto.io](https://matto.io) ya dispone de una conexión segura gracias a los certificados digitales de la gente de [Let's Encrypt](https://letsencrypt.org/), quienes han abierto una beta pública ayer, y ya están entregándolos a quien los quiera.
 
-![](/images/cert.png)
+![](/assets/images/cert.png)
 
 Para mi sorpresa, el proceso es muy simple y rápido. En unos 10 o 15 minutos puedes tener todo configurado y funcionando.
 
@@ -48,7 +48,7 @@ En este momento, se abrirá una pantalla azul que nos pedirá nuestra dirección
 
 En el siguiente paso, nos pedirá los dominios para los cuales queremos generar el certificado separados por espacios y/o comas. En mi caso, lo que hice fue generar el certificado para «matto.io» y «www.matto.io», dado que cuentan como dos dominios diferentes.
 
-![](/images/setup.png)
+![](/assets/images/setup.png)
 
 Le damos a «OK» y luego de unos momentos tendremos nuestros certificados generados.
 

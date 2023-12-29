@@ -3,7 +3,7 @@ author: matto
 title: Baja Pro rally computer
 date: 2019-01-27T21:12:00+01:00
 image: 
-  path: /images/bg2.jpg
+  path: /assets/images/bg2.jpg
 categories:
 tags:
 - electronica
@@ -24,7 +24,7 @@ En esta página encontrarás actualizaciones acerca del estado del desarrollo y 
 
 Mi amigo Jaime Lozano de [Cabras Sobre Ruedas](https://www.cabrassobreruedas.com) me ha dado una gran alegría este fin de semana, dado que ha participado en la [xTrem 300](https://www.xtrem300.com) de Huéneja con su KTM 990R y llevaba una unidad de prueba del nuevo modelo del Baja Pro.
 
-![](/images/WhatsApp-Image-2019-10-07-at-10.55.52.jpeg)
+![](/assets/images/WhatsApp-Image-2019-10-07-at-10.55.52.jpeg)
 _El setup con el que ha participado Jaime de la xTrem 300_
 
 Esta ha sido su experiencia:
@@ -59,10 +59,10 @@ He estado comprando materiales de a poco para poder avanzar en el proyecto. La i
 
 De momento ya he comprado las cajas, algunos botones, las pantallas, algunos componentes, los microcontroladores y las placas base.
 
-![](/images/20190825_185050.jpg)
+![](/assets/images/20190825_185050.jpg)
 _Algunos de los materiales que han llegado durante estos meses_
 
-![](/images/20190825_185246.jpg)
+![](/assets/images/20190825_185246.jpg)
 _Pantallas para el Baja Pro_
 
 Con esto ya podría empezar a cortar cajas y protectores de pantalla, y soldar algunos de los componentes.
@@ -114,22 +114,22 @@ Di con una empresa que podía hacer las ventanas con una fresadora de corte num�
 
 Finalmente me decidí a montar mi propia fresadora CNC y a efectuar los cortes yo mismo. De esa manera no dependeré de nadie y podré hacer todas las pruebas necesarias directamente en casa hasta llegar al resultado deseado. Las primeras pruebas han sido muy satisfactorias:
 
-![](/images/20190416_193347.jpg)
+![](/assets/images/20190416_193347.jpg)
 _Proceso de corte con mi propia fresadora CNC_
 
 El tiempo de corte es muy bajo y tanto la precisión como el acabado son sorprendentemente buenos:
 
-![](/images/20190416_211158.jpg)
+![](/assets/images/20190416_211158.jpg)
 _Caja recortada y cristal protector_
 
 En la siguiente imagen se puede apreciar la diferencia entre una caja cortada a mano con una dremmel y una cortada con la fresadora:
 
-![](/images/20190416_210456.jpg)
+![](/assets/images/20190416_210456.jpg)
 _Diferencia entre corte manual y automatizado_
 
 Y el resultado final con el hardware montado es el siguiente:
 
-![](/images/20190416_205926.jpg)
+![](/assets/images/20190416_205926.jpg)
 _Caja terminada_
 
 #### Cristal protector
@@ -138,7 +138,7 @@ El cristal (en realidad es un policarbonato transparente) que estoy utilizando a
 
 En primer lugar, es realmente bueno en su cometido de evitar reflejos, pero para que esto funcione, una de sus caras es rugosa. Esto implica que lo que está detrás (en nuestro caso la pantalla) se vea un poco borroso:
 
-![](/images/20190416_211556.jpg)
+![](/assets/images/20190416_211556.jpg)
 _Cristal anti reflejos_
 
 De todas formas la información de la pantalla se distingue perfectamente. Esto no sería un problema muy importante a no ser por las pruebas que he efectuado en escenarios reales: Al ser una superficie rugosa provoca que el polvo se almacene en el propio cristal, y eso sumado a la luz directa del sol hace que sea bastante más difícil ver los datos de la pantalla.
@@ -153,7 +153,7 @@ Hasta ahora estaba usando uno bastante standard. Es un poco grande y sólo capta
 
 Luego de mucho investigar, he dado con unos módulos que son más pequeños y además de utilizar satélites GPS (estadounidenses), pueden usar también Galileo (europeos), Glonass (rusos) y Beidou (chinos). Esto mejora sensiblemente no solo la precisión sino también el tiempo en que demora en obtener ubicación.
 
-![](/images/20190401_181438.jpg)
+![](/assets/images/20190401_181438.jpg)
 _Comparativa de tamaño: A la izquierda el nuevo módulo, a la derecha el anterior_
 
 Otra gran ventaja es que los nuevos módulos pueden entregar actualizaciones de posición a 10Hz (10 veces por segundo), cuando el modelo anterior solo daba un valor de posición por segundo.
@@ -182,7 +182,7 @@ Ya están aquí los nuevos chips de memoria. He comprado varios y de diferentes 
 
 Después de muchas (de verdad, muchas) horas de prueba y error y dolores de cabeza, finalmente he logrado hacerlas funcionar y almacenar información de manera persistente.
 
-![](/images/memory.jpg)
+![](/assets/images/memory.jpg)
 
 En este preciso momento estoy haciendo una prueba de estrés para ver si la memoria resiste la escritura de datos a alta frecuencia durante periodos largos de tiempo. Por ahora tiene buena pinta.
 

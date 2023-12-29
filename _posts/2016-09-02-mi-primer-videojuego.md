@@ -3,7 +3,7 @@ author: matto
 title: Mi primer videojuego
 date: 2016-09-02T19:22:00+01:00
 image: 
-  path: /images/jetfight-banner.jpg
+  path: /assets/images/jetfight-banner.jpg
 categories:
 tags:
 - programacion
@@ -22,7 +22,7 @@ Actualmente (y desde hace ya varios años) soy desarrollador front-end de aplica
 
 Hace ya algunos meses, junto a [Alberto Fernandez](https://twitter.com/AlbertoFdzM) decidimos crear un pequeño estudio independiente de desarrollo de videojuegos. Así nació [ZombieUnicorn](https://zombieunicorn.studio/)
 
-![](/images/logo.png)
+![](/assets/images/logo.png)
 _Logo de ZombieUnicorn_
 
 Nuestro primer (y actualmente único) proyecto se llama **The Seeker** , y es un shooter de zombies en 2D y con estilo [PixelArt](https://es.wikipedia.org/wiki/Pixel_art).
@@ -52,7 +52,7 @@ Cuando decidí a que quería hacer juegos, estuve investigando bastante sobre lo
 
 Después de mucho leer me decidí por [Unity 3D](https://unity3d.com), porque te permite crear un juego y publicarlo para todas las plataformas más utilizadas (Mac, Windows, Linux, Android, iOS, PlayStation, XBox y muchas más). Eso facilita muchísimo las cosas. Además, hay dos puntos muy importantes en los que Unity ha mejorado recientemente: El primero es que han agregado herramientas para juegos en **2D**. Y la segunda es que ahora es gratis! Antes había que pagar una licencia (muy cara por cierto) para poder publicar los juegos hechos con ese motor. Desde hace poco, podrás publicar los juegos pero con algunas condiciones. Al iniciar el juego se verá una pantalla que dice "_Made with Unity_", y si ganas mas de U$D 100.000 en ventas del juego, tendrás que comprar la licencia. Ojalá tuviera que comprarla ;)
 
-![](/images/unity.png)
+![](/assets/images/unity.png)
 
 Lo único que me tiraba para atrás era el lenguaje de programación que usa Unity: **C#**  
 Debo decir que estaba equivocado y no eran más que prejuicios. C# me ha demostrado ser un lenguaje sólido y fácil de escribir. No me costó absolutamente nada aprenderlo y empezar a escribir código rápidamente (y no es que yo sea el más listo del barrio).
@@ -63,7 +63,7 @@ Algo que he descubierto es que, por obvio que suene, los juegos entran por lo oj
 
 Para este juego en particular, lo que hice fue comprar una plantilla de gráficos (llamada _spritesheet_ en el mundo de los videojuegos) que contiene todos los dibujos (llamados _sprites_) necesarios para los jugadores y los ítems, incluyendo los que componen el escenario.
 
-![](/images/spritesheet.jpg)
+![](/assets/images/spritesheet.jpg)
 _Parte del spritesheet usado para JetFight_
 
 Otros de los gráficos, como por ejemplo la sierra circular, los tuve que crear yo por mi cuenta.
@@ -94,17 +94,17 @@ Esto atrae otro tipo de problemas, pero creo que vale la pena solucionarlos. En 
 
 JetFight tiene por ahora sólo un nivel. En él hay varias amenazas para los jugadores y está pensado para representar un buen campo de batalla para las peleas entre los 2 personajes.
 
-![](/images/map.jpg)
+![](/assets/images/map.jpg)
 _Boceto de idea inicial del nivel_
 
 Hice el diseño del nivel con una herramienta gratuita llamada [Tiled](https://www.mapeditor.org/), que facilita muchísimo las cosas. Unity está en el proceso de agregar este tipo de herramientas a su interfaz, pero todavía está en desarrollo.
 
-![](/images/tiled.png)
+![](/assets/images/tiled.png)
 _Diseño del nivel en Tiled_
 
 Una vez terminado el diseño del nivel, se exporta a Unity usando otra gran herramienta gratuita llamada [Tiled2Unity](https://www.seanba.com/tiled2unity).
 
-![](/images/tiled2.png)
+![](/assets/images/tiled2.png)
 _Exportando el nivel a Unity_
 
 En este proceso además se crean Colliders sobre los tiles en los que así lo especifiquemos, facilitando mucho el desarrollo del lado de Unity y permitiendo que el personaje se pueda posar sobre las plataformas y colisionar contra las paredes.
@@ -209,11 +209,11 @@ Simplemente declaro el componente R de cada uno de los colores que quiero reempl
 
 El resultado es el siguiente:
 
-![](/images/jetfight.png)
+![](/assets/images/jetfight.png)
 
 El jugador es básicamente el mismo y no he tenido que duplicar código ni imágenes. Simplemente aplicar el shader y definir los colores en las propiedades del jugador:
 
-![](/images/colors.png)
+![](/assets/images/colors.png)
 
 Et voilá!
 
@@ -221,7 +221,7 @@ Et voilá!
 
 Este tipo de juegos es siempre más divertido usando joysticks. El problema es que Unity tiene una manera un poco críptica de administrarlos, pero investigando un poco logré hacerlos funcionar. De hecho, todos los controles pueden ser modificados desde la pestaña _Input_ en la pantalla de configuración que se lanza al inicio del juego:
 
-![](/images/jetfight2.png)
+![](/assets/images/jetfight2.png)
 
 ## Resultado
 
@@ -229,13 +229,13 @@ El resultado final es un juego bastante entretenido y con todas las funcionalida
 
 {% include embed/youtube.html id='v6GJNbuP7Iw' %}
 
-![](/images/jetfight3.png)
+![](/assets/images/jetfight3.png)
 
-![](/images/jetfight4.jpg)
+![](/assets/images/jetfight4.jpg)
 
-![](/images/jetfight5.jpg)
+![](/assets/images/jetfight5.jpg)
 
-![](/images/jetfight6.jpg)
+![](/assets/images/jetfight6.jpg)
 
 ## Publicación y distribución
 
@@ -246,13 +246,13 @@ Hay [muchos artículos](https://hipertextual.com/2015/08/steam-greenlight) que h
 
 Es por ello que existen alternativas, como el EXCELENTE [itch.io](https://itch.io/), una plataforma con las mismas prestaciones de Steam (aunque lamentablemente no tan popular y por tanto con un alcance menor), pero que tiene grandes ventajas para desarrolladores independientes o estudios con menos recursos. En itch.io el proceso de registro es muchísimo más fácil y se completa en cuestión de minutos. No hace falta aprobación de nadie y simplemente vinculas una cuenta de PayPal a la que irá el dinero de las compras que hagan de tu juego. Además tiene una opción muy interesante (que es la que he adoptado yo) en la que te permite "pagar lo que quieras" por el juego (incluido nada). Es decir, que el juego puede ser bajado de forma completamente gratuita, o pagas el precio que creas justo por él.
 
-![](/images/Itch-io_logo.png)
+![](/assets/images/Itch-io_logo.png)
 
 Otra gran ventaja de itch.io es que como desarrollador te permite decidir qué porcentaje de ventas irá para ellos. Este porcentaje puede incluso ser 0%, pero considero que siempre está bien dejar algo para que esta gente que nos da tan buenas herramientas y nos facilita la vida pueda vivir de algo.
 
 Dispone también de un simple, pero útil tablero en el que te muestra datos analíticos sobre las visitas de la página de tu juego, cantidad de descargas y cantidad de ventas realizadas.
 
-![](/images/analytics.png)
+![](/assets/images/analytics.png)
 _Tablero de analíticas de itch.io_
 
 ## Sonidos
@@ -261,7 +261,7 @@ Considero que una parte importante de los juegos son los sonidos que se utilizan
 
 Inicialmente pensé en usar sonidos de 8 bits que recuerden a juegos antiguos. Para generarlos usé una herramienta online llamada [Chiptone](https://sfbgames.com/chiptone/):
 
-![](/images/chiptone.png)
+![](/assets/images/chiptone.png)
 
 Pero luego de hacer unas pruebas me pareció que estos sonidos no transmitían lo que yo estaba buscando para este juego en particular.
 
@@ -269,7 +269,7 @@ Finalmente lo que hice fue buscar sonidos en [freesound.org](https://www.freesou
 
 Hice modificaciones sobre algunos sonidos usando [Audacity](https://www.audacityteam.org/) para hacer que sean más cortos, largos, que hagan fade-out o loop dependiendo del caso.
 
-![](/images/audacity.png)
+![](/assets/images/audacity.png)
 _Edición de sonidos en Audacity_
 
 De esta forma logré que el audio del juego esté un poco más a tono con el tema del mismo.

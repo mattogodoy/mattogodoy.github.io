@@ -3,7 +3,7 @@ author: matto
 title: Brazo robótico
 date: 2016-08-12T19:15:00+01:00
 image: 
-  path: /images/bg.png
+  path: /assets/images/bg.png
 categories:
 tags:
 - robotica
@@ -32,7 +32,7 @@ También tuve que crear las piezas del controlador yo mismo:
 - Base
 - Uniones
 - Brazo
-![](/images/brazo.png)
+![](/assets/images/brazo.png)
 _Una de las modificaciones que hice sobre el modelo original_
 
 Todos los modelos creados o modificados por mi pueden obtenerse [aquí](https://www.tinkercad.com/users/hlAtf6r4quE-mattogodoy).
@@ -41,7 +41,7 @@ Todos los modelos creados o modificados por mi pueden obtenerse [aquí](https://
 
 El funcionamiento es muy básico. Lo que hice fue leer valores de un [potenciómetro analógico](https://es.wikipedia.org/wiki/Potenci%C3%B3metro), que básicamente es una resistencia variable. Tiene una perilla que al girarla en un sentido aumenta la resistencia, y al girarla en el otro la reduce.
 
-![](/images/potenciometro.jpg)
+![](/assets/images/potenciometro.jpg)
 _Potenciómetro analógico_
 
 Las primeras pruebas antes de tener el mando impreso y montado:
@@ -52,15 +52,15 @@ Usé un potenciómetro como sensor de la posición de cada eje en el mando, de m
 
 El resultado no es muy bonito, pero cumple su función:
 
-![](/images/brazo2-1.jpg)
+![](/assets/images/brazo2-1.jpg)
 
-![](/images/brazo3.jpg)
+![](/assets/images/brazo3.jpg)
 
 Los valores de cada eje van a puertos de entrada de un [Arduino UNO](https://www.arduino.cc/en/Main/ArduinoBoardUno) y son transformados en valores [PWM](https://es.wikipedia.org/wiki/Modulaci%C3%B3n_por_ancho_de_pulsos) de salida para los actuadores.
 
 Como actuadores usé 4 micro [servos](https://es.wikipedia.org/wiki/Servomotor_de_modelismo), que son pequeños motores eléctricos que tienen una caja reductora y otro potenciómetro dentro. Esto les permite tener mucho torque y ser conscientes de la posición en la que se encuentran en cada momento. Son el santo grial de la robótica.
 
-![](/images/servo2.jpg)
+![](/assets/images/servo2.jpg)
 _Micro servo de 9 gramos_
 
 ## Código

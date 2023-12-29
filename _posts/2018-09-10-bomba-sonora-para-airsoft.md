@@ -3,7 +3,7 @@ author: matto
 title: Bomba sonora para airsoft
 date: 2018-09-10T22:50:00+01:00
 image: 
-  path: /images/front2-1.jpg
+  path: /assets/images/front2-1.jpg
 categories:
 tags:
 - electronica
@@ -19,7 +19,7 @@ Una cosa lleva a la otra, y terminé viendo videos de YouTube de [NOVRITSCH](htt
 
 Es una actividad muy interesante. Hago deporte sin darme cuenta y puedo disparar a la gente sin que la policía me pida explicaciones. Todas las armas son réplicas exactas de las reales y el equipamiento también se suele imitar de grupos especiales de asalto de todas partes del mundo.
 
-![](/images/airsoft.jpeg)
+![](/assets/images/airsoft.jpeg)
 _Nuestro equipo. Yo soy el último de la derecha 👆🏻_
 
 Durante las partidas hay muchos modos de juego. Uno de ellos es que uno de los bandos pone una bomba en un lugar especificado y tiene que protegerla por un tiempo determinado hasta que "explota". El otro bando tiene que llegar hasta ese lugar e intentar desactivar la bomba antes de que explote.
@@ -38,7 +38,7 @@ Como base quería una bomba basada en Arduino que tuviese una pantalla, un tecla
 
 Estos son algunos de los componentes que utilicé:
 
-![](/images/components.jpg)
+![](/assets/images/components.jpg)
 _Un Arduino Nano, una pantalla LCD de 16*2 caracteres, un teclado numérico, un buzzer y una caja plástica._
 
 Mas adelante, a lo que se ve en la foto agregue dos LEDs RGB que obtuve de unas tiras que usé para otro proyecto (del que hablaré más adelante) y un interruptor con llave que tenía dando vueltas por ahí.
@@ -47,14 +47,14 @@ Como batería para todo el sistema he usado una LiPo de 3S que tenía de [un pro
 
 Con la ayuda de un taladro, un cutter y un poco de paciencia hice los huecos necesarios para todos los componentes.
 
-![](/images/inside.jpg)
+![](/assets/images/inside.jpg)
 _No es mi mejor trabajo, pero cumple su función._
 
 El interior es muy poco atractivo, pero he pegado todos los componentes con silicona para que la bomba aguante golpes y caídas. Las partidas pueden ser muy intensas.
 
 El resultado es éste:
 
-![](/images/front1.jpg)
+![](/assets/images/front1.jpg)
 _Disposición final de los componentes._
 
 ## Modos de juego
@@ -150,7 +150,7 @@ Personalmente creo que aporta bastante a la partida. Se podría complementar con
 
 Finalmente agregué un poco de cinta amarilla alrededor de la caja para darle más visibilidad:
 
-![](/images/front2.jpg)
+![](/assets/images/front2.jpg)
 _Bomba terminada_
 
 Otra mejora importante que tengo pendiente es poner un botón grande y con luz para activar y desactivar la bomba. Actualmente eso se hace con la tecla **#** del teclado numérico, pero es muy pequeña y no se ve en la oscuridad además de ser poco intuitivo.

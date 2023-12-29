@@ -3,7 +3,7 @@ author: matto
 title: Creando un blog
 date: 2015-01-29T01:56:00+01:00
 image: 
-  path: /images/code.png
+  path: /assets/images/code.png
 categories:
 tags:
 - servidores
@@ -72,4 +72,4 @@ Fue duro, pero quedó...
 
 ¡Hasta la próxima!
 
-![](/images/bye.gif)
+![](/assets/images/bye.gif)

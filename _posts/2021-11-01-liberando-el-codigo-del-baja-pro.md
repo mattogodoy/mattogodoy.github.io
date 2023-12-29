@@ -3,7 +3,7 @@ author: matto
 title: Liberando el código del Baja Pro
 date: 2021-11-01T16:23:00+01:00
 image: 
-  path: /images/20191110_180005.jpg
+  path: /assets/images/20191110_180005.jpg
 categories:
 tags:
 - electronica
@@ -86,7 +86,7 @@ Uno de mis tantos hobbies es la electrónica y siempre me han gustado los desaf�
 
 Lo más importante que salió de ese proyecto fue el tripmaster, que desde un primer momento fue de [código abierto](https://github.com/mattogodoy/open-trip) para que cualquier persona interesada pudiera fabricarse uno.
 
-![](/images/image-1.2.png)
+![](/assets/images/image-1.2.png)
 _Primer prototipo de tripmaster_
 
 Esta versión inicial utilizaba un sensor magnético que iba instalado en la pinza de freno de la rueda delantera. Combinado con un imán que iba instalado en la rueda, era capaz de detectar cada vez que la rueda hacía un giro completo. Multiplicando la cantidad de vueltas por la circunferencia de la rueda obtenía la distancia recorrida. Si a eso le sumamos el tiempo, también era capaz de calcular la velocidad.
@@ -107,7 +107,7 @@ Si quería emprender un nuevo proyecto, tenía que pensar en una marca y en un n
 
 Inspirado por el famoso rally [Baja 1000](https://es.wikipedia.org/wiki/Baja_1000), decidí que el nombre de mi marca sería **Baja Rally Computers**. Mi gran amigo Jaime de [Cabras Sobre Ruedas](https://www.youtube.com/c/CabrasSobreRuedasLaAventuraEmpiezaAqui) diseñó un logo para el proyecto que a día de hoy todavía me encanta:
 
-![](/images/working.png)
+![](/assets/images/working.png)
 _Logotipo de Baja Rally Computers_
 
 En cuanto al modelo, este sería el **Pro** , por lo que de ahora en adelante, me referiré al tripmaster como **Baja Pro**.
@@ -118,7 +118,7 @@ Las pantallas del prototipo inicial eran del tipo "7 segmentos", como las calcul
 
 Una de las cosas que más me costó entender cuando descubrí los equipos de navegación con roadbook es que los tripmasters de las marcas más conocidas (ICO, RNS, etc) sólo muestran 1 dato a la vez: &nbsp;distancia velocidad o rumbo. Es decir, no sólo son tremendamente caros sino que además tienes que comprar 2 (generalmente quieres saber distancia y rumbo en todo momento).
 
-![](/images/image-2.2.png)
+![](/assets/images/image-2.2.png)
 _Configuración estándar: Dos tripmasters y un porta-roadbook_
 
 Para esta nueva versión quería utilizar alguna pantalla que me permita mostrar más información, y de esa manera utilizar sólo 1 dispositivo para ver ambos datos.
@@ -127,12 +127,12 @@ Esto me llevó a una espiral de locura interminable en la que pasé muchísimas 
 
 Mi requisito principal es que la información sea altamente visible en condiciones de sol directo sobre la pantalla (que es lo normal durante un rally). Esto resultó ser bastante complicado, porque las pantallas que más prestaciones me daban y más fáciles eran de implementar, prácticamente no se veían al sol directo.
 
-![](/images/20170610_132138.jpg)
+![](/assets/images/20170610_132138.jpg)
 _Comparación de una pantalla OLED (a la izquierda) con una de tinta electrónica (a la derecha) bajo la luz directa del sol_
 
 Mi opción preferida era la pantalla de tinta electrónica. Su mayor cualidad es que mientras más sol haya, mejor se ve. Como si fuese tinta impresa en un papel.
 
-![](/images/20170613_210925-1.jpg)
+![](/assets/images/20170613_210925-1.jpg)
 _Probando una pantalla de tinta electrónica_
 
 Pero estas pantallas tienen una gran desventaja: No tienen una velocidad de refresco muy alta. Cada vez que quieres cambiar algo de lo que estás mostrando, hay que hacer un proceso de "borrado" primero y luego mostrarlo. Cualquiera que tenga un lector de libros electrónico sabe de lo que estoy hablando. Si quisiéramos saltarnos el paso del borrado y simplemente mostramos la información (por ejemplo, un número cambiando), sucede lo que se conoce como "ghosting" y es lo que se puede apreciar en la imagen anterior.  
@@ -141,7 +141,7 @@ Otra desventaja es que las pantallas de tinta electrónica cuestan unas 10 veces
 Al final, luego de mucho investigar, probar y debatir conmigo mismo, terminé decidiéndome por una pantalla de LCD de 128 por 64 pixeles.  
 Esta pantalla combina las ventajas de las de 7 segmentos, que se ven perfectamente al sol, con las del resto que permiten dibujar cosas más complejas. Además, tienen como ventaja añadida una luz de fondo que permite ver la pantalla en plena oscuridad.
 
-![](/images/20170622_183232.jpg)
+![](/assets/images/20170622_183232.jpg)
 _Pantalla LCD 128x64_
 
 Como se ve en la foto, en este punto ya estaba mostrando varios datos a la vez en la misma pantalla.
@@ -162,7 +162,7 @@ Fue por ello que decidí implementar un módulo GPS en su lugar. De esta forma p
 
 Este cambio implicó bastantes horas invertidas en aprender cómo funciona el sistema de GPS (he hecho un [episodio completo de mi podcast dedicado a este tema](https://bucleinfinito.pinecast.co/episode/b026f728de464fee/76-sistemas-de-posicionamiento-global)) y cómo comunicarme con el módulo receptor.
 
-![](/images/20170729_205440.jpg)
+![](/assets/images/20170729_205440.jpg)
 _Implementando el módulo GPS_
 
 La gran desventaja del GPS es que al pasar por túneles o zonas muy cerradas, se pierde la señal y dejamos de obtener datos de distancia. Mi solución a este problema fue guardar el último punto donde perdí la señal (punto A), y al recuperar la señal luego de salir del túnel (punto B), calcular la distancia en línea recta entre el punto A y el B. No es un valor muy exacto, pero rara vez los túneles tienen curvas dentro, por lo que sigue manteniendo una precisión más que aceptable en esa situación.
@@ -171,10 +171,10 @@ La gran desventaja del GPS es que al pasar por túneles o zonas muy cerradas, se
 
 Llegado este punto, ya tenía en mis manos el primer prototipo funcional de Baja Pro v1. Todavía no había diseñado un circuito impreso para el proyecto (ni sabía tampoco cómo hacerlo), pero tenía todo soldado en una placa de prototipado, también conocida como "perfboard".
 
-![](/images/20170820_213527.jpg)
+![](/assets/images/20170820_213527.jpg)
 _Prototipo del primer Baja Pro_
 
-![](/images/20170820_213536.jpg)
+![](/assets/images/20170820_213536.jpg)
 _Prototipo del primer Baja Pro_
 
 ### Pruebas
@@ -183,7 +183,7 @@ Para comprobar que el Baja Pro se comportaría según lo esperado en una situaci
 
 En esos trayectos iba verificando que los valores de distancia, tiempo y velocidad se correspondían con los valores que indicaba mi Garmin GPSMAP64.
 
-![](/images/20170821_090302.jpg)
+![](/assets/images/20170821_090302.jpg)
 _Primeras pruebas del prototipo_
 
 Para mi sorpresa, los resultados eran prácticamente idénticos. No podía estar más contento.
@@ -196,7 +196,7 @@ Hasta entonces yo nunca había diseñado una PCB, ni tenía idea de cómo era el
 
 El resultado fueron las primeras PCBs que había diseñado en mi vida:
 
-![](/images/20171003_110333.jpg)
+![](/assets/images/20171003_110333.jpg)
 _Placas de circuito impreso de la versión 1 del Baja Pro_
 
 Como era de esperar, tuve un par de errores en el diseño de esta versión, siendo el más grave que me equivoqué al trazar los circuitos del conector de la pantalla y los puse todos al revés, en espejo 🤦🏻
@@ -207,7 +207,7 @@ Como extra, añadí puertos para conectar un termistor, porque siempre me ha gus
 
 Para esta primera versión diseñé una caja que imprimí en 3D con un filamento reforzado (ASA) y pinté con una especie de epoxy especial para piezas impresas en 3D para hacerlo impermeable. El acabado no era especialmente bonito, pero cumplía con su función.
 
-![](/images/20171113_005023.jpg)
+![](/assets/images/20171113_005023.jpg)
 _Parte trasera de la caja impresa en 3D_
 
 En esta foto se aprecian también los primeros conectores que utilicé. Si bien eran perfectamente válidos e impermeables, no daban mucho aspecto de calidad.
@@ -216,7 +216,7 @@ En esta foto se aprecian también los primeros conectores que utilicé. Si bien 
 
 En el prototipo inicial había diseñado una botonera impresa en 3D, pero luego de mucho buscar por internet di con un diseño muy compacto y simple que servía perfectamente para lo que yo necesitaba: 3 botones (dos delante y uno detrás).
 
-![](/images/20191215_132227.jpg)
+![](/assets/images/20191215_132227.jpg)
 
 De todas maneras, los botones que traía este mando (los que se ven en la foto) no eran los indicados. Los reemplacé todos por otros de mayor calidad porque tenían que ser impermeables al agua y el polvo.
 
@@ -224,11 +224,11 @@ De todas maneras, los botones que traía este mando (los que se ven en la foto) 
 
 Combinando todos estos cambios con la nueva PCB obtuve lo que sería un Baja Pro v1 terminado.
 
-![](/images/20171026_223420.jpg)
+![](/assets/images/20171026_223420.jpg)
 
-![](/images/20171026_223438.jpg)
+![](/assets/images/20171026_223438.jpg)
 
-![](/images/20171113_004815.jpg)
+![](/assets/images/20171113_004815.jpg)
 
 Algunos amigos me pidieron que les fabrique una unidad, por lo que hice unas 4 o 5 y se las vendí a precio de coste.
 
@@ -248,7 +248,7 @@ No puedo describir con palabras la cantidad de tiempo, investigación, emails y 
 
 Finalmente no pude encontrar una caja que se adapte a mis necesidades (ni podía permitirme mandar a fabricar una de plástico inyectado a medida), por lo que terminé diseñando la mía propia, que constaba de varias capas de metacrilato cortado con láser, que apiladas formaban el volumen del Baja Pro.
 
-![](/images/20180407_011501.jpg)
+![](/assets/images/20180407_011501.jpg)
 
 Además utilicé un metacrilato transparente rugoso como protector de la pantalla. Esta rugosidad permitía que se vean los números perfectamente, pero además eliminaba gran parte del reflejo producido por el sol.
 
@@ -262,7 +262,7 @@ Para esta segunda versión diseñé una nueva PCB con algunos cambios:
 - Protección contra polaridad invertida
 - Corrección del error de la posición de los pines de la pantalla
 
-![](/images/20180219_192442.jpg)
+![](/assets/images/20180219_192442.jpg)
 _Placa de circuito impreso de la versión 2 del Baja Pro_
 
 ### Nueva interfaz de usuario
@@ -275,19 +275,19 @@ Dediqué muchísimo tiempo a diseñar una interfaz más agradable y usable en la
 
 Nuevamente, algunos amigos me pidieron que fabrique unidades para ellos (por supuesto, a precio de coste) por lo que hice 7 unidades. Una de ellas tenía la pantalla azul porque era para una moto Yamaha.
 
-![](/images/20180506_184222.jpg)
+![](/assets/images/20180506_184222.jpg)
 
-![](/images/20180506_184243.jpg)
+![](/assets/images/20180506_184243.jpg)
 _Segunda versión de la PCB ya montada_
 
-![](/images/20180413_144234.jpg)
+![](/assets/images/20180413_144234.jpg)
 _Versión terminada del Baja Pro v2_
 
-![](/images/20180413_144240.jpg)
+![](/assets/images/20180413_144240.jpg)
 
-![](/images/20180525_182705.jpg)
+![](/assets/images/20180525_182705.jpg)
 
-![](/images/20180524_232802.jpg)
+![](/assets/images/20180524_232802.jpg)
 
 De esta versión sólo hubo una tirada de 7 unidades.
 
@@ -300,7 +300,7 @@ Luego de muchas pruebas con la versión 2 del Baja Pro llegamos a la conclusión
 
 Luego de comprar muchas cajas para proyectos electrónicos y ver que no eran lo que yo buscaba, di con la solución: la [Retex Serie 32](https://www.retex.es/producto/serie-32/).
 
-![](/images/image-4.2.png)
+![](/assets/images/image-4.2.png)
 
 Esta caja no sólo era lo suficientemente robusta como para aguantar golpes y vibraciones, sino que además trae una junta de goma que la hace resistente al agua.
 
@@ -312,7 +312,7 @@ Para lograr que toda la electrónica entre dentro de la nueva caja, tuve que bus
 
 Luego de mucho buscar, di con el modelo [ERC12864](https://www.displayfuture.com/Display/datasheet/monographic/ERC12864-4.pdf), una pantalla que se adaptaba perfectamente a mis necesidades: muy plana, 128x64 pixeles y retroiluminación integrada.
 
-![](/images/20181008_203729.jpg)
+![](/assets/images/20181008_203729.jpg)
 _Nueva pantalla ERC12864_
 
 Hacerla funcionar me llevó un tiempo, pero siguiendo las instrucciones indicadas en la hoja de datos del fabricante funcionó a la perfección.
@@ -325,37 +325,37 @@ Tantos cambios en los componentes requería de una nueva placa de circuito impre
 
 Para comprobar que meter tantos componentes en un espacio tan reducido era posible, hice primero un prototipo en perfboard de lo que sería la nueva placa.
 
-![](/images/20181010_082900.jpg)
+![](/assets/images/20181010_082900.jpg)
 _Muy feo, lo sé :)_
 
-![](/images/20181010_082853.jpg)
+![](/assets/images/20181010_082853.jpg)
 _Prototipo de PCB v3_
 
 Una vez confirmado que el tamaño era el correcto, procedí a diseñar la placa y fabricarla.
 
-![](/images/20181105_221904.jpg)
+![](/assets/images/20181105_221904.jpg)
 _Tercera versión del circuito impreso del Baja Pro_
 
 Esta versión estaba específicamente diseñada para entrar dentro de la nueva caja y ser atornillada en los soportes que venían incluidos dentro de la propia caja.
 
-![](/images/20190101_163753.jpg)
+![](/assets/images/20190101_163753.jpg)
 _La nueva placa dentro de su caja_
 
-![](/images/20190111_195320.jpg)
+![](/assets/images/20190111_195320.jpg)
 _El lateral de la caja con un baja montado. Aquí se aprecia hasta qué punto he tenido que miniaturizar los componentes_
 
 ### Nueva antena GPS
 
 Dado que el espacio de la nueva caja era mucho más reducido, la antena de GPS que estaba utilizando hasta entonces ya no era una opción. Encontré una alternativa mucho más pequeña y que funcionaba prácticamente igual de bien. La ventaja es que con la nueva ubicación, esta antena apuntaba hacia el cielo como es recomendado.
 
-![](/images/20190114_104723.jpg)
+![](/assets/images/20190114_104723.jpg)
 _La nueva antena GPS (arriba a la izquierda)_
 
 ### Resultado final
 
 Con esto ya tenía una versión muy robusta y del tamaño que estaba buscando. Todo entraba correctamente en la caja y funcionaba como debía.
 
-![](/images/20190101_173942.jpg)
+![](/assets/images/20190101_173942.jpg)
 _El primer Baja Pro v3_
 
 ## Versión 4
@@ -370,17 +370,17 @@ Para esta versión decidí cambiar el módulo GPS por uno que no solo soportaba 
 
 Todo esto en un componente que no además de traer la antena integrada, tenía un tamaño mucho menor.
 
-![](/images/20190401_181447.jpg)
+![](/assets/images/20190401_181447.jpg)
 _A la izquierda el nuevo módulo. A la derecha el anterior._
 
-![](/images/20190401_181438.jpg)
+![](/assets/images/20190401_181438.jpg)
 _A la izquierda el nuevo módulo. A la derecha el anterior._
 
 ### Nueva PCB
 
 Como el nuevo módulo traía la antena integrada, tuve que rediseñar el circuito impreso para hacerle lugar. Lo que se me ocurrió fue hacer un hueco en la placa donde ubicar el módulo. Era la única manera de poder instalarlo dentro del espacio tan reducido de la caja.
 
-![](/images/20190505_170435.jpg)
+![](/assets/images/20190505_170435.jpg)
 _Nueva PCB para la versión 4, con su hueco para el módulo GPS._
 
 ### Cambio de tipo de microcontrolador
@@ -389,7 +389,7 @@ Hasta ahora venía usando lo que se conoce como un "kit de desarrollo" (o devkit
 
 Como el cambio de módulo GPS me obligó a rediseñar la placa, aproveché para hacer lo que quería desde hace mucho tiempo: Implementar el ESP32 directamente, sin devkit. La ventaja de hacerlo así es que el espacio que ocupa es mucho menor.
 
-![](/images/20211108_212101.jpg)
+![](/assets/images/20211108_212101.jpg)
 _A la izquierda el devkit que venía usando hasta ahora. A la derecha el módulo que empecé a utilizar en la versión 4._
 
 Si bien esto añade un poco de complejidad, da un acabado más limpio y compacto y ahorra mucho espacio.
@@ -408,7 +408,7 @@ Pasé mucho tiempo pensando en una solución e investigando alternativas para ve
 
 Finalmente llegué a una alternativa que es la utilizada por la industria automotriz para solucionar problemas de este tipo. Es una memoria bastante moderna fabricada por Texas Instruments que se llama FRAM (un acrónimo para Ferroelectric Random Access Memory).
 
-![](/images/20190125_203619.jpg)
+![](/assets/images/20190125_203619.jpg)
 _Un módulo de FRAM_
 
 La memoria FRAM garantiza 100 **trillones** de ciclos de escritura, y mantener los datos almacenados por un periodo de 100 años. Increíble.
@@ -431,7 +431,7 @@ Continuando con la búsqueda de un acabado más profesional, lo siguiente que de
 
 Tras mucho investigar, me decidí por que se conocen como "conectores M8".
 
-![](/images/20211108_214204.jpg)
+![](/assets/images/20211108_214204.jpg)
 _Conectores de tipo M8 de 4 y 3 pines respectivamente_
 
 Estos conectores no solo eran de mucha mayor calidad respecto a los anteriores, sino que además son un estándar en el mundo de los tripmasters. Esto me permitió hacer que el Baja Pro sea compatible con alguna instalación ya existente en una moto. La idea era que cualquier piloto pudiese reemplazar un ICO por un Baja Pro y viceversa sin tener que cambiar todo el cableado de la moto.
@@ -442,44 +442,44 @@ Ya puestos a cambiar cosas, decidí también mejorar la calidad del mando del Ba
 
 Anteriormente utilizaba una versión de plástico. A partir de ahora pasaría a ser de metal y tendría el nuevo conector.
 
-![](/images/20190517_204614.jpg)
+![](/assets/images/20190517_204614.jpg)
 _Nueva versión del mando hecho de metal y con el nuevo conector_
 
 ### Mejoras en la caja
 
 Como he mencionado anteriormente, la caja necesitaba una "ventana" para que la pantalla del Baja Pro quede visible. Hasta ahora había estado cortando esta ventana a mano con unos resultados desastrosos. Tenia que hacer algo.
 
-![](/images/20181121_210944.jpg)
+![](/assets/images/20181121_210944.jpg)
 _Un template del tamaño de la ventana de la caja_
 
 Se podría decir que utilicé el tema de las cajas como una excusa para algo que quería hacer desde hacía ya mucho tiempo: comprar una fresadora CNC.
 
-![](/images/20190407_203607.jpg)
+![](/assets/images/20190407_203607.jpg)
 _Mi nueva fresadora CNC_
 
 Si bien es una máquina muy pequeña, esto me permitiría cortar las ventanas en las cajas con una precisión muy superior a la que venía teniendo hasta ahora.
 
 Para ello, fabriqué con la propia fresadora un soporte que mantendría a la caja bien sujeta siempre en el mismo lugar, lo que me permitiría automatizar el proceso de corte.
 
-![](/images/20190416_193347.jpg)
+![](/assets/images/20190416_193347.jpg)
 _Cortando la ventana en una caja_
 
 Además de las cajas, la fresadora me permitiría cortar el protector de pantalla de metacrilato a un tamaño que encajaría perfectamente.
 
-![](/images/20190416_211158.jpg)
+![](/assets/images/20190416_211158.jpg)
 _Caja y protector de pantalla cortados con la fresadora CNC_
 
 Cuando gané un poco más de experiencia con la máquina, me animé a grabar el logo de Baja en el propio protector de la pantalla:
 
-![](/images/20191130_185747.jpg)
+![](/assets/images/20191130_185747.jpg)
 _Logo grabado con la fresadora CNC_
 
-![](/images/20190929_204352.jpg)
+![](/assets/images/20190929_204352.jpg)
 _Montando la caja completa_
 
 ### Resultado final
 
-![](/images/20200304_204143.jpg)
+![](/assets/images/20200304_204143.jpg)
 _Un Baja Pro v4 terminado_
 
 Esto ya estaba empezando a parecer un producto que se podía vender.
@@ -490,7 +490,7 @@ Hoy en día es difícil promocionar cualquier producto sin tener una web.
 
 En este caso creé una web bastante simple, pero que mostraba las funcionalidades principales del Baja Pro.
 
-![](/images/image-6.2.png)
+![](/assets/images/image-6.2.png)
 
 La web sigue funcional a día de hoy:
 
@@ -504,34 +504,34 @@ Con todas estas mejoras ya estaba listo para fabricar la primera tanda de Baja P
 
 Por una cuestión de tiempo y presupuesto, decidí fabricar 25 unidades. Para ello tuve que comprar todos los componentes, flashear el firmware en los microcontroladores, soldar todos los componentes electrónicos, cortar las ventanas en las cajas, cortar y grabar los protectores de pantalla, cortar los cables a medida, montar los mandos con sus botones, y un largo etcétera.
 
-![](/images/20190612_193321.jpg)
+![](/assets/images/20190612_193321.jpg)
 _El pedido con las cajas_
 
-![](/images/20190916_195153.jpg)
+![](/assets/images/20190916_195153.jpg)
 _El pedido de los módulos GPS_
 
-![](/images/20190908_162855.jpg)
+![](/assets/images/20190908_162855.jpg)
 _Soldando componentes electrónicos de montaje superficial_
 
-![](/images/20191013_192724.jpg)
+![](/assets/images/20191013_192724.jpg)
 _Cajas con sus ventanas ya cortadas_
 
-![](/images/20191214_161355.jpg)
+![](/assets/images/20191214_161355.jpg)
 _Cajas con la cinta de doble cara para pegar el protector de pantalla_
 
-![](/images/20191026_154209.jpg)
+![](/assets/images/20191026_154209.jpg)
 _Mandos con sus botones resistentes al agua instalados_
 
-![](/images/20191106_213726.jpg)
+![](/assets/images/20191106_213726.jpg)
 _Placas con casi todos los componentes electrónicos soldados_
 
-![](/images/20191110_180005-1.jpg)
+![](/assets/images/20191110_180005-1.jpg)
 _Pantallas soldadas_
 
-![](/images/20191109_202907.jpg)
+![](/assets/images/20191109_202907.jpg)
 _Probando una pantalla recién soldada_
 
-![](/images/20191117_125513.jpg)
+![](/assets/images/20191117_125513.jpg)
 _Control de calidad: Probando unidad por unidad para confirmar que funcionan correctamente_
 
 ## El momento de la venta
@@ -544,10 +544,10 @@ Nunca imaginé el resultado: Se vendieron todas las unidades en menos de 9 horas
 
 Para el envío mande a imprimir unas cajas personalizadas con el logo de Baja Rally Computers:
 
-![](/images/20191215_225332.jpg)
+![](/assets/images/20191215_225332.jpg)
 _Caja del Baja Pro_
 
-![](/images/20191227_211139.jpg)
+![](/assets/images/20191227_211139.jpg)
 _Los pedidos listos para ser enviados por correo_
 
 Afortunadamente, a día de hoy (2 años después de la venta) ninguna de las unidades ha fallado, por lo que no he tenido que reemplazar ni una.
@@ -663,6 +663,6 @@ Eso es lo que más me gusta de esta licencia. Es como un virus. Un virus bueno q
 
 El desarrollo del Baja Pro ha sido un largo y tortuoso camino, pero me ha dejado innumerables enseñanzas y una experiencia que espero aplicar a futuras aventuras.
 
-![](/images/20200621_155419-1.jpg)
+![](/assets/images/20200621_155419-1.jpg)
 
 Estoy impaciente por ver el futuro de este proyecto y espero que la comunidad open source me ayude a lograr lo que yo sólo no pude; un tripmaster de código abierto que sea asequible, pero a la vez tan bueno y fiable que pase a ser la elección por defecto de pilotos profesionales del Dakar. Soñar es gratis.

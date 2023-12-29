@@ -3,7 +3,7 @@ author: matto
 title: Open sourcing the Baja Pro
 date: 2021-11-01T16:23:00+01:00
 image: 
-  path: /images/20191110_180005.jpg
+  path: /assets/images/20191110_180005.jpg
 categories:
 tags:
 - electronica
@@ -89,7 +89,7 @@ Electronics is one of many hobbies I have. I have always enjoyed challenges that
 
 The most important thing that came out of that project was the tripmaster, which was [open source](https://github.com/mattogodoy/open-trip) since the beginning, so anyone who was interested could build one.
 
-![](/images/image-1.2.png)
+![](/assets/images/image-1.2.png)
 _First prototype of the tripmaster_
 
 This initial version used a magnetic sensor that was installed in the front brake caliper. Combined with a magnet glued to the front wheel brake disk, it was capable of detecting every time the wheel made a complete turn. By multiplying the number of turns by the wheel circumference it obtained the traveled distance. By adding time to that equation, it could also calculate speed.
@@ -110,7 +110,7 @@ If I wanted to start a somewhat serious company, I had to think in a brand and m
 
 Inspired by the famous [Baja 1000](https://es.wikipedia.org/wiki/Baja_1000) rally, I decided that the name of my brand would be **Baja Rally Computers**. My good friend Jaime ([Cabras Sobre Ruedas](https://www.youtube.com/c/CabrasSobreRuedasLaAventuraEmpiezaAqui)) designed a great logo for me. A logo that I really like up to this day:
 
-![](/images/working.png)
+![](/assets/images/working.png)
 _Baja Rally Computers logo_
 
 Regarding the model name, it was called **Pro** , so from now on I’ll be referring to it as the **Baja Pro**.
@@ -121,7 +121,7 @@ The screens I used for the initial prototype were 7-segment displays, just like 
 
 One of the things that was really hard for me to understand when I learned about roadbook navigation equipment was that the tripmasters made by the most famous and well tested brands (ICO, RNS, etc) only show one thing at the same time: either distance, or speed, or heading, but only one. So they are not only very expensive, but you also have to buy two (generally you’ll need to see distance and heading at all times).
 
-![](/images/image-2.2.png)
+![](/assets/images/image-2.2.png)
 _Standard configuration: Two tripmasters and a roadbook holder_
 
 For this new version I wanted to use a display that allowed me to show more information, so I could use only one device to see both numbers.
@@ -130,12 +130,12 @@ This took me through a deadly spiral of infinite madness in which I spent countl
 
 The main requisite was that the information was clearly readable in direct sunlight conditions (which is the normal during a rally). This turned out to be quite complicated because the displays that had the most capabilities and were the easiest to implement, were also the ones that looked the worst under the sun.
 
-![](/images/20170610_132138.jpg)
+![](/assets/images/20170610_132138.jpg)
 _Comparing an OLED display (on the left) with an e-ink display (on the right) under direct sunlight_
 
 My preferred option was the e-ink display. It has the advantage that the more sun there is, the best it looks. Just like ink printed in a paper.
 
-![](/images/20170613_210925-1.jpg)
+![](/assets/images/20170613_210925-1.jpg)
 _Testing an e-ink display_
 
 But these displays have a big disadvantage: Their refresh rate is quite low. Every time you want to change something in it you have to go through an erase process to remove the previous data first. Anyone with an e-reader knows what I’m describing here. If we wanted to skip the erase process altogether and simply show the new information, some artifacts start showing up. This is known as “ghosting” and you can clearly see it in the previous image.  
@@ -143,7 +143,7 @@ Another disadvantage is that the price for these displays is around 10 times hig
 
 At the end, after a lot of investigation, testing and debating with myself, I ended up sticking up with a 128x64 pixels LCD display. It combines the advantages of the 7-segment displays (very readable under sunlight) and the ones that are capable of drawing more complex forms. Also, as a bonus, they have an integrated backlight that allows to see the display even in complete darkness.
 
-![](/images/20170622_183232.jpg)
+![](/assets/images/20170622_183232.jpg)
 _128x64 LCD display_
 
 At this point I was already showing multiple bits of information at the same time.
@@ -164,7 +164,7 @@ Because of that, I decided to implement a GPS module in its place. This way I co
 
 This change implied investing many hours on learning how the GPS system works at a low level (I recorded a [complete podcast episode](https://bucleinfinito.pinecast.co/episode/b026f728de464fee/76-sistemas-de-posicionamiento-global) -in Spanish- about this topic) and how to communicate with the module.
 
-![](/images/20170729_205440.jpg)
+![](/assets/images/20170729_205440.jpg)
 _Implementing the GPS module_
 
 A great disadvantage of the GPS compared to the wheel sensor is that going through a tunnel prevents the module from receiving signal signal and renders it incapable of calculating distances. My solution to that was to store the last known position where I lost signal (point A) and get the first position when the signal is recovered (point B). Then I just calculate the straight-line distance from point A to point B. The value is not as exact, but it’s more than good enough. Usually tunnels have no curves inside, so you could assume that the pilot traveled in a straight line.
@@ -173,10 +173,10 @@ A great disadvantage of the GPS compared to the wheel sensor is that going throu
 
 At this point I had in my hands the first functional prototype of the Baja Pro v1. I still had not designed a PCB board yet (and I didn’t know how to do it either), but I had al soldered in place in a perfboard.
 
-![](/images/20170820_213527.jpg)
+![](/assets/images/20170820_213527.jpg)
 _Prototype of the first Baja Pro_
 
-![](/images/20170820_213536.jpg)
+![](/assets/images/20170820_213536.jpg)
 _Prototype of the first Baja Pro_
 
 ### Tests
@@ -185,7 +185,7 @@ To check that the Baja Pro was behaving as expected in a real life situation, I 
 
 During the commuting I sporadically checked the distance, speed and time values to see if they matched the ones showed by my Garmin GPSMAP64.
 
-![](/images/20170821_090302.jpg)
+![](/assets/images/20170821_090302.jpg)
 _First tests_
 
 To my surprise, the values were practically identical. I could not be happier.
@@ -198,7 +198,7 @@ Until then I had never designed a PCB board nor had any idea on how was the proc
 
 The result was the first PCBs I had ever designed:
 
-![](/images/20171003_110333.jpg)
+![](/assets/images/20171003_110333.jpg)
 _PCBs for the version 1 of the Baja Pro_
 
 As expected, I had a couple of errors with the design of this version. The most important was drawing the display pins mirrored 🤦🏻
@@ -209,7 +209,7 @@ As an extra I added pins to install a thermistor becase I always liked knowing t
 
 For this first version I designed an enclosure and 3D printed it using a very strong filament (ASA). Then I painted it with a special epoxy designed for 3D printed parts to make it water resistant. The finish was not specially pretty, but it worked.
 
-![](/images/20171113_005023.jpg)
+![](/assets/images/20171113_005023.jpg)
 _Back of the 3D printed enclosure_
 
 In this picture you can also see the first connectors I used. Even though they were perfectly functional and water resistant, they didn’t help with the looks.
@@ -218,7 +218,7 @@ In this picture you can also see the first connectors I used. Even though they w
 
 For the initial prototype I had designed a 3D printed remote, but after a lot of searching through the interwebs I found a very simple and compact remote that was perfect for my needs: 3 buttons (two in the front and one in the back).
 
-![](/images/20191215_132227.jpg)
+![](/assets/images/20191215_132227.jpg)
 
 The buttons that came with this remote (the ones in the photo) were not ideal. I replaced them with other that had more quality and were water resistant.
 
@@ -226,11 +226,11 @@ The buttons that came with this remote (the ones in the photo) were not ideal. I
 
 Combining all these changes with the new PCB I got the first finished Baja Pro v1.
 
-![](/images/20171026_223420.jpg)
+![](/assets/images/20171026_223420.jpg)
 
-![](/images/20171026_223438.jpg)
+![](/assets/images/20171026_223438.jpg)
 
-![](/images/20171113_004815.jpg)
+![](/assets/images/20171113_004815.jpg)
 
 Some of my friends asked me to make a unit for them, so I made 4 or 5 and sold them at cost value.
 
@@ -250,7 +250,7 @@ I can’t describe how much time, research, emails and headaches were implied in
 
 I could not find the perfect candidate and I certainly could not afford an injection molding version, so I ended up designing my on version. It was made of a stack of several laser cut methacrylate layers that combined made the volume of the Baja Pro.
 
-![](/images/20180407_011501.jpg)
+![](/assets/images/20180407_011501.jpg)
 
 I also used a transparent metacrylate as the screen protector. Its surface was rough on purpose. It helped preventing reflections produced by the sun.
 
@@ -264,7 +264,7 @@ For this second version I designed a new PCB with some adjustments:
 - Inverted polarity protection
 - Corrected the display pins error
 
-![](/images/20180219_192442.jpg)
+![](/assets/images/20180219_192442.jpg)
 _PCB for the version 2 of the Baja Pro_
 
 ### New user interface
@@ -277,19 +277,19 @@ I spent a lot of time in designing a friendlier and more usable interface where 
 
 Some friends asked me again to build a few units for them (at cost, of course) so I built 7. One of them had a blue screen because it was for a Yamaha motorcycle :)
 
-![](/images/20180506_184222.jpg)
+![](/assets/images/20180506_184222.jpg)
 
-![](/images/20180506_184243.jpg)
+![](/assets/images/20180506_184243.jpg)
 _Second version of the PCB with soldered components_
 
-![](/images/20180413_144234.jpg)
+![](/assets/images/20180413_144234.jpg)
 _Finished Baja Pro v2_
 
-![](/images/20180413_144240.jpg)
+![](/assets/images/20180413_144240.jpg)
 
-![](/images/20180525_182705.jpg)
+![](/assets/images/20180525_182705.jpg)
 
-![](/images/20180524_232802.jpg)
+![](/assets/images/20180524_232802.jpg)
 
 {% include embed/youtube.html id='GV5TdtcInaw' %}
 _A review of all the features (in Spanish - you can turn on the subtitles)_
@@ -300,7 +300,7 @@ After a lot of testing on the version 2 we reached to the conclusion that, even 
 
 After buying a lot of enclosures made specifically for electronics projects, I found the holy grail: the [Retex Serie 32](https://www.retex.es/producto/serie-32/).
 
-![](/images/image-4.2.png)
+![](/assets/images/image-4.2.png)
 
 This box was not only sturdy enough to endure hits and vibrations, but also had a rubber gasket that made it water proof.
 
@@ -310,7 +310,7 @@ The size of the enclosure was quite small, so it pushed me to improve my electro
 
 After a lot of searching, I found the perfect display: the [ERC12864](https://www.displayfuture.com/Display/datasheet/monographic/ERC12864-4.pdf). It was very thin and the size was perfect for my needs while maintaining the 128x64 pixels resolution and the integrated backlight.
 
-![](/images/20181008_203729.jpg)
+![](/assets/images/20181008_203729.jpg)
 _New ERC12864 display_
 
 It took a while to adapt it and make it work, but by following the manufacturer’s instructions it ended up working perfectly.
@@ -323,36 +323,36 @@ All these changes required a new PCB version. I also had to adapt its shape so i
 
 To confirm that cramming all those components in a very tight space was possible, I first made a perfboard prototype of the board.
 
-![](/images/20181010_082900.jpg)
+![](/assets/images/20181010_082900.jpg)
 _Ugly, I know :)_
 
-![](/images/20181010_082853.jpg)
+![](/assets/images/20181010_082853.jpg)
 _PCB v3 prototype_
 
 Once I confirmed that the size was correct, I designed and fabricated the new board.
 
-![](/images/20181105_221904.jpg)
+![](/assets/images/20181105_221904.jpg)
 _Third version of the Baja Pro PCB_
 
 This version was specifically designed to fit inside the new enclosure and be held by screws to the supports built inside the box.
 
-![](/images/20190101_163753.jpg)
+![](/assets/images/20190101_163753.jpg)
 
-![](/images/20190111_195320.jpg)
+![](/assets/images/20190111_195320.jpg)
 _Lateral view of the board inside the enclosure. Here you can see up to what extents I had to miniaturize the whole device_
 
 ### New GPS antenna
 
 Given that the space inside the new enclosure was much smaller, the old GPS antenna was no longer an option. I found a good alternative that was way smaller and worked as good. An added advantage was that with the new location the antenna was pointing to the sky, which was ideal.
 
-![](/images/20190114_104723.jpg)
+![](/assets/images/20190114_104723.jpg)
 _The new GPS antenna (top left corner)_
 
 ### Final results
 
 At this point I had a sturdy device with a size that was more like what I was looking for.
 
-![](/images/20190101_173942.jpg)
+![](/assets/images/20190101_173942.jpg)
 _The first Baja Pro v3_
 
 ## Version 4
@@ -367,17 +367,17 @@ For this version I decided to change the GPS module for a new one that not only 
 
 All this in a package that had an integrated antenna and was way smaller than its predecessor.
 
-![](/images/20190401_181447.jpg)
+![](/assets/images/20190401_181447.jpg)
 _New module on the left, old module on the right_
 
-![](/images/20190401_181438.jpg)
+![](/assets/images/20190401_181438.jpg)
 _New module on the left, old module on the right_
 
 ### New PCB
 
 The fact that the new GPS module had an integrated antenna forced me to redesign the circuit board to make room for it. The only solution I found was to make a hole in the PCB.
 
-![](/images/20190505_170435.jpg)
+![](/assets/images/20190505_170435.jpg)
 _Version 4 of the PCB with the hole for the GPS module_
 
 ### Shrank microcontroller
@@ -386,7 +386,7 @@ Up until now I was using what is know as a “devkit” of the ESP32. This is a 
 
 Since I had to redesign the PCB to accommodate the new GPS module, I took the opportunity to do something that I was planning for a while now: implement the bare ESP32 module (without the devkit). The advantage is that the space it takes is way smaller.
 
-![](/images/20211108_212101.jpg)
+![](/assets/images/20211108_212101.jpg)
 _On the left, the devkit I was using before. On the right, a bare ESP32 module._
 
 Although this adds some complexity (for instance, it uses 3.3V instead of 5V), it makes for a cleaner and more professional look while also saving a bunch of space.
@@ -403,7 +403,7 @@ To solve this problem what I initially did was to wait until detecting that the 
 
 I spent a lot of time thinking in a solution for this. Finally I found an alternative that is also used by the automotive industry to solve problems like this one. It’s a fairly new memory built by Texas Instruments called FRAM (an acronym for Ferroelectric Random Access Memory).
 
-![](/images/20190125_203619.jpg)
+![](/assets/images/20190125_203619.jpg)
 _FRAM module_
 
 An FRAM module guarantees 100 **trillion** write cycles and keeps the stored data for a period of 100 years or more. Incredible.
@@ -426,7 +426,7 @@ The next component I decided to upgrade were the power and remote connectors.
 
 After a lot of research I found that the best option would be what is known as an “M8 sensor connector”.
 
-![](/images/20211108_214204.jpg)
+![](/assets/images/20211108_214204.jpg)
 _M8 sensor connectors with 4 and 3 pins respectively_
 
 These connectors were not only of a much better quality, but also are a standard in the tripmasters world. This allowed me to make the Baja Pro compatible with an existing cable installation in a motorcycle. The idea was to allow the pilot to switch an ICO for a Baja Pro and vice-versa without having to redo the whole cabling of the bike.
@@ -437,44 +437,44 @@ Since I was in the “upgrading” train, I decided to improve the quality of th
 
 Previously it was made of plastic. From now on it would be made of metal and would have the new connector.
 
-![](/images/20190517_204614.jpg)
+![](/assets/images/20190517_204614.jpg)
 _New metal remote with the M8 connector_
 
 ### Enclosure improvements
 
 The enclosure needed a window for the display. Until now I was cutting it manually with horrendous results. I had to do something about it.
 
-![](/images/20181121_210944.jpg)
+![](/assets/images/20181121_210944.jpg)
 _Enclosure window cutting template_
 
 Anyone could say (and they would be correct) that I used the enclosures excuse for something that I wanted to do for a long time: to buy a CNC machine.
 
-![](/images/20190407_203607.jpg)
+![](/assets/images/20190407_203607.jpg)
 _My new CNC machine_
 
 Even though it was a very small machine, it allowed me to cut the enclosure windows with a precision that was quite higher than before.
 
 For that I built a wooden rig using the same machine. This rig allowed me to place an enclosure inside and it will ensure that it always was aligned in the same position, making the automation of the process way easier.
 
-![](/images/20190416_193347.jpg)
+![](/assets/images/20190416_193347.jpg)
 _Cutting an enclosure window_
 
 The CNC machine also allowed me to cut the metacrylate screen protector with great precision. It fitted perfectly.
 
-![](/images/20190416_211158.jpg)
+![](/assets/images/20190416_211158.jpg)
 _Both items cut with the CNC machine_
 
 Once I gained a bit more trust with the machine, I started engraving the Baja logo in the screen protectors.
 
-![](/images/20191130_185747.jpg)
+![](/assets/images/20191130_185747.jpg)
 _CNC engraved logos_
 
-![](/images/20190929_204352.jpg)
+![](/assets/images/20190929_204352.jpg)
 _Full assembly_
 
 ### Final results
 
-![](/images/20200304_204143.jpg)
+![](/assets/images/20200304_204143.jpg)
 _A finished Baja Pro v4_
 
 This was starting to look like a product that could be sold.
@@ -485,7 +485,7 @@ Nowadays it’s very difficult to promote a product without having a webpage.
 
 I made a very simple one that showed the main features of the Baja Pro.
 
-![](/images/image-6.2.png)
+![](/assets/images/image-6.2.png)
 
 The web is still up and running:
 
@@ -499,34 +499,34 @@ Having all of these improvements I was ready to fabricate the first Baja Pro bat
 
 Time and budget were my limiting factors. I decided to make 25 units. For that I had to buy all of the components, flash the microcontrollers, solder all of the electronics, cut the windows in the enclosures, cut and engrave the screen protectors, cut and solder the cables, changing and soldering the remote buttons and a long etcetera.
 
-![](/images/20190612_193321.jpg)
+![](/assets/images/20190612_193321.jpg)
 _The enclosures order_
 
-![](/images/20190916_195153.jpg)
+![](/assets/images/20190916_195153.jpg)
 _The GPS modules order_
 
-![](/images/20190908_162855.jpg)
+![](/assets/images/20190908_162855.jpg)
 _Soldering surface mount components_
 
-![](/images/20191013_192724.jpg)
+![](/assets/images/20191013_192724.jpg)
 _Enclosures with their respective windows already cut_
 
-![](/images/20191214_161355.jpg)
+![](/assets/images/20191214_161355.jpg)
 _Enclosures with a double sided tape to install the screen protectors_
 
-![](/images/20191026_154209.jpg)
+![](/assets/images/20191026_154209.jpg)
 _Remotes with the waterproof buttons installed_
 
-![](/images/20191106_213726.jpg)
+![](/assets/images/20191106_213726.jpg)
 _Boards with most components already soldered_
 
-![](/images/20191110_180005-1.jpg)
+![](/assets/images/20191110_180005-1.jpg)
 _Soldered displays_
 
-![](/images/20191109_202907.jpg)
+![](/assets/images/20191109_202907.jpg)
 _Testing a recently soldered display_
 
-![](/images/20191117_125513.jpg)
+![](/assets/images/20191117_125513.jpg)
 _Quality test: Checking units one by one to confirm that they worked as expected_
 
 ## The moment of the sale
@@ -539,10 +539,10 @@ I was not expecting the results: All units were sold in the first 9 hours after 
 
 For the shipping I ordered custom cardboard boxes with the Baja Rally Computers logo.
 
-![](/images/20191215_225332.jpg)
+![](/assets/images/20191215_225332.jpg)
 _Baja Pro box_
 
-![](/images/20191227_211139.jpg)
+![](/assets/images/20191227_211139.jpg)
 _Orders ready to be shipped_
 
 Luckily, up until today (2 years after the sale) none of the units has failed, so I have not had the need to replace any of them.
@@ -658,6 +658,6 @@ That is what I like the most about this license. It’s like a computer virus. A
 
 Developing the Baja Pro has been a rough and long way, but has left me with countless valuable skills and an experience that I hope to apply to future adventures.
 
-![](/images/20200621_155419-1.jpg)
+![](/assets/images/20200621_155419-1.jpg)
 
 I cannot wait to see the future of this project. I hope the open source community helps me to achieve what I could’t by myself; an open source affordable tripmaster that is very reliable. Maybe the one that will in the future be the choice of professional Dakar pilots. Dreaming doesn't cost a thing.
