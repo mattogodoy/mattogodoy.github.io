@@ -157,7 +157,7 @@ defaults:
       layout: page
       permalink: /:title/
   - scope:
-      path: assets/images/favicon
+      path: assets/img/favicons
     values:
       swcache: true
   - scope:
