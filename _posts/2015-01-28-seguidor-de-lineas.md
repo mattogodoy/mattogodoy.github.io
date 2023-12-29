@@ -38,7 +38,7 @@ _Los chicos de la Universidad de Mendoza también habían instalado unas cámara
 
 ### Reglamento
 
-El documento oficial del reglamento se puede ver [aquí](/assets/uploads/Reglamento_Carreras_2012.pdf).  
+El documento oficial del reglamento se puede ver [aquí](/assets/uploads/Reglamento_Carreras_2012.pdf){:target="_blank"}.  
 Está bien detallado y no deja lugar a dudas.
 
 ## Construcción
