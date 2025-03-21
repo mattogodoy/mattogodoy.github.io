@@ -9,6 +9,8 @@ tags:
 - electronica
 ---
 
+> This article is also [available in English]({% post_url 2025-03-21-converting-a-go-kart-into-a-deathtrap %}) 🇬🇧
+
 De pequeño siempre soñaba con tener vehículos que pudiera conducir yo mismo. Recuerdo poner una silla con un ventilador delante y jugar a que volaba en una avioneta.
 
 ## El plan
