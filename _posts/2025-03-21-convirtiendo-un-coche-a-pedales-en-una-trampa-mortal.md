@@ -1,5 +1,13 @@
-
-# Convirtiendo un coche a pedales en una trampa mortal
+---
+author: matto
+title: Convirtiendo un coche a pedales en una trampa mortal
+date: 2025-03-20T18:00:00+01:00
+image:
+  path: /assets/images/2025-03-21/IMG_8558.jpeg
+categories:
+tags:
+- electronica
+---
 
 De pequeño siempre soñaba con tener vehículos que pudiera conducir yo mismo. Recuerdo poner una silla con un ventilador delante y jugar a que volaba en una avioneta.
 
