@@ -196,7 +196,7 @@ Y este es el resultado final:
 ![](../assets/images/2025-03-21/IMG_8557.jpeg)
 ![](../assets/images/2025-03-21/IMG_8558.jpeg)
 ![](../assets/images/2025-03-21/IMG_8562.jpeg)
-<video controls style="width: 100%;" src="/../assets/images/2025-03-21/videos/IMG_8565.mp4" title=""></video>
+<video controls style="width: 100%;" src="/../assets/images/2025-03-21/videos/IMG_8565.mp4#t=1" title=""></video>
 <video controls style="width: 100%;" src="/../assets/images/2025-03-21/videos/IMG_8566.mp4" title=""></video>
 
 ## Cosas pendientes
