@@ -162,12 +162,12 @@ Aquí van algunas fotos y videos de todo el proceso.
 
 Esta es una primera prueba del controlador de motor. La batería no había llegado todavía, por lo que estaba usando una fuente de energía regulable para la prueba:
 ![](../assets/images/2025-03-21/IMG_8267.jpeg)
-<video controls src="../assets/images/2025-03-21/videos/IMG_8270.mp4" title=""></video>
+<video controls src="/../assets/images/2025-03-21/videos/IMG_8270.mp4" title=""></video>
 
 Aquí ya empiezan las pruebas de integración con el Arduino y el mando a distancia. El código tiene una función de debugging que permite ver las entradas y salidas en la pantalla del ordenador:
 ![](../assets/images/2025-03-21/IMG_8305.jpeg)
-<video controls src="../assets/images/2025-03-21/videos/IMG_8303.mp4" title=""></video>
-<video controls src="../assets/images/2025-03-21/videos/IMG_8304.mp4" title=""></video>
+<video controls src="/../assets/images/2025-03-21/videos/IMG_8303.mp4" title=""></video>
+<video controls src="/../assets/images/2025-03-21/videos/IMG_8304.mp4" title=""></video>
 
 Esta es la caja estanca que contiene todos los componentes electrónicos. Tiene el tamaño justo para entrar debajo del asiento. Lamentablemente olvidé hacer una foto con todos los componentes dentro:
 ![](../assets/images/2025-03-21/IMG_8308.jpeg)
@@ -187,8 +187,8 @@ Aquí se ve la parte final, cuando instalo la estructura del coche a pedales en 
 ![](../assets/images/2025-03-21/IMG_8517.jpeg)
 
 Estas son las primeras pruebas con todo integrado:
-<video controls src="../assets/images/2025-03-21/videos/IMG_8518.mp4" title=""></video>
-<video controls src="../assets/images/2025-03-21/videos/IMG_8552.mp4" title=""></video>
+<video controls src="/../assets/images/2025-03-21/videos/IMG_8518.mp4" title=""></video>
+<video controls src="/../assets/images/2025-03-21/videos/IMG_8552.mp4" title=""></video>
 
 Y este es el resultado final:
 ![](../assets/images/2025-03-21/IMG_8555.jpeg)
@@ -196,8 +196,8 @@ Y este es el resultado final:
 ![](../assets/images/2025-03-21/IMG_8557.jpeg)
 ![](../assets/images/2025-03-21/IMG_8558.jpeg)
 ![](../assets/images/2025-03-21/IMG_8562.jpeg)
-<video controls src="../assets/images/2025-03-21/videos/IMG_8565.mp4" title=""></video>
-<video controls src="../assets/images/2025-03-21/videos/IMG_8566.mp4" title=""></video>
+<video controls src="/../assets/images/2025-03-21/videos/IMG_8565.mp4" title=""></video>
+<video controls src="/../assets/images/2025-03-21/videos/IMG_8566.mp4" title=""></video>
 
 ## Cosas pendientes
 
