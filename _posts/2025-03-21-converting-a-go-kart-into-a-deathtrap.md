@@ -7,6 +7,7 @@ image:
 categories:
 tags:
 - electronics
+hidden: true
 ---
 
 > Este artículo también está [disponible en Español]({% post_url 2025-03-21-convirtiendo-un-coche-a-pedales-en-una-trampa-mortal %}) 🇪🇸
