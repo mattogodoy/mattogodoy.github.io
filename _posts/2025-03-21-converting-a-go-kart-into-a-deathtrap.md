@@ -1,6 +1,6 @@
 ---
 author: matto
-title: Converting a go-kart into a deathtrap
+title: Converting a go-kart into a death trap
 date: 2025-03-20T18:00:00+01:00
 image:
   path: /assets/images/2025-03-21/IMG_8558.jpeg
